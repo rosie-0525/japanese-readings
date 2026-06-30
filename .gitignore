@@ -1,6 +1,7 @@
-# Local Supabase credentials (copy html/supabase-config.example.js → html/supabase-config.js).
-# The anon key is public-safe, but keep each user's project ref out of git.
-html/supabase-config.js
+# Supabase config (html/supabase-config.js) is committed: it only holds the
+# project URL + anon (public) key, which are safe in client code. Row-Level
+# Security in db/schema.sql is what protects each user's data. Never commit the
+# service_role key.
 
 # Python bytecode cache (work/export_words.py imports work/render.py)
 __pycache__/
