@@ -10,7 +10,7 @@ raw = open('work/all_raw.txt', encoding='utf-8').read().split('\f')
 while raw and raw[-1].strip() == '':
     raw.pop()
 assert len(raw) == 451, len(raw)
-OUT = 'extracted'
+OUT = os.path.join('data', 'ocr')
 
 CJK = r'　-〿぀-ゟ゠-ヿ㐀-䶿一-鿿豈-﫿︐-︟︰-﹏＀-￯'
 SPACE_BETWEEN_CJK = re.compile(rf'(?<=[{CJK}])[ \t]+(?=[{CJK}])')

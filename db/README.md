@@ -32,11 +32,12 @@ only their own stats).
 3. **SQL editor** → run `db/schema.sql`.
 4. `python3 work/export_words.py`, then run the generated `db/words_seed.sql` in the SQL editor.
 5. **Project Settings → API**: copy the **Project URL** and **anon public** key into
-   `supabase-config.js` (copy `supabase-config.example.js` first — it's git-ignored).
-6. Serve the site over **http(s)**, not `file://` (auth/CORS need a real origin):
+   `html/supabase-config.js` (copy `html/supabase-config.example.js` first — it's git-ignored).
+6. Serve the site over **http(s)**, not `file://` (auth/CORS need a real origin). The
+   site lives in `html/`, so serve that directory:
 
    ```sh
-   python3 -m http.server 8000        # then open http://localhost:8000/
+   python3 -m http.server -d html 8000    # then open http://localhost:8000/
    ```
 
    …or deploy the static files to any static host (GitHub Pages, Netlify, …).

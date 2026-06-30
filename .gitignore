@@ -1,6 +1,6 @@
-# Local Supabase credentials (copy supabase-config.example.js → supabase-config.js).
+# Local Supabase credentials (copy html/supabase-config.example.js → html/supabase-config.js).
 # The anon key is public-safe, but keep each user's project ref out of git.
-supabase-config.js
+html/supabase-config.js
 
 # Python bytecode cache (work/export_words.py imports work/render.py)
 __pycache__/

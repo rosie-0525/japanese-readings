@@ -2,7 +2,7 @@
 
 Detailed rules behind `SKILL.md`. Read this before writing content.
 
-Pages are authored as JSON in `data/` (schema in `data/README.md`) and rendered to HTML by
+Pages are authored as JSON in `data/pages/` (schema in `data/README.md`) and rendered to HTML by
 `work/render.py`. The HTML snippets below show what the renderer **emits**; when authoring,
 put the content into the corresponding JSON fields (e.g. furigana as `{base, ruby}` tokens,
 not literal `<ruby>` tags). The content rules here apply regardless of format.
@@ -116,4 +116,4 @@ furigana in ①, so a word earns a row only when its *meaning* cannot be guessed
   (`.toc-num` / `.toc-ja` Japanese title / `.toc-zh` one-line Chinese summary).
 - Not-yet-done chapters live as `.future-chip`s in the 待补充 block; remove a chip when its
   chapter is completed.
-- Chapter order follows `extracted/README.txt` (一…十八 + 附録).
+- Chapter order follows `data/ocr/README.txt` (一…十八 + 附録).

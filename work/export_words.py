@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # Generate db/words_seed.sql — the canonical catalog of every practiceable word,
-# derived from data/ch*.json via render.build_vocab_bank (the same deck the pages
-# embed). Import the output in the Supabase SQL editor AFTER running db/schema.sql.
+# derived from data/pages/ch*.json via render.build_vocab_bank (the same deck the
+# pages embed). Import the output in the Supabase SQL editor AFTER running db/schema.sql.
 #
 #     python3 work/export_words.py        # run from the repo root
 #

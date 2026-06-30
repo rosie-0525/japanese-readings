@@ -6,7 +6,7 @@ Furigana and 白文 OCR correction are NOT done here — that needs human/model 
 
 Usage:
     python3 normalize.py < snippet.txt
-    sed -n '17,21p' extracted/01_公案小説.txt | python3 normalize.py
+    sed -n '17,21p' data/ocr/01_公案小説.txt | python3 normalize.py
 """
 import re
 import sys

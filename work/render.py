@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-# Render the bilingual study pages from data/*.json.
+# Render the bilingual study pages from data/pages/*.json.
 #
-# data/*.json is the SOURCE OF TRUTH; this script generates the static HTML
-# (ch<NN>-<M>-<slug>.html + index.html) from it. It is the inverse of
+# data/pages/*.json is the SOURCE OF TRUTH; this script generates the static HTML
+# under html/ (ch<NN>-<M>-<slug>.html + index.html) from it. It is the inverse of
 # work/extract_data.py, which re-derives the JSON and so doubles as a round-trip
 # check (render -> extract -> the data should come back unchanged).
 #
 #     python3 work/render.py        # run from the repo root
 #
-# Output: index.html and one ch<NN>-<M>-<slug>.html per data/ch*.json. The markup
+# Output: html/index.html and one html/ch<NN>-<M>-<slug>.html per data/pages/ch*.json. The markup
 # (CSS, section skeleton) comes from the templates in the japanese-study-page
 # skill: template.html (chapter pages) and index-template.html (the TOC).
 #
@@ -16,7 +16,8 @@
 import os, re, glob, json, html
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA = os.path.join(ROOT, 'data')
+DATA = os.path.join(ROOT, 'data', 'pages')
+HTML = os.path.join(ROOT, 'html')
 SKILL = os.path.join(ROOT, '.claude', 'skills', 'japanese-study-page')
 PAGE_TEMPLATE = os.path.join(SKILL, 'template.html')
 INDEX_TEMPLATE = os.path.join(SKILL, 'index-template.html')
@@ -239,7 +240,7 @@ def read(path):
 
 
 def write(name, text):
-    with open(os.path.join(ROOT, name), 'w', encoding='utf-8') as f:
+    with open(os.path.join(HTML, name), 'w', encoding='utf-8') as f:
         f.write(text)
 
 
@@ -249,6 +250,7 @@ def load(name):
 
 
 def main():
+    os.makedirs(HTML, exist_ok=True)
     page_tpl = read(PAGE_TEMPLATE)
     index_tpl = read(INDEX_TEMPLATE)
 

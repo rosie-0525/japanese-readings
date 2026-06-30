@@ -1,16 +1,16 @@
 ---
 name: japanese-study-page
-description: Generate bilingual Japanese study-page HTML from passages of the scanned book 荘司格一『中国の公案小説』 (source text in extracted/NN_*.txt). Pages are authored as JSON in data/ and rendered to HTML by work/render.py. Use when converting book passages into the established furigana + Chinese-translation + vocabulary + grammar study format, adding new chapter/passage pages (chNN-M-slug), or updating the study index. Output matches the existing ch01-*.html pages.
+description: Generate bilingual Japanese study-page HTML from passages of the scanned book 荘司格一『中国の公案小説』 (source text in data/ocr/NN_*.txt). Pages are authored as JSON in data/pages/ and rendered to HTML by work/render.py. Use when converting book passages into the established furigana + Chinese-translation + vocabulary + grammar study format, adding new chapter/passage pages (chNN-M-slug), or updating the study index. Output matches the existing html/ch01-*.html pages.
 ---
 
 # Japanese study-page generator
 
-Turn a passage of `extracted/NN_<title>.txt` into a self-contained bilingual study
-page that matches the existing `ch01-*.html` pages.
+Turn a passage of `data/ocr/NN_<title>.txt` into a self-contained bilingual study
+page that matches the existing `html/ch01-*.html` pages.
 
-**`data/*.json` is the source of truth; the HTML is generated.** You author the
-content as JSON under `data/`, then run `work/render.py` to produce the static
-`chNN-M-slug.html` + `index.html` in the **project root**. Never hand-edit the
+**`data/pages/*.json` is the source of truth; the HTML is generated.** You author the
+content as JSON under `data/pages/`, then run `work/render.py` to produce the static
+`chNN-M-slug.html` + `index.html` in **`html/`**. Never hand-edit the
 generated HTML — edit the JSON and re-render. The JSON schema is in
 `data/README.md`; the markup/CSS lives in `template.html` + `index-template.html`
 (this folder) and is applied by the renderer. Detailed content conventions are in
@@ -22,11 +22,11 @@ OCR-correction policy, vocab/grammar style, reading gotchas).
 - "Update / rebuild the index".
 
 ## Inputs & layout
-- Source: `extracted/NN_<title>.txt` — clean Japanese prose, **vertical-form punctuation**
+- Source: `data/ocr/NN_<title>.txt` — clean Japanese prose, **vertical-form punctuation**
   (`︑ ︒ ﹁ ﹂ ﹃ ﹄ ︵ ︶`), `〔PDF p.N〕` markers, embedded **classical-Chinese (白文) quotes
   with OCR errors**.
-- Output you author: `data/ch<NN>-<M>-<slug>.json` (one per page) + `data/index.json` (TOC).
-- Schema: `data/README.md`. Examples to imitate: `data/ch01-1-teigi-rojin.json` … `ch01-5…json`.
+- Output you author: `data/pages/ch<NN>-<M>-<slug>.json` (one per page) + `data/pages/index.json` (TOC).
+- Schema: `data/README.md`. Examples to imitate: `data/pages/ch01-1-teigi-rojin.json` … `ch01-5…json`.
 - Naming: `ch<NN>-<M>-<short-romaji-slug>` (NN = chapter ordinal, M = passage number); the
   JSON `filename` is the same stem + `.html`.
 - The renderer turns the data into markup — you do **not** write `<ruby>`, tables, nav `<a>`
@@ -34,14 +34,14 @@ OCR-correction policy, vocab/grammar style, reading gotchas).
 
 ## Process
 
-1. **Read the chapter file** `extracted/NN_*.txt`. Split it into passages at natural
+1. **Read the chapter file** `data/ocr/NN_*.txt`. Split it into passages at natural
    topic breaks — aim for ~1–3 source paragraphs each, comparable in size to existing
    pages; a passage may include one 白文 block quote. List the passages (lines → slug → title)
    before generating, so prev/next wiring is known.
 
-2. **Create the page JSON** `data/ch<NN>-<M>-<slug>.json` following the `data/README.md`
+2. **Create the page JSON** `data/pages/ch<NN>-<M>-<slug>.json` following the `data/README.md`
    schema (`filename, slug, chapter, section, page_title, h1, sub, nav, original,
-   translation, vocab, grammar, notes, footer`). Copy a finished `data/ch01-*.json` as a
+   translation, vocab, grammar, notes, footer`). Copy a finished `data/pages/ch01-*.json` as a
    shape reference. Fill the fields per steps 3–8.
 
 3. **① 日语原文** → the `original` blocks (an ordered list of `paragraph`/`quote` blocks):
@@ -80,17 +80,17 @@ OCR-correction policy, vocab/grammar style, reading gotchas).
    `← 上一篇：<title>`). `footer` is the list of `<footer>` lines:
    `第<N>章 … · 第<M>節／全<总>節 ｜ …` and `出典：荘司格一『中国の公案小説』（研文出版, 1988）`.
 
-9. **Update `data/index.json`** — add the page to its chapter's `sections`
+9. **Update `data/pages/index.json`** — add the page to its chapter's `sections`
    (`{num, href, title_ja, summary_zh}`). When a chapter is finished, give it a `chapters[]`
    entry (`head`, `note` `全 M 节 · 已完成 ✅`, `status: "done"`, its `sections`) and remove its
    `future_chapters[]` placeholder.
 
 10. **Render + verify** (from the project root):
-    - `python3 work/render.py` — writes the HTML from `data/`.
-    - `python3 .claude/skills/japanese-study-page/scripts/check.py` — must report: no residual
+    - `python3 work/render.py` — writes the HTML from `data/pages/` into `html/`.
+    - `python3 .claude/skills/japanese-study-page/scripts/check.py html` — must report: no residual
       vertical glyphs, all internal links resolve, `<ruby>`/`<rt>` balanced. (Old OCR forms
       legitimately appear inside the `底本「X」→「Y」` notes — that's expected.)
-    - Optional round-trip sanity check: `python3 work/extract_data.py` should leave `data/`
+    - Optional round-trip sanity check: `python3 work/extract_data.py` should leave `data/pages/`
       unchanged (the renderer and extractor are inverses).
 
 ## Tips

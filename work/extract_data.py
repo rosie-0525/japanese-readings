@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 # Extract the content of the bilingual study pages into structured JSON.
 #
-# The HTML pages (ch<NN>-<M>-<slug>.html + index.html) are the source of truth;
-# this script DERIVES a machine-readable record under data/. Re-run it after
-# adding/editing pages to keep data/ in sync:
+# The HTML pages under html/ (ch<NN>-<M>-<slug>.html + index.html) are the source
+# of truth; this script DERIVES a machine-readable record under data/pages/. Re-run
+# it after adding/editing pages to keep data/pages/ in sync:
 #
 #     python3 work/extract_data.py
 #
-# Output: data/index.json (book meta + TOC) and data/ch<NN>-<M>-<slug>.json
+# Output: data/pages/index.json (book meta + TOC) and data/pages/ch<NN>-<M>-<slug>.json
 # (one per page). See data/README.md for the schema.
 #
 # Parsing relies only on the stable template structure shared by every page;
@@ -16,7 +16,8 @@ import os, re, glob, json
 import lxml.html as H
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA = os.path.join(ROOT, 'data')
+DATA = os.path.join(ROOT, 'data', 'pages')
+HTML = os.path.join(ROOT, 'html')
 
 
 # ---- small helpers ---------------------------------------------------------
@@ -326,11 +327,11 @@ def write(name, obj):
 def main():
     os.makedirs(DATA, exist_ok=True)
 
-    idx = parse_index(os.path.join(ROOT, 'index.html'))
+    idx = parse_index(os.path.join(HTML, 'index.html'))
     write('index.json', idx)
     print(f"index.json          chapters={len(idx['chapters'])} future={len(idx['future_chapters'])}")
 
-    for path in sorted(glob.glob(os.path.join(ROOT, 'ch*.html'))):
+    for path in sorted(glob.glob(os.path.join(HTML, 'ch*.html'))):
         page = parse_page(path)
         write(page['slug'] + '.json', page)
         nq = sum(1 for b in page['original'] if b['type'] == 'quote')

@@ -1,10 +1,18 @@
-# `data/` — source content of the study pages
+# `data/` — processed book data
 
-Machine-readable content of the bilingual study pages — 原文 furigana, 汉语翻译,
-語彙注釈, 文法分析, 资料补注, and the TOC — decoupled from the CSS/markup.
+Two stages of processed data, separated into subdirectories:
 
-**`data/*.json` is the source of truth.** Edit the JSON here, then render the
-HTML from it; don't hand-edit the generated `../ch*.html` / `../index.html`.
+| subdir | what | provenance |
+|--------|------|------------|
+| **`ocr/`**   | raw OCR text of the book, one `NN_<title>.txt` per chapter (vertical-form punctuation, `〔PDF p.N〕` markers, embedded 白文 quotes) | extracted from `../source/book.pdf` by `work/build.py` (one-time) |
+| **`pages/`** | the authored, machine-readable content of the study pages — 原文 furigana, 汉语翻译, 語彙注釈, 文法分析, 资料补注, and the TOC — decoupled from the CSS/markup | hand-authored / enriched from `ocr/`; **source of truth** for the rendered site |
+
+The pipeline is `source/ → data/ocr/ → data/pages/ → html/`. This README documents
+the `pages/` schema (the rest of `data/` is plain text). The renderer in `work/`
+turns `pages/` into the static site under `../html/`.
+
+**`data/pages/*.json` is the source of truth.** Edit the JSON here, then render the
+HTML from it; don't hand-edit the generated `../html/ch*.html` / `../html/index.html`.
 
 ## Render
 
@@ -12,8 +20,8 @@ HTML from it; don't hand-edit the generated `../ch*.html` / `../index.html`.
 python3 work/render.py            # run from the repo root
 ```
 
-`render.py` reads each `data/ch*.json` + `data/index.json` and writes the
-self-contained `../ch*.html` + `../index.html`, reusing the markup templates in
+`render.py` reads each `data/pages/ch*.json` + `data/pages/index.json` and writes the
+self-contained `../html/ch*.html` + `../html/index.html`, reusing the markup templates in
 `.claude/skills/japanese-study-page/` (`template.html` for pages,
 `index-template.html` for the TOC). It prints a one-line per-file summary and
 needs only the Python stdlib.
@@ -35,18 +43,19 @@ from the same bank; re-run it when lesson content changes.
 ## Verify / re-import
 
 ```sh
-python3 work/extract_data.py      # re-derive data/ from the HTML
+python3 work/extract_data.py      # re-derive data/pages/ from the HTML in html/
 ```
 
-`extract_data.py` is the inverse of the renderer: it parses `ch*.html` +
-`index.html` back into `data/<name>.json` (needs `lxml`). Use it to **import
-legacy hand-authored HTML** into `data/`, or as a **round-trip check** — after
-`render.py`, re-running it should leave `data/` byte-for-byte unchanged.
+`extract_data.py` is the inverse of the renderer: it parses `../html/ch*.html` +
+`../html/index.html` back into `data/pages/<name>.json` (needs `lxml`). Use it to **import
+legacy hand-authored HTML** into `data/pages/`, or as a **round-trip check** — after
+`render.py`, re-running it should leave `data/pages/` byte-for-byte unchanged.
 
 ## Files
 
-- `index.json` — book metadata + table of contents.
-- `ch<NN>-<M>-<slug>.json` — one per study page (currently `ch01-1` … `ch01-5`).
+- `ocr/NN_<title>.txt` — raw OCR text, one per book chapter (+ `ocr/README.txt`).
+- `pages/index.json` — book metadata + table of contents.
+- `pages/ch<NN>-<M>-<slug>.json` — one per study page (currently `ch01-1` … `ch02-15`).
 
 ## Per-page schema (`ch<NN>-<M>-<slug>.json`)
 
