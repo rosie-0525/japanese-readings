@@ -486,28 +486,23 @@
     const bar = $('auth-bar'); if (!bar) return;
     if (!cfgOK) { bar.innerHTML = '<span class="ab-msg">未配置数据库：把 supabase-config.example.js 复制为 supabase-config.js 并填入项目信息</span>'; return; }
     if (user) {
-      bar.innerHTML = '<span class="ab-user">👤 ' + esc((user.email || '').replace(/@example\.com$/, '')) + '</span><button class="auth-btn ghost" id="ab-logout" type="button">退出</button>';
+      bar.innerHTML = '<span class="ab-user">👤 ' + esc(user.email) + '</span><button class="auth-btn ghost" id="ab-logout" type="button">退出</button>';
       $('ab-logout').addEventListener('click', () => sb.auth.signOut());
     } else {
       bar.innerHTML =
-        '<input id="ab-user" type="text" placeholder="用户名" autocomplete="username" autocapitalize="none" spellcheck="false">'
+        '<input id="ab-email" type="email" placeholder="邮箱" autocomplete="username">'
         + '<input id="ab-pass" type="password" placeholder="密码" autocomplete="current-password">'
         + '<button class="auth-btn" id="ab-login" type="button">登录</button>'
         + '<button class="auth-btn ghost" id="ab-signup" type="button">注册</button>'
         + '<span class="ab-msg" id="ab-msg"></span>';
-      const uname = () => $('ab-user').value.trim().toLowerCase(), pass = () => $('ab-pass').value, msg = t => { $('ab-msg').textContent = t || ''; };
-      // Supabase auth is email-based; we synthesize an email from the username.
-      const emailOf = u => u + '@example.com';
-      const badName = u => !/^[a-z0-9._-]+$/.test(u);
+      const email = () => $('ab-email').value.trim(), pass = () => $('ab-pass').value, msg = t => { $('ab-msg').textContent = t || ''; };
       $('ab-login').addEventListener('click', async () => {
-        const u = uname(); if (badName(u)) { msg('用户名只能用字母、数字、. _ -'); return; }
-        msg('登录中…'); const { error } = await sb.auth.signInWithPassword({ email: emailOf(u), password: pass() });
+        msg('登录中…'); const { error } = await sb.auth.signInWithPassword({ email: email(), password: pass() });
         if (error) msg('登录失败：' + error.message);
       });
       $('ab-signup').addEventListener('click', async () => {
-        const u = uname(); if (badName(u)) { msg('用户名只能用字母、数字、. _ -'); return; }
-        msg('注册中…'); const { error } = await sb.auth.signUp({ email: emailOf(u), password: pass() });
-        msg(error ? ('注册失败：' + error.message) : '注册成功，请直接登录。');
+        msg('注册中…'); const { error } = await sb.auth.signUp({ email: email(), password: pass() });
+        msg(error ? ('注册失败：' + error.message) : '注册成功；若开启了邮箱验证，请查收邮件后再登录。');
       });
     }
   }
@@ -527,17 +522,21 @@
   }
   async function fetchHardDeck() {
     if (!sb || !user) return [];
-    const { data, error } = await sb.from('user_word_stats')
-      .select('slug,word,reading,meaning,type,seen,correct,score').gt('score', 0)
-      .order('score', { ascending: false }).limit(80);
-    if (error || !data) return [];
-    return data.map(r => ({ w: r.word, r: r.reading, m: r.meaning, t: r.type, slug: r.slug, score: r.score, seen: r.seen }));
+    try {
+      const { data, error } = await sb.from('user_word_stats')
+        .select('slug,word,reading,meaning,type,seen,correct,score').gt('score', 0)
+        .order('score', { ascending: false }).limit(80);
+      if (error || !data) return [];
+      return data.map(r => ({ w: r.word, r: r.reading, m: r.meaning, t: r.type, slug: r.slug, score: r.score, seen: r.seen }));
+    } catch (e) { return []; }
   }
   async function fetchPool() {
     if (!sb) return [];
-    const { data, error } = await sb.from('words').select('word,reading,meaning,type').limit(800);
-    if (error || !data) return [];
-    return data.map(r => ({ w: r.word, r: r.reading, m: r.meaning, t: r.type }));
+    try {
+      const { data, error } = await sb.from('words').select('word,reading,meaning,type').limit(800);
+      if (error || !data) return [];
+      return data.map(r => ({ w: r.word, r: r.reading, m: r.meaning, t: r.type }));
+    } catch (e) { return []; }
   }
   async function updateCount() {
     const el = $('rv-count'); if (!el) return;
@@ -546,25 +545,38 @@
     el.textContent = count ? ('当前难词 ' + count + ' 个') : '还没有错题记录——先到课文页练习。';
   }
 
-  if ($('rv-start')) $('rv-start').addEventListener('click', async () => {
+  async function startReview() {
     if (!sb || !user) return;
     stageEl.innerHTML = '<div class="quiz-summary">加载中…</div>';
-    const deck = await fetchHardDeck();
-    if (!deck.length) {
-      stageEl.innerHTML = '<div class="quiz-summary">还没有错题记录。到任意课文页做「🎴 单词练习」后，这里会汇集你的难词。</div>';
-      return;
+    try {
+      const deck = await Promise.race([
+        fetchHardDeck(),
+        new Promise((_, rej) => setTimeout(() => rej(new Error('加载超时')), 8000)),
+      ]);
+      if (!deck.length) {
+        stageEl.innerHTML = '<div class="quiz-summary">还没有错题记录。到任意课文页做「🎴 单词练习」后，这里会汇集你的难词。</div>';
+        return;
+      }
+      let pool = await fetchPool(); if (!pool.length) pool = deck;
+      const statsMap = {}; deck.forEach(c => statsMap[c.w] = { score: c.score, seen: c.seen });
+      makeQuiz(stageEl, { deck, pool, statsOf: c => statsMap[c.w], size: 15, record: recordAnswer, onAnswer: updateCount, showSrc: true }).start();
+    } catch (e) {
+      stageEl.innerHTML = '<div class="quiz-summary">加载失败：' + esc(e.message)
+        + '　<button class="vp-btn" type="button" id="rv-retry">重试</button></div>';
+      const r = $('rv-retry'); if (r) r.addEventListener('click', startReview);
     }
-    let pool = await fetchPool(); if (!pool.length) pool = deck;
-    const statsMap = {}; deck.forEach(c => statsMap[c.w] = { score: c.score, seen: c.seen });
-    makeQuiz(stageEl, { deck, pool, statsOf: c => statsMap[c.w], size: 15, record: recordAnswer, onAnswer: updateCount, showSrc: true }).start();
-  });
+  }
+  if ($('rv-start')) $('rv-start').addEventListener('click', startReview);
   if ($('rv-reset')) $('rv-reset').addEventListener('click', async () => {
     if (!sb || !user) return; if (!confirm('清除你的全部练习记录？')) return;
     await sb.from('user_word_stats').delete().eq('user_id', user.id);
     if (stageEl) stageEl.innerHTML = ''; updateCount();
   });
 
-  async function syncAuth(session) { user = session ? session.user : null; renderAuth(); applyGate(); await updateCount(); }
+  // Not async on purpose: updateCount() runs a Supabase query, and onAuthStateChange fires
+  // while GoTrue holds its navigator.locks auth lock — awaiting here would deadlock (加载中…
+  // forever). Defer the read to a fresh task so it runs after the lock is released.
+  function syncAuth(session) { user = session ? session.user : null; renderAuth(); applyGate(); setTimeout(updateCount, 0); }
   renderAuth(); applyGate();
   if (sb) {
     sb.auth.getSession().then(({ data }) => syncAuth(data.session));

@@ -544,9 +544,11 @@ const PAGE_SLUG = "ch01-4-shijo-kahan";
   }
   async function fetchSlugStats() {
     if (!sb || !user) return {};
-    const { data, error } = await sb.from('user_word_stats').select('word,score,seen,correct').eq('slug', PAGE_SLUG);
-    if (error) return {};
-    const m = {}; (data || []).forEach(r => m[r.word] = r); return m;
+    try {
+      const { data, error } = await sb.from('user_word_stats').select('word,score,seen,correct').eq('slug', PAGE_SLUG);
+      if (error) return {};
+      const m = {}; (data || []).forEach(r => m[r.word] = r); return m;
+    } catch (e) { return {}; }   // stats only weight selection — never block loading
   }
   async function refreshHard() {
     const slot = $('user-hard'); if (!slot) return;
@@ -568,8 +570,17 @@ const PAGE_SLUG = "ch01-4-shijo-kahan";
   async function startPractice() {
     if (!sb || !user) return;
     stageEl.innerHTML = '<div class="quiz-summary">加载中…</div>';
-    const statsMap = await fetchSlugStats();
-    makeQuiz(stageEl, { deck: bank, pool: bank, statsOf: c => statsMap[c.w], size: 12, record: recordAnswer, onAnswer: refreshHard }).start();
+    try {
+      const statsMap = await Promise.race([
+        fetchSlugStats(),
+        new Promise((_, rej) => setTimeout(() => rej(new Error('加载超时')), 8000)),
+      ]);
+      makeQuiz(stageEl, { deck: bank, pool: bank, statsOf: c => statsMap[c.w], size: 12, record: recordAnswer, onAnswer: refreshHard }).start();
+    } catch (e) {
+      stageEl.innerHTML = '<div class="quiz-summary">加载失败：' + esc(e.message)
+        + '　<button class="vp-btn" type="button" id="vp-retry">重试</button></div>';
+      const r = $('vp-retry'); if (r) r.addEventListener('click', startPractice);
+    }
   }
 
   // ---------- one-time legacy localStorage import ----------
@@ -598,7 +609,11 @@ const PAGE_SLUG = "ch01-4-shijo-kahan";
     if (stageEl) stageEl.innerHTML = ''; refreshHard();
   });
 
-  async function syncAuth(session) { user = session ? session.user : null; renderAuth(); applyGate(); await refreshHard(); }
+  // syncAuth is intentionally NOT async: refreshHard() issues a Supabase query, and
+  // onAuthStateChange fires while GoTrue holds its navigator.locks auth lock. Awaiting a
+  // query here would queue on that lock and never resolve (deadlock → 加载中… forever).
+  // setTimeout defers the read to a fresh task, after the callback returns and the lock frees.
+  function syncAuth(session) { user = session ? session.user : null; renderAuth(); applyGate(); setTimeout(refreshHard, 0); }
   renderAuth(); applyGate();
   if (sb) {
     sb.auth.getSession().then(({ data }) => syncAuth(data.session));
