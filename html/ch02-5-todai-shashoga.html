@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>日语学习：唐代の名裁判と謝小蛾伝 ·『中国の公案小説』第二章⑤ · 学术日语解析</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #f1efe7;
+            font-family: system-ui, -apple-system, 'Segoe UI', 'Noto Sans CJK JP', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Microsoft YaHei', sans-serif;
+            line-height: 1.65;
+            padding: 2rem 1rem;
+            color: #2b2a26;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            background: #fffef9;
+            border-radius: 32px;
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            padding: 2rem 2rem 2.2rem;
+        }
+        h1 {
+            font-size: 1.9rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            border-left: 6px solid #8b3c2c;
+            padding-left: 1.2rem;
+            margin-bottom: 0.4rem;
+            color: #2d2a23;
+        }
+        .sub {
+            color: #6e6558;
+            margin-bottom: 2rem;
+            font-size: 0.85rem;
+            border-bottom: 1px solid #e2dbcf;
+            padding-bottom: 0.75rem;
+        }
+        .section {
+            margin-bottom: 2.8rem;
+        }
+        .section-title {
+            font-size: 1.35rem;
+            font-weight: 600;
+            background: #f0ece0;
+            display: inline-block;
+            padding: 0.2rem 1.3rem;
+            border-radius: 40px;
+            margin-bottom: 1.2rem;
+            color: #4b3f2f;
+        }
+        .japanese-text {
+            background: #fefaf0;
+            padding: 1.5rem 1.8rem;
+            border-radius: 26px;
+            border: 1px solid #e5ddce;
+            font-size: 1.02rem;
+            line-height: 2.1;
+            font-family: 'Noto Sans CJK JP', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+            margin-bottom: 1rem;
+        }
+        ruby rt {
+            font-size: 0.68rem;
+            color: #b45f2a;
+            font-weight: normal;
+            letter-spacing: 0.02em;
+        }
+        .translation-block {
+            background: #f6f8fc;
+            padding: 1.2rem 1.8rem;
+            border-radius: 22px;
+            border-left: 5px solid #2c6e6b;
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .translation-text {
+            font-size: 1rem;
+            color: #1e3e3c;
+        }
+        .chinese-quote {
+            background: #fef5e6;
+            padding: 1rem 1.6rem;
+            margin: 0.8rem 0;
+            border-left: 4px solid #b47c48;
+            border-radius: 18px;
+            font-size: 0.96rem;
+            color: #2b4b3a;
+            font-family: 'Noto Serif SC', 'STSong', 'SimSun', serif;
+            line-height: 1.75;
+        }
+        .word-table-wrapper {
+            overflow-x: auto;
+            margin: 1.2rem 0 1rem;
+            border-radius: 20px;
+            border: 1px solid #ddd6ca;
+        }
+        .word-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+            background: white;
+        }
+        .word-table th {
+            background: #e7e0d2;
+            padding: 10px 12px;
+            text-align: left;
+            font-weight: 600;
+            color: #2e2b25;
+            border-bottom: 1px solid #cfc6b6;
+        }
+        .word-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #ece3d8;
+            vertical-align: top;
+        }
+        .grammar-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+        }
+        .grammar-card {
+            background: #ffffff;
+            border-radius: 20px;
+            border: 1px solid #e1d8cc;
+            padding: 0.9rem 1.3rem;
+        }
+        .grammar-title {
+            font-weight: 700;
+            font-size: 0.92rem;
+            color: #9b542e;
+            font-family: monospace;
+            background: #faf3e8;
+            display: inline-block;
+            padding: 0.2rem 0.8rem;
+            border-radius: 24px;
+            margin-bottom: 0.5rem;
+        }
+        .grammar-desc {
+            margin-top: 0.25rem;
+            color: #3e3a33;
+            font-size: 0.9rem;
+        }
+        hr {
+            margin: 1.8rem 0 1rem;
+            border: none;
+            border-top: 1px solid #e2d9ce;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.7rem;
+            color: #938c7d;
+            margin-top: 1.5rem;
+        }
+        .small-note {
+            font-size: 0.76rem;
+            color: #7b6e5c;
+            margin-top: 0.4rem;
+        }
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .nav-bar.top { margin-bottom: 1.6rem; }
+        .nav-bar.bottom { margin-top: 1.8rem; }
+        .nav-link {
+            text-decoration: none;
+            color: #8b3c2c;
+            background: #f0ece0;
+            padding: 0.4rem 1.05rem;
+            border-radius: 22px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            white-space: nowrap;
+            transition: background 0.2s;
+        }
+        .nav-link:hover { background: #e3dccb; }
+        .nav-link.home { background: #8b3c2c; color: #fdfaf2; }
+        .nav-link.home:hover { background: #76301f; }
+        .nav-link.disabled {
+            color: #bcb3a1;
+            background: #f5f2ea;
+            pointer-events: none;
+        }
+        .content-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.8rem 1.6rem;
+            align-items: flex-start;
+            margin-bottom: 2.8rem;
+        }
+        .content-grid > .section { flex: 1 1 100%; order: 3; margin-bottom: 0; }
+        .content-grid > .section.text-col { flex: 1 1 58%; order: 1; min-width: 0; }
+        .content-grid > .section.vocab-col { flex: 0 0 36%; order: 2; min-width: 0; }
+        .content-grid .word-table { font-size: 0.82rem; }
+        .content-grid .word-table th,
+        .content-grid .word-table td { padding: 8px 10px; }
+        @media (max-width: 900px) {
+            .content-grid { display: block; }
+            .content-grid > .section { margin-bottom: 2.8rem; }
+        }
+        @media (max-width: 680px) {
+            .container { padding: 1.2rem; }
+            .japanese-text { padding: 1rem; font-size: 0.92rem; }
+            .section-title { font-size: 1.2rem; }
+        }
+        /* --- 你的难词 (personalized hard-word slot atop ③) + 单词练习 (MC self-test) --- */
+        .user-hard {
+            background: #fbeee6;
+            border: 1px solid #e6c9b8;
+            border-radius: 16px;
+            padding: 0.7rem 0.95rem;
+            margin-bottom: 0.95rem;
+        }
+        .user-hard .uh-title { font-weight: 700; color: #8b3c2c; font-size: 0.82rem; margin-bottom: 0.45rem; }
+        .user-hard .uh-list { list-style: none; display: flex; flex-direction: column; gap: 0.3rem; }
+        .user-hard .uh-list li { font-size: 0.82rem; color: #3e3a33; }
+        .user-hard .uh-r { color: #b45f2a; font-size: 0.76rem; margin: 0 0.3rem; }
+        .user-hard .uh-miss { color: #9b6a57; font-size: 0.72rem; }
+        .vp-intro { font-size: 0.85rem; color: #5c5343; margin-bottom: 1rem; }
+        .vp-intro b { color: #8b3c2c; }
+        .vp-controls { display: flex; align-items: center; gap: 1.3rem; margin-top: 1rem; flex-wrap: wrap; }
+        .vp-btn {
+            background: #8b3c2c; color: #fdfaf2; border: none; cursor: pointer;
+            padding: 0.5rem 1.5rem; border-radius: 22px; font-size: 0.9rem; font-weight: 600;
+            font-family: inherit; transition: background 0.2s;
+        }
+        .vp-btn:hover { background: #76301f; }
+        .vp-reset { font-size: 0.78rem; color: #9a8f7d; text-decoration: none; cursor: pointer; }
+        .vp-reset:hover { text-decoration: underline; }
+        .quiz-card {
+            background: #fffef9; border: 1px solid #e1d8cc; border-radius: 20px;
+            padding: 1.3rem 1.5rem; max-width: 560px;
+        }
+        .quiz-progress { font-size: 0.76rem; color: #7b6e5c; margin-bottom: 0.6rem; }
+        .quiz-q { font-size: 1.7rem; font-weight: 600; color: #2d2a23; line-height: 1.3; }
+        .quiz-q .qhint { font-size: 0.95rem; color: #b45f2a; font-weight: normal; margin-left: 0.55rem; }
+        .quiz-ask { font-size: 0.8rem; color: #6e6558; margin: 0.25rem 0 0.95rem; }
+        .quiz-opts { display: flex; flex-direction: column; gap: 0.55rem; }
+        .quiz-opt {
+            text-align: left; background: #f6f3ea; border: 1px solid #e1d8cc; border-radius: 14px;
+            padding: 0.6rem 1rem; font-size: 0.95rem; font-family: inherit; color: #2b2a26;
+            cursor: pointer; transition: background 0.15s, border-color 0.15s;
+        }
+        .quiz-opt:hover:not(:disabled) { background: #efeadd; }
+        .quiz-opt:disabled { cursor: default; }
+        .quiz-opt.correct { background: #e3f0e2; border-color: #8fbf8a; color: #1f5d2a; }
+        .quiz-opt.wrong { background: #f7e0db; border-color: #d99b8c; color: #8b3c2c; }
+        .quiz-reveal { font-size: 0.82rem; color: #5c5343; margin-top: 0.8rem; min-height: 1.1rem; }
+        .quiz-reveal .qr-r { color: #b45f2a; margin: 0 0.3rem; }
+        .quiz-next { margin-top: 0.95rem; }
+        .quiz-summary { font-size: 0.98rem; color: #2d2a23; }
+        .quiz-summary b { color: #8b3c2c; }
+        .quiz-reveal .qr-err { color: #b0461f; }
+        .user-hard .uh-acc { color: #7b6e5c; font-size: 0.72rem; }
+        /* --- auth bar (Supabase email/password login) + practice gate --- */
+        .auth-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.45rem; justify-content: flex-end; margin-bottom: 1.2rem; font-size: 0.82rem; }
+        .auth-bar input { font-family: inherit; font-size: 0.82rem; padding: 0.35rem 0.6rem; border: 1px solid #d8cdbb; border-radius: 12px; background: #fff; color: #2b2a26; }
+        .auth-bar .ab-user { color: #5c5343; margin-right: 0.3rem; }
+        .auth-bar .ab-msg { color: #b0461f; font-size: 0.76rem; flex-basis: 100%; text-align: right; }
+        .auth-btn { background: #8b3c2c; color: #fdfaf2; border: none; cursor: pointer; padding: 0.35rem 0.95rem; border-radius: 14px; font-size: 0.8rem; font-weight: 600; font-family: inherit; }
+        .auth-btn:hover { background: #76301f; }
+        .auth-btn.ghost { background: #efeadd; color: #6e5a3f; }
+        .auth-btn.ghost:hover { background: #e4dcc9; }
+        .vp-gate { font-size: 0.84rem; color: #9a6a30; background: #fbf3e3; border: 1px solid #ecd9b8; border-radius: 12px; padding: 0.5rem 0.85rem; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>📖 唐代の名裁判と謝小蛾伝</h1>
+    <div class="sub">第二章 公案小説の系譜 · 第5節／全15節 ｜ 日语原文（総ルビ付き）· 汉语翻译 · 单词注释 · 语法分析</div>
+
+    <div class="auth-bar" id="auth-bar"></div>
+
+    <div class="nav-bar top">
+        <a class="nav-link" href="ch02-4-rikucho-soshinki.html">← 上一篇</a>
+        <a class="nav-link home" href="index.html">📖 目录</a>
+        <a class="nav-link" href="ch02-6-sodai-suiou-danroku.html">下一篇 →</a>
+    </div>
+
+    <div class="content-grid">
+    <div class="section text-col">
+        <div class="section-title">📜 日语原文（振り仮名付き）</div>
+        <div class="japanese-text">
+            <ruby>唐代<rt>とうだい</rt></ruby>には、「<ruby>棠陰比事<rt>とういんひじ</rt></ruby>」によってみるに、<ruby>李傑<rt>りけつ</rt></ruby>、<ruby>戴胃<rt>たいい</rt></ruby>、<ruby>杜亜<rt>とあ</rt></ruby>、<ruby>郭正一<rt>かくせいいち</rt></ruby>、<ruby>表均<rt>ひょうきん</rt></ruby>、<ruby>劉崇亀<rt>りゅうすうき</rt></ruby>、<ruby>張行皮<rt>ちょうこうひ</rt></ruby>、<ruby>張驚<rt>ちょうきょう</rt></ruby>、<ruby>閻済美<rt>えんせいび</rt></ruby>、<ruby>桂賠<rt>けいばい</rt></ruby>、<ruby>拿皐<rt>だこう</rt></ruby>、<ruby>呂元鷹<rt>りょげんよう</rt></ruby>、<ruby>柳渾<rt>りゅうこん</rt></ruby>、<ruby>江深<rt>こうしん</rt></ruby>、<ruby>蒋常<rt>しょうじょう</rt></ruby>、<ruby>李靖<rt>りせい</rt></ruby>、<ruby>李至遠<rt>りしえん</rt></ruby>、<ruby>表子雲<rt>ひょうしうん</rt></ruby>、<ruby>李済公<rt>りせいこう</rt></ruby>、<ruby>王鍔<rt>おうがく</rt></ruby>、<ruby>李徳裕<rt>りとくゆう</rt></ruby>などの<ruby>名<rt>な</rt></ruby>が<ruby>見<rt>み</rt></ruby>え、それぞれ<ruby>名裁判<rt>めいさいばん</rt></ruby>をおこなったことが<ruby>記<rt>しる</rt></ruby>される。<br><br>
+            <ruby>伝奇小説<rt>でんきしょうせつ</rt></ruby>には<ruby>有名<rt>ゆうめい</rt></ruby>な<ruby>謝小蛾伝<rt>しゃしょうがでん</rt></ruby>がある。これは<ruby>史実<rt>しじつ</rt></ruby>にもとづいたものとされる。「<ruby>新唐書<rt>しんとうじょ</rt></ruby>」<ruby>巻<rt>かん</rt></ruby><ruby>二〇五<rt>にひゃくご</rt></ruby><ruby>列女伝<rt>れつじょでん</rt></ruby>に<ruby>段居貞<rt>だんきょてい</rt></ruby>の<ruby>妻<rt>つま</rt></ruby><ruby>謝<rt>しゃ</rt></ruby>として、<ruby>字<rt>あざな</rt></ruby>を<ruby>小蛾<rt>しょうが</rt></ruby>といい、<ruby>夫<rt>おっと</rt></ruby>と<ruby>父<rt>ちち</rt></ruby>とともに<ruby>商売<rt>しょうばい</rt></ruby>に<ruby>出<rt>で</rt></ruby>かけて<ruby>盗賊<rt>とうぞく</rt></ruby>に<ruby>殺<rt>ころ</rt></ruby>された。<ruby>小蛾<rt>しょうが</rt></ruby>は<ruby>頭<rt>あたま</rt></ruby>と<ruby>足<rt>あし</rt></ruby>に<ruby>傷<rt>きず</rt></ruby>をうけ<ruby>江<rt>こう</rt></ruby>におちたが<ruby>人<rt>ひと</rt></ruby>に<ruby>救<rt>すく</rt></ruby>われ、<ruby>乞食<rt>こじき</rt></ruby>をしながらゆくと、<ruby>夢<rt>ゆめ</rt></ruby>に<ruby>犯人<rt>はんにん</rt></ruby>の<ruby>名<rt>な</rt></ruby>を<ruby>示<rt>しめ</rt></ruby>す<ruby>十二文字<rt>じゅうにもじ</rt></ruby>を<ruby>見<rt>み</rt></ruby>る。その<ruby>謎<rt>なぞ</rt></ruby>をたずねたずねてゆくが<ruby>解<rt>と</rt></ruby>いてくれる<ruby>人<rt>ひと</rt></ruby>がいない。<ruby>李公佐<rt>りこうさ</rt></ruby>に<ruby>会<rt>あ</rt></ruby>うと、<ruby>申蘭<rt>しんらん</rt></ruby>・<ruby>申春<rt>しんしゅん</rt></ruby>というものだ、と<ruby>解<rt>と</rt></ruby>く。そこで<ruby>男装<rt>だんそう</rt></ruby>して<ruby>犯人<rt>はんにん</rt></ruby>をさがす。ついにさがしあて<ruby>下僕<rt>げぼく</rt></ruby>として<ruby>住<rt>す</rt></ruby>みこみ、<ruby>二人<rt>ふたり</rt></ruby>が<ruby>酔<rt>よ</rt></ruby>うたところを<ruby>見<rt>み</rt></ruby>はからって<ruby>殺<rt>ころ</rt></ruby>し、<ruby>大声<rt>おおごえ</rt></ruby>で<ruby>賊<rt>ぞく</rt></ruby>をとらえた、と<ruby>呼<rt>よ</rt></ruby>び、<ruby>仲間<rt>なかま</rt></ruby>を<ruby>全部<rt>ぜんぶ</rt></ruby>とらえた。のち<ruby>佛道<rt>ぶつどう</rt></ruby>にはいり、<ruby>垢衣<rt>こうい</rt></ruby><ruby>糖飯<rt>とうはん</rt></ruby>で<ruby>終<rt>お</rt></ruby>えた。<br><br>
+            という。<ruby>小説<rt>しょうせつ</rt></ruby>はほぼこれを<ruby>襲<rt>おそ</rt></ruby>うが、<ruby>犯人<rt>はんにん</rt></ruby>の<ruby>名<rt>な</rt></ruby>を<ruby>暗示<rt>あんじ</rt></ruby>する<ruby>夢<rt>ゆめ</rt></ruby>のなかの<ruby>語<rt>ご</rt></ruby>を、<ruby>殺我者<rt>さつがしゃ</rt></ruby>、<ruby>車中猥<rt>しゃちゅうわい</rt></ruby>、<ruby>門東草<rt>もんとうそう</rt></ruby>、<ruby>及<rt>およ</rt></ruby>び<ruby>殺我者<rt>さつがしゃ</rt></ruby>、<ruby>禾中走<rt>かちゅうそう</rt></ruby>、<ruby>一日夫<rt>いちじつふ</rt></ruby>、とする。<ruby>申蘭<rt>しんらん</rt></ruby>・<ruby>申春<rt>しんしゅん</rt></ruby>と<ruby>解<rt>と</rt></ruby>くわけも<ruby>述<rt>の</rt></ruby>べられるし、<ruby>作者<rt>さくしゃ</rt></ruby>である<ruby>李公佐<rt>りこうさ</rt></ruby>に<ruby>再<rt>ふたた</rt></ruby>び<ruby>会<rt>あ</rt></ruby>い、<ruby>仇<rt>あだ</rt></ruby>を<ruby>討<rt>う</rt></ruby>ったことを<ruby>報告<rt>ほうこく</rt></ruby>してお<ruby>礼<rt>れい</rt></ruby>をのべる。<ruby>李公佐<rt>りこうさ</rt></ruby>も<ruby>感慨<rt>かんがい</rt></ruby>をのべ、<ruby>最後<rt>さいご</rt></ruby>に、
+            <div class="chinese-quote">
+                余備詳前事、発明隠文、暗与冥合、符於人心、知善不録、非春秋之義也、故作伝以旌美之。
+            </div>
+            とむすぶ。<ruby>列女<rt>れつじょ</rt></ruby>と<ruby>賞賛<rt>しょうさん</rt></ruby>をうける<ruby>仇討<rt>あだう</rt></ruby>ちの<ruby>挙<rt>きょ</rt></ruby>を<ruby>題材<rt>だいざい</rt></ruby>にとり、<ruby>短篇小説<rt>たんぺんしょうせつ</rt></ruby>に<ruby>仕上<rt>しあ</rt></ruby>げる。<ruby>謎<rt>なぞ</rt></ruby>ときと<ruby>謝小蛾<rt>しゃしょうが</rt></ruby>の<ruby>忍苦<rt>にんく</rt></ruby>のすえに<ruby>本懐<rt>ほんかい</rt></ruby>をとげることに<ruby>重点<rt>じゅうてん</rt></ruby>がおかれる。<br><br>
+            このほか、「<ruby>太平広記<rt>たいへいこうき</rt></ruby>」<ruby>巻<rt>かん</rt></ruby><ruby>一七一<rt>ひゃくななじゅういち</rt></ruby>、<ruby>一七二<rt>ひゃくななじゅうに</rt></ruby>には<ruby>精察<rt>せいさつ</rt></ruby>と<ruby>題<rt>だい</rt></ruby>されてそれぞれ<ruby>十八名<rt>じゅうはちめい</rt></ruby>、<ruby>十二名<rt>じゅうにめい</rt></ruby><ruby>計<rt>けい</rt></ruby><ruby>三十一名<rt>さんじゅういちめい</rt></ruby>の<ruby>透徹<rt>とうてつ</rt></ruby>した<ruby>眼識<rt>がんしき</rt></ruby>によって<ruby>解決<rt>かいけつ</rt></ruby>されるさまざまの<ruby>事件<rt>じけん</rt></ruby>が<ruby>列挙<rt>れっきょ</rt></ruby>される。<ruby>一例<rt>いちれい</rt></ruby>をあげる。<ruby>顔真卿<rt>がんしんけい</rt></ruby>と<ruby>題<rt>だい</rt></ruby>して、
+            <div class="chinese-quote">
+                五原有冤獄、久不決、真卿立弁之、天久旱、及獄決乃雨、郡人呼御史雨。
+            </div>
+            （<ruby>一七二<rt>ひゃくななじゅうに</rt></ruby>、<ruby>出<rt>しゅつ</rt></ruby><ruby>伝載<rt>でんさい</rt></ruby>）<ruby>冤獄<rt>えんごく</rt></ruby>の<ruby>内容<rt>ないよう</rt></ruby>は<ruby>記<rt>しる</rt></ruby>されないが、<ruby>解決<rt>かいけつ</rt></ruby>したところ<ruby>久<rt>ひさ</rt></ruby>しい<ruby>早魃<rt>かんばつ</rt></ruby>であったのが、<ruby>慈雨<rt>じう</rt></ruby>にめぐまれたという。<ruby>人事<rt>じんじ</rt></ruby>と<ruby>天<rt>てん</rt></ruby>が<ruby>呼応<rt>こおう</rt></ruby>しあっていることが<ruby>注目<rt>ちゅうもく</rt></ruby>されるところである。
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">🌐 汉语翻译</div>
+        <div class="translation-block">
+            <div class="translation-text">
+                到了唐代，据《棠阴比事》所载，可见李杰、戴胃、杜亚、郭正一、表均、刘崇龟、张行皮、张惊、阎济美、桂赔、拿皋、吕元鹰、柳浑、江深、蒋常、李靖、李至远、表子云、李济公、王锷、李德裕等人之名，并记载他们各自审理过著名的案件。<br><br>
+                传奇小说中有著名的《谢小蛾传》。此篇被认为依据史实而作。据《新唐书》卷二〇五《列女传》：段居贞之妻谢氏，字小蛾，与丈夫、父亲一同外出经商，遭盗贼杀害。小蛾头、足受伤，坠入江中，幸为人所救；一路乞讨前行时，梦中见到暗示凶手姓名的十二个字。她四处探问这一谜语，却无人能为她解开。及至遇见李公佐，李公佐解道：此乃申兰、申春二人。于是小蛾女扮男装寻找凶手，终于查访到，便充作下仆住进其家，趁二人酒醉之机将其杀死，并高呼‘捉贼’，将同党悉数擒获。后来她皈依佛门，以粗衣粝食终其一生。<br><br>
+                据云如此。小说大体沿袭这一本事，但将梦中暗示凶手姓名的字句写作‘杀我者，车中猥，门东草’以及‘杀我者，禾中走，一日夫’。文中也叙述了将其解为申兰、申春的缘由，并写小蛾再次与作者李公佐相见，向他报告自己已经报仇，表示谢意。李公佐也抒发感慨，最后以下面这段文字作结：
+                <div class="chinese-quote" style="margin: 0.6rem 0; background: #f3efe2;">
+                    余備詳前事、発明隠文、暗与冥合、符於人心、知善不録、非春秋之義也、故作伝以旌美之。
+                </div>
+                以此作结。作者取这桩被誉为‘列女’、备受称道的复仇之举为题材，将其写成短篇小说，重点放在解谜，以及谢小蛾历尽艰辛、终遂夙愿这两点上。<br><br>
+                除此之外，《太平广记》卷一七一、一七二题作‘精察’，分别列举十八人、十二人，共三十一人凭借透彻的眼力所侦破的种种案件。试举一例。题为‘颜真卿’者云：
+                <div class="chinese-quote" style="margin: 0.6rem 0; background: #f3efe2;">
+                    五原有冤獄、久不決、真卿立弁之、天久旱、及獄決乃雨、郡人呼御史雨。
+                </div>
+                （见卷一七二，出《传载》。）冤狱的具体内容虽未记载，但据云案件审结之时，久旱之后忽逢甘霖。人事与天意彼此呼应，正是此处值得注目之处。
+            </div>
+        </div>
+        <div class="small-note">※ 上引李公佐《谢小娥传》结语及《太平广记》卷一七二「精察」颜真卿条诸白文，已据通行本校正 OCR 讹字（详见下「资料补注」OCR 订正条），照录原文不另译。</div>
+    </div>
+
+    <div class="section vocab-col">
+        <div class="section-title">📖 語彙注釈（单词注释）</div>
+        <div class="user-hard" id="user-hard" hidden></div>
+        <div class="word-table-wrapper">
+            <table class="word-table">
+                <thead>
+                    <tr><th>日语词汇</th><th>读音</th><th>中文释义</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>もとづく</td><td>もとづく</td><td>依据、基于（「基づく」）</td></tr>
+                    <tr><td>字</td><td>あざな</td><td>（人的）表字、别号（≠汉语“文字”）</td></tr>
+                    <tr><td>たずねたずねて</td><td>たずねたずねて</td><td>一路反复打听、边问边走（「訪ねる」的重叠形）</td></tr>
+                    <tr><td>見はからう</td><td>みはからう</td><td>看准时机、瞅准空当（「見計らう」）</td></tr>
+                    <tr><td>襲う</td><td>おそう</td><td>此处义为“沿袭、承袭”（非常义“袭击”）</td></tr>
+                    <tr><td>仕上げる</td><td>しあげる</td><td>完成、（写）成（作品）</td></tr>
+                    <tr><td>本懐をとげる</td><td>ほんかいをとげる</td><td>得遂夙愿（「本懐」＝夙愿、本愿；「遂げる」＝实现、达成）</td></tr>
+                    <tr><td>むすぶ</td><td>むすぶ</td><td>（以…）作结、收尾（「結ぶ」）</td></tr>
+                    <tr><td>めぐまれる</td><td>めぐまれる</td><td>蒙受、喜逢（恩泽）；「慈雨にめぐまれる」＝喜逢甘霖（「恵まれる」）</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="small-note">※ 本表仅收录中文读者较难推断的词汇（和语词、文语/语法形式、同形异义词等）；其义可由汉字直接推知的同形词已省略，读音见原文振假名。</div>
+    </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">✍️ 文法分析（句子语法简析）</div>
+        <div class="grammar-list">
+            <div class="grammar-card">
+                <div class="grammar-title">① ～によって…みるに（漢文訓読調）</div>
+                <div class="grammar-desc">「『棠陰比事』によってみるに」——“据《棠阴比事》观之”。「みるに」的「に」为文语顺接助词，相当于“……来看（便见）”。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">② ～が見える／…として…と見える（引用・典据）</div>
+                <div class="grammar-desc">「…などの名が見え」「段居貞の妻謝として…と見える」——“可见……之名／（书中）记作……”。表“见载于某书”，是叙录典籍的惯用语。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">③ 受身（～される・～られる・～われる）</div>
+                <div class="grammar-desc">「名裁判をおこなったことが記される」「盗賊に殺された」「人に救われ」「わけも述べられる」——汉文训读体与学术叙述多用被动，常不译出施动者。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">④ ～(もの)とされる（传闻・评断）</div>
+                <div class="grammar-desc">「史実にもとづいたものとされる」——“被认为是依据史实（而作）的”。是「とする」的被动，表世人／学界的认定。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">⑤ ～ながら（附帯状況）</div>
+                <div class="grammar-desc">「乞食をしながらゆく」——“一边乞讨一边前行”。「～ながら」表两动作同时并行。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">⑥ 連用形の重ね（反復・強調）</div>
+                <div class="grammar-desc">「その謎をたずねたずねてゆく」——动词连用形叠用，表“反复地、不停地（打听）”。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">⑦ 酔うたところを～（ウ音便・文语調）</div>
+                <div class="grammar-desc">「二人が酔うたところを見はからって殺し」——「酔うた」是「酔った」的ウ音便（文语雅语过去形），「～たところを見はからって」＝“瞅准（二人）酒醉之机”。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">⑧ 引用の「と」＋動詞（とする・と解く・とむすぶ）</div>
+                <div class="grammar-desc">「…というものだ、と解く」「…とする」「…とむすぶ」——「と」承上文引语，下接动词，是训读式引用句法，“解作……／作……／以……作结”。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">⑨ ～のすえに～をとげる</div>
+                <div class="grammar-desc">「忍苦のすえに本懐をとげる」——“历尽艰辛之末，终遂夙愿”。「～のすえに」表“经过……（的过程）之后，最终”。</div>
+            </div>
+        </div>
+        <div class="small-note">※ 语法分析以现代日语为主，兼及汉文训读调与文语残留。</div>
+    </div>
+
+    <hr>
+    <div style="background-color: #faf6ed; border-radius: 20px; padding: 1rem 1.5rem;">
+        <p style="font-size: 0.83rem; color:#5c5343;">📌 <strong>资料补注</strong>：<br>
+        • <strong>本节定位</strong>：本节承接上文六朝《搜神记》的冤死谭，转入唐代：先据《棠阴比事》列举李杰、戴胄等以名裁判著称者，继而详述传奇名篇《谢小蛾传》的本事及李公佐的改写，并旁及《太平广记》‘精察’类所载的断案故事，呈现唐代公案题材在史传与小说两端的展开。<br>
+        • <strong>《棠阴比事》</strong>：南宋桂万荣编（嘉定六年，1213）的决狱故事汇编，取材于五代和凝《疑狱集》、宋郑克《折狱龟鉴》等，以四言骈语连缀历代断案名例、便于记诵，后世流传甚广，并东传日本、朝鲜，曾用作吏员读本。本节即据以列举唐代李杰、戴胄等“名裁判”之人。<br>
+        • <strong>《谢小娥传》与李公佐</strong>：「謝小蛾伝」即唐传奇名篇《谢小娥传》（“小蛾”即“小娥”）。作者李公佐（字颛蒙，约活动于八世纪末至九世纪初），另撰《南柯太守传》《庐江冯媪传》《古岳渎经》等。篇中谢小娥依梦中隐语解出杀父、杀夫之仇为申兰、申春，遂女扮男装、佣身仇家而手刃之；其事亦见《新唐书》卷二〇五《列女传》。<br>
+        • <strong>《太平广记》“精察”类与“御史雨”</strong>：《太平广记》（宋·李昉等奉敕编，978年成书）卷一七一、一七二以“精察”为题，辑录历代明察决狱之事，分载十八人、十二人，共三十一人。所引“颜真卿”一条记其于五原速决积年冤狱，适逢久旱得雨，郡人遂称之为“御史雨”，文出唐《传载》。<br>
+        • <strong>OCR订正</strong>：白文据通行本校正：《谢小娥传》底本「施美之」→「旌美之」（旌美＝表彰）；《太平广记·精察》（颜真卿）底本「天久早」→「天久旱」。</p>
+    </div>
+
+    <div class="section vocab-practice">
+        <div class="section-title">🎴 单词练习（多选自测）</div>
+        <div class="vp-intro">从本节 <b id="vp-count">0</b> 个词中随机抽取，选出正确的读音或释义；答错的词会记入上方「📌 你的难词」，并按正确率在数据库中追踪。</div>
+        <div id="vp-stage"></div>
+        <div class="vp-controls">
+            <span class="vp-gate" id="vp-gate">登录后即可练习（在页面顶部注册 / 登录）。</span>
+            <button class="vp-btn" id="vp-start" type="button">开始练习</button>
+            <button class="auth-btn ghost" id="vp-import" type="button" style="display:none">导入本机旧记录</button>
+            <a class="vp-reset" id="vp-reset">重置本节记录</a>
+        </div>
+    </div>
+
+    <div class="nav-bar bottom">
+        <a class="nav-link" href="ch02-4-rikucho-soshinki.html">← 上一篇：六朝『捜神記』の冤死譚</a>
+        <a class="nav-link home" href="index.html">📖 目录</a>
+        <a class="nav-link" href="ch02-6-sodai-suiou-danroku.html">下一篇：宋代『酔翁談録』の公案十六題（一〜九） →</a>
+    </div>
+
+    <footer>
+        第二章 公案小説の系譜 · 第5節／全15節 ｜ 日语原文（振假名）· 汉语翻译 · 单词注释 · 语法分析<br>
+        出典：荘司格一『中国の公案小説』（研文出版, 1988）· 第二章
+    </footer>
+</div>
+<script src="supabase-config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const VOCAB_BANK = [{"w": "唐代", "r": "とうだい", "t": "reading"}, {"w": "棠陰比事", "r": "とういんひじ", "t": "reading"}, {"w": "李傑", "r": "りけつ", "t": "reading"}, {"w": "戴胃", "r": "たいい", "t": "reading"}, {"w": "杜亜", "r": "とあ", "t": "reading"}, {"w": "郭正一", "r": "かくせいいち", "t": "reading"}, {"w": "表均", "r": "ひょうきん", "t": "reading"}, {"w": "劉崇亀", "r": "りゅうすうき", "t": "reading"}, {"w": "張行皮", "r": "ちょうこうひ", "t": "reading"}, {"w": "張驚", "r": "ちょうきょう", "t": "reading"}, {"w": "閻済美", "r": "えんせいび", "t": "reading"}, {"w": "桂賠", "r": "けいばい", "t": "reading"}, {"w": "拿皐", "r": "だこう", "t": "reading"}, {"w": "呂元鷹", "r": "りょげんよう", "t": "reading"}, {"w": "柳渾", "r": "りゅうこん", "t": "reading"}, {"w": "江深", "r": "こうしん", "t": "reading"}, {"w": "蒋常", "r": "しょうじょう", "t": "reading"}, {"w": "李靖", "r": "りせい", "t": "reading"}, {"w": "李至遠", "r": "りしえん", "t": "reading"}, {"w": "表子雲", "r": "ひょうしうん", "t": "reading"}, {"w": "李済公", "r": "りせいこう", "t": "reading"}, {"w": "王鍔", "r": "おうがく", "t": "reading"}, {"w": "李徳裕", "r": "りとくゆう", "t": "reading"}, {"w": "名", "r": "な", "t": "reading"}, {"w": "見", "r": "み", "t": "reading"}, {"w": "名裁判", "r": "めいさいばん", "t": "reading"}, {"w": "記", "r": "しる", "t": "reading"}, {"w": "伝奇小説", "r": "でんきしょうせつ", "t": "reading"}, {"w": "有名", "r": "ゆうめい", "t": "reading"}, {"w": "謝小蛾伝", "r": "しゃしょうがでん", "t": "reading"}, {"w": "史実", "r": "しじつ", "t": "reading"}, {"w": "新唐書", "r": "しんとうじょ", "t": "reading"}, {"w": "巻", "r": "かん", "t": "reading"}, {"w": "二〇五", "r": "にひゃくご", "t": "reading"}, {"w": "列女伝", "r": "れつじょでん", "t": "reading"}, {"w": "段居貞", "r": "だんきょてい", "t": "reading"}, {"w": "妻", "r": "つま", "t": "reading"}, {"w": "謝", "r": "しゃ", "t": "reading"}, {"w": "字", "r": "あざな", "t": "meaning", "m": "（人的）表字、别号（≠汉语“文字”）"}, {"w": "小蛾", "r": "しょうが", "t": "reading"}, {"w": "夫", "r": "おっと", "t": "reading"}, {"w": "父", "r": "ちち", "t": "reading"}, {"w": "商売", "r": "しょうばい", "t": "reading"}, {"w": "出", "r": "で", "t": "reading"}, {"w": "盗賊", "r": "とうぞく", "t": "reading"}, {"w": "殺", "r": "ころ", "t": "reading"}, {"w": "頭", "r": "あたま", "t": "reading"}, {"w": "足", "r": "あし", "t": "reading"}, {"w": "傷", "r": "きず", "t": "reading"}, {"w": "江", "r": "こう", "t": "reading"}, {"w": "人", "r": "ひと", "t": "reading"}, {"w": "救", "r": "すく", "t": "reading"}, {"w": "乞食", "r": "こじき", "t": "reading"}, {"w": "夢", "r": "ゆめ", "t": "reading"}, {"w": "犯人", "r": "はんにん", "t": "reading"}, {"w": "示", "r": "しめ", "t": "reading"}, {"w": "十二文字", "r": "じゅうにもじ", "t": "reading"}, {"w": "謎", "r": "なぞ", "t": "reading"}, {"w": "解", "r": "と", "t": "reading"}, {"w": "李公佐", "r": "りこうさ", "t": "reading"}, {"w": "会", "r": "あ", "t": "reading"}, {"w": "申蘭", "r": "しんらん", "t": "reading"}, {"w": "申春", "r": "しんしゅん", "t": "reading"}, {"w": "男装", "r": "だんそう", "t": "reading"}, {"w": "下僕", "r": "げぼく", "t": "reading"}, {"w": "住", "r": "す", "t": "reading"}, {"w": "二人", "r": "ふたり", "t": "reading"}, {"w": "酔", "r": "よ", "t": "reading"}, {"w": "大声", "r": "おおごえ", "t": "reading"}, {"w": "賊", "r": "ぞく", "t": "reading"}, {"w": "呼", "r": "よ", "t": "reading"}, {"w": "仲間", "r": "なかま", "t": "reading"}, {"w": "全部", "r": "ぜんぶ", "t": "reading"}, {"w": "佛道", "r": "ぶつどう", "t": "reading"}, {"w": "垢衣", "r": "こうい", "t": "reading"}, {"w": "糖飯", "r": "とうはん", "t": "reading"}, {"w": "終", "r": "お", "t": "reading"}, {"w": "小説", "r": "しょうせつ", "t": "reading"}, {"w": "襲", "r": "おそ", "t": "reading"}, {"w": "暗示", "r": "あんじ", "t": "reading"}, {"w": "語", "r": "ご", "t": "reading"}, {"w": "殺我者", "r": "さつがしゃ", "t": "reading"}, {"w": "車中猥", "r": "しゃちゅうわい", "t": "reading"}, {"w": "門東草", "r": "もんとうそう", "t": "reading"}, {"w": "及", "r": "およ", "t": "reading"}, {"w": "禾中走", "r": "かちゅうそう", "t": "reading"}, {"w": "一日夫", "r": "いちじつふ", "t": "reading"}, {"w": "述", "r": "の", "t": "reading"}, {"w": "作者", "r": "さくしゃ", "t": "reading"}, {"w": "再", "r": "ふたた", "t": "reading"}, {"w": "仇", "r": "あだ", "t": "reading"}, {"w": "討", "r": "う", "t": "reading"}, {"w": "報告", "r": "ほうこく", "t": "reading"}, {"w": "礼", "r": "れい", "t": "reading"}, {"w": "感慨", "r": "かんがい", "t": "reading"}, {"w": "最後", "r": "さいご", "t": "reading"}, {"w": "列女", "r": "れつじょ", "t": "reading"}, {"w": "賞賛", "r": "しょうさん", "t": "reading"}, {"w": "仇討", "r": "あだう", "t": "reading"}, {"w": "挙", "r": "きょ", "t": "reading"}, {"w": "題材", "r": "だいざい", "t": "reading"}, {"w": "短篇小説", "r": "たんぺんしょうせつ", "t": "reading"}, {"w": "仕上", "r": "しあ", "t": "reading"}, {"w": "謝小蛾", "r": "しゃしょうが", "t": "reading"}, {"w": "忍苦", "r": "にんく", "t": "reading"}, {"w": "本懐", "r": "ほんかい", "t": "reading"}, {"w": "重点", "r": "じゅうてん", "t": "reading"}, {"w": "太平広記", "r": "たいへいこうき", "t": "reading"}, {"w": "一七一", "r": "ひゃくななじゅういち", "t": "reading"}, {"w": "一七二", "r": "ひゃくななじゅうに", "t": "reading"}, {"w": "精察", "r": "せいさつ", "t": "reading"}, {"w": "題", "r": "だい", "t": "reading"}, {"w": "十八名", "r": "じゅうはちめい", "t": "reading"}, {"w": "十二名", "r": "じゅうにめい", "t": "reading"}, {"w": "計", "r": "けい", "t": "reading"}, {"w": "三十一名", "r": "さんじゅういちめい", "t": "reading"}, {"w": "透徹", "r": "とうてつ", "t": "reading"}, {"w": "眼識", "r": "がんしき", "t": "reading"}, {"w": "解決", "r": "かいけつ", "t": "reading"}, {"w": "事件", "r": "じけん", "t": "reading"}, {"w": "列挙", "r": "れっきょ", "t": "reading"}, {"w": "一例", "r": "いちれい", "t": "reading"}, {"w": "顔真卿", "r": "がんしんけい", "t": "reading"}, {"w": "伝載", "r": "でんさい", "t": "reading"}, {"w": "冤獄", "r": "えんごく", "t": "reading"}, {"w": "内容", "r": "ないよう", "t": "reading"}, {"w": "久", "r": "ひさ", "t": "reading"}, {"w": "早魃", "r": "かんばつ", "t": "reading"}, {"w": "慈雨", "r": "じう", "t": "reading"}, {"w": "人事", "r": "じんじ", "t": "reading"}, {"w": "天", "r": "てん", "t": "reading"}, {"w": "呼応", "r": "こおう", "t": "reading"}, {"w": "注目", "r": "ちゅうもく", "t": "reading"}, {"w": "もとづく", "r": "もとづく", "m": "依据、基于（「基づく」）", "t": "meaning"}, {"w": "たずねたずねて", "r": "たずねたずねて", "m": "一路反复打听、边问边走（「訪ねる」的重叠形）", "t": "meaning"}, {"w": "見はからう", "r": "みはからう", "m": "看准时机、瞅准空当（「見計らう」）", "t": "meaning"}, {"w": "襲う", "r": "おそう", "m": "此处义为“沿袭、承袭”（非常义“袭击”）", "t": "meaning"}, {"w": "仕上げる", "r": "しあげる", "m": "完成、（写）成（作品）", "t": "meaning"}, {"w": "本懐をとげる", "r": "ほんかいをとげる", "m": "得遂夙愿（「本懐」＝夙愿、本愿；「遂げる」＝实现、达成）", "t": "meaning"}, {"w": "むすぶ", "r": "むすぶ", "m": "（以…）作结、收尾（「結ぶ」）", "t": "meaning"}, {"w": "めぐまれる", "r": "めぐまれる", "m": "蒙受、喜逢（恩泽）；「慈雨にめぐまれる」＝喜逢甘霖（「恵まれる」）", "t": "meaning"}];
+const PAGE_SLUG = "ch02-5-todai-shashoga";
+(function () {
+  "use strict";
+  // ---------- shared MC quiz core (distractors from the embedded bank) ----------
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
+  function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+  const ansField = c => (c.t === 'meaning' ? 'm' : 'r');
+  function buildRound(deck, statsOf, size) {
+    return deck.map(c => {
+      const st = statsOf(c); const score = st ? st.score : 0, seen = st ? st.seen : 0;
+      return { c, w: score * 2 + (seen === 0 ? 3 : 0) + Math.random() * 2 };
+    }).sort((a, b) => b.w - a.w).slice(0, Math.min(size, deck.length)).map(x => x.c);
+  }
+  function buildOptions(card, pool) {
+    const field = ansField(card), correct = card[field], seen = new Set([correct]), out = [];
+    for (const c of shuffle(pool.filter(c => c[field] && c[field] !== correct))) {
+      if (seen.has(c[field])) continue;
+      seen.add(c[field]); out.push(c[field]);
+      if (out.length >= 3) break;
+    }
+    return shuffle([correct].concat(out));
+  }
+  // cfg: { deck, pool, statsOf, size, record(card,ok)->Promise, onAnswer, showSrc }
+  function makeQuiz(stage, cfg) {
+    let round = [], idx = 0, correctN = 0;
+    function start() {
+      round = buildRound(cfg.deck, cfg.statsOf, cfg.size || 12); idx = 0; correctN = 0;
+      if (!round.length) { stage.innerHTML = '<div class="quiz-summary">暂无可练习的词。</div>'; return; }
+      question();
+    }
+    function question() {
+      const card = round[idx], field = ansField(card), correct = card[field];
+      const options = buildOptions(card, cfg.pool);
+      const ask = field === 'm' ? '选择正确的中文释义' : '选择正确的读音（假名）';
+      const hint = (field === 'm' && card.r && card.r !== card.w) ? '<span class="qhint">' + esc(card.r) + '</span>' : '';
+      stage.innerHTML =
+        '<div class="quiz-card">'
+        + '<div class="quiz-progress">第 ' + (idx + 1) + ' / ' + round.length + ' 题 · 正确 ' + correctN + '</div>'
+        + '<div class="quiz-q">' + esc(card.w) + hint + '</div>'
+        + '<div class="quiz-ask">' + ask + '</div>'
+        + '<div class="quiz-opts">'
+        + options.map(o => '<button class="quiz-opt" type="button">' + esc(o) + '</button>').join('')
+        + '</div>'
+        + '<div class="quiz-reveal"></div>'
+        + '<div class="quiz-next"></div>'
+        + '</div>';
+      stage.querySelectorAll('.quiz-opt').forEach(btn => btn.addEventListener('click', async () => {
+        const ok = btn.textContent === correct;
+        stage.querySelectorAll('.quiz-opt').forEach(b => {
+          b.disabled = true;
+          if (b.textContent === correct) b.classList.add('correct');
+          else if (b === btn) b.classList.add('wrong');
+        });
+        if (ok) correctN++;
+        const reveal = stage.querySelector('.quiz-reveal');
+        reveal.innerHTML =
+          (ok ? '✅ 正确　' : '❌ 正确答案如上　')
+          + '<b>' + esc(card.w) + '</b><span class="qr-r">' + esc(card.r) + '</span>'
+          + (card.m ? '— ' + esc(card.m) : '')
+          + (cfg.showSrc && card.slug ? '<span class="qr-src">· ' + esc(card.slug) + '</span>' : '');
+        try { await cfg.record(card, ok); } catch (e) { reveal.innerHTML += '<span class="qr-err"> · 保存失败</span>'; }
+        if (cfg.onAnswer) cfg.onAnswer();
+        const next = stage.querySelector('.quiz-next'), last = idx + 1 >= round.length;
+        next.innerHTML = '<button class="vp-btn" type="button">' + (last ? '查看结果' : '下一题') + '</button>';
+        next.querySelector('button').addEventListener('click', () => { if (last) summary(); else { idx++; question(); } });
+      }));
+    }
+    function summary() {
+      stage.innerHTML = '<div class="quiz-summary">本组完成：正确 <b>' + correctN + '</b> / ' + round.length
+        + '　<button class="vp-btn" type="button" style="margin-left:0.6rem">再来一组</button></div>';
+      stage.querySelector('button').addEventListener('click', start);
+      if (cfg.onAnswer) cfg.onAnswer();
+    }
+    return { start };
+  }
+
+  // ---------- Supabase client + auth ----------
+  const cfgOK = !!(window.SUPA_URL && window.SUPA_ANON_KEY && window.supabase);
+  const sb = cfgOK ? window.supabase.createClient(window.SUPA_URL, window.SUPA_ANON_KEY) : null;
+  let user = null;
+  const $ = id => document.getElementById(id);
+  const bank = (VOCAB_BANK || []).map(c => ({ w: c.w, r: c.r, m: c.m || null, t: c.t, slug: PAGE_SLUG }));
+  if ($('vp-count')) $('vp-count').textContent = bank.length;
+  const stageEl = $('vp-stage');
+
+  function renderAuth() {
+    const bar = $('auth-bar'); if (!bar) return;
+    if (!cfgOK) { bar.innerHTML = '<span class="ab-msg">未配置数据库：把 supabase-config.example.js 复制为 supabase-config.js 并填入项目信息</span>'; return; }
+    if (user) {
+      bar.innerHTML = '<span class="ab-user">👤 ' + esc(user.email) + '</span><button class="auth-btn ghost" id="ab-logout" type="button">退出</button>';
+      $('ab-logout').addEventListener('click', () => sb.auth.signOut());
+    } else {
+      bar.innerHTML =
+        '<input id="ab-email" type="email" placeholder="邮箱" autocomplete="username">'
+        + '<input id="ab-pass" type="password" placeholder="密码" autocomplete="current-password">'
+        + '<button class="auth-btn" id="ab-login" type="button">登录</button>'
+        + '<button class="auth-btn ghost" id="ab-signup" type="button">注册</button>'
+        + '<span class="ab-msg" id="ab-msg"></span>';
+      const email = () => $('ab-email').value.trim(), pass = () => $('ab-pass').value, msg = t => { $('ab-msg').textContent = t || ''; };
+      $('ab-login').addEventListener('click', async () => {
+        msg('登录中…'); const { error } = await sb.auth.signInWithPassword({ email: email(), password: pass() });
+        if (error) msg('登录失败：' + error.message);
+      });
+      $('ab-signup').addEventListener('click', async () => {
+        msg('注册中…'); const { error } = await sb.auth.signUp({ email: email(), password: pass() });
+        msg(error ? ('注册失败：' + error.message) : '注册成功；若开启了邮箱验证，请查收邮件后再登录。');
+      });
+    }
+  }
+  function applyGate() {
+    const on = !!user;
+    if ($('vp-gate')) $('vp-gate').style.display = on ? 'none' : 'inline-block';
+    if ($('vp-start')) $('vp-start').style.display = on ? 'inline-block' : 'none';
+    if ($('vp-reset')) $('vp-reset').style.display = on ? 'inline' : 'none';
+    if (!on && stageEl) stageEl.innerHTML = '';
+    updateImport();
+  }
+
+  // ---------- DB-backed stats ----------
+  async function recordAnswer(card, ok) {
+    if (!sb || !user) throw new Error('not signed in');
+    const { error } = await sb.rpc('record_attempt', { p_slug: card.slug, p_word: card.w, p_reading: card.r || '', p_meaning: card.m, p_type: card.t, p_correct: ok });
+    if (error) throw error;
+  }
+  async function fetchSlugStats() {
+    if (!sb || !user) return {};
+    const { data, error } = await sb.from('user_word_stats').select('word,score,seen,correct').eq('slug', PAGE_SLUG);
+    if (error) return {};
+    const m = {}; (data || []).forEach(r => m[r.word] = r); return m;
+  }
+  async function refreshHard() {
+    const slot = $('user-hard'); if (!slot) return;
+    if (!sb || !user) { slot.hidden = true; slot.innerHTML = ''; return; }
+    const { data, error } = await sb.from('user_word_stats')
+      .select('word,reading,meaning,type,seen,correct,score').eq('slug', PAGE_SLUG).gt('score', 0)
+      .order('score', { ascending: false }).limit(5);
+    if (error || !data || !data.length) { slot.hidden = true; slot.innerHTML = ''; return; }
+    slot.hidden = false;
+    slot.innerHTML = '<div class="uh-title">📌 你的难词（练习易错）</div><ul class="uh-list">'
+      + data.map(x => {
+        const acc = x.seen ? Math.round(100 * x.correct / x.seen) : 0;
+        return '<li><b>' + esc(x.word) + '</b><span class="uh-r">' + esc(x.reading || '') + '</span>'
+          + (x.meaning ? '— ' + esc(x.meaning) : '<span class="uh-miss">（读音）</span>')
+          + ' <span class="uh-acc">正确率 ' + acc + '%</span></li>';
+      }).join('')
+      + '</ul>';
+  }
+  async function startPractice() {
+    if (!sb || !user) return;
+    stageEl.innerHTML = '<div class="quiz-summary">加载中…</div>';
+    const statsMap = await fetchSlugStats();
+    makeQuiz(stageEl, { deck: bank, pool: bank, statsOf: c => statsMap[c.w], size: 12, record: recordAnswer, onAnswer: refreshHard }).start();
+  }
+
+  // ---------- one-time legacy localStorage import ----------
+  function legacy() { try { return JSON.parse(localStorage.getItem('koan-vocab-v1')) || null; } catch (e) { return null; } }
+  function updateImport() { const b = $('vp-import'); if (b) b.style.display = (user && legacy()) ? 'inline' : 'none'; }
+  async function doImport() {
+    if (!sb || !user) return; const all = legacy(); if (!all) return;
+    const b = $('vp-import'); b.disabled = true; b.textContent = '导入中…';
+    const payload = [];
+    for (const slug of Object.keys(all)) for (const w of Object.keys(all[slug])) {
+      const s = all[slug][w];
+      payload.push({ slug, word: w, reading: s.r || '', meaning: s.m || null, type: s.t || 'reading', seen: s.seen || 0, correct: s.correct || 0, wrong: s.wrong || 0, score: s.score || 0 });
+    }
+    const { error } = await sb.rpc('import_stats', { p: payload });
+    if (error) { b.textContent = '导入失败'; b.disabled = false; return; }
+    try { localStorage.removeItem('koan-vocab-v1'); } catch (e) {}
+    b.textContent = '已导入 ' + payload.length + ' 词'; refreshHard();
+  }
+
+  // ---------- wire up ----------
+  if ($('vp-start')) $('vp-start').addEventListener('click', startPractice);
+  if ($('vp-import')) $('vp-import').addEventListener('click', doImport);
+  if ($('vp-reset')) $('vp-reset').addEventListener('click', async () => {
+    if (!sb || !user) return; if (!confirm('清除本节的练习记录（仅你自己）？')) return;
+    await sb.from('user_word_stats').delete().eq('slug', PAGE_SLUG).eq('user_id', user.id);
+    if (stageEl) stageEl.innerHTML = ''; refreshHard();
+  });
+
+  async function syncAuth(session) { user = session ? session.user : null; renderAuth(); applyGate(); await refreshHard(); }
+  renderAuth(); applyGate();
+  if (sb) {
+    sb.auth.getSession().then(({ data }) => syncAuth(data.session));
+    sb.auth.onAuthStateChange((_e, session) => syncAuth(session));
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>日语学习：鲁迅与《龙图公案》· 孙楷第书目 · 学术日语解析</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #f1efe7;
+            font-family: system-ui, -apple-system, 'Segoe UI', 'Noto Sans CJK JP', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Microsoft YaHei', sans-serif;
+            line-height: 1.65;
+            padding: 2rem 1rem;
+            color: #2b2a26;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            background: #fffef9;
+            border-radius: 32px;
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            padding: 2rem 2rem 2.2rem;
+        }
+        h1 {
+            font-size: 1.9rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            border-left: 6px solid #8b3c2c;
+            padding-left: 1.2rem;
+            margin-bottom: 0.4rem;
+            color: #2d2a23;
+        }
+        .sub {
+            color: #6e6558;
+            margin-bottom: 2rem;
+            font-size: 0.85rem;
+            border-bottom: 1px solid #e2dbcf;
+            padding-bottom: 0.75rem;
+        }
+        .section {
+            margin-bottom: 2.8rem;
+        }
+        .section-title {
+            font-size: 1.35rem;
+            font-weight: 600;
+            background: #f0ece0;
+            display: inline-block;
+            padding: 0.2rem 1.3rem;
+            border-radius: 40px;
+            margin-bottom: 1.2rem;
+            color: #4b3f2f;
+        }
+        .japanese-text {
+            background: #fefaf0;
+            padding: 1.5rem 1.8rem;
+            border-radius: 26px;
+            border: 1px solid #e5ddce;
+            font-size: 1.02rem;
+            line-height: 2.1;
+            font-family: 'Noto Sans CJK JP', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+            margin-bottom: 1rem;
+        }
+        ruby rt {
+            font-size: 0.68rem;
+            color: #b45f2a;
+            font-weight: normal;
+            letter-spacing: 0.02em;
+        }
+        .translation-block {
+            background: #f6f8fc;
+            padding: 1.2rem 1.8rem;
+            border-radius: 22px;
+            border-left: 5px solid #2c6e6b;
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .translation-text {
+            font-size: 1rem;
+            color: #1e3e3c;
+        }
+        .chinese-quote {
+            background: #fef5e6;
+            padding: 1rem 1.6rem;
+            margin: 0.8rem 0;
+            border-left: 4px solid #b47c48;
+            border-radius: 18px;
+            font-size: 0.96rem;
+            color: #2b4b3a;
+            font-family: 'Noto Serif SC', 'STSong', 'SimSun', serif;
+            line-height: 1.75;
+        }
+        .word-table-wrapper {
+            overflow-x: auto;
+            margin: 1.2rem 0 1rem;
+            border-radius: 20px;
+            border: 1px solid #ddd6ca;
+        }
+        .word-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+            background: white;
+        }
+        .word-table th {
+            background: #e7e0d2;
+            padding: 10px 12px;
+            text-align: left;
+            font-weight: 600;
+            color: #2e2b25;
+            border-bottom: 1px solid #cfc6b6;
+        }
+        .word-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #ece3d8;
+            vertical-align: top;
+        }
+        .grammar-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+        }
+        .grammar-card {
+            background: #ffffff;
+            border-radius: 20px;
+            border: 1px solid #e1d8cc;
+            padding: 0.9rem 1.3rem;
+        }
+        .grammar-title {
+            font-weight: 700;
+            font-size: 0.92rem;
+            color: #9b542e;
+            font-family: monospace;
+            background: #faf3e8;
+            display: inline-block;
+            padding: 0.2rem 0.8rem;
+            border-radius: 24px;
+            margin-bottom: 0.5rem;
+        }
+        .grammar-desc {
+            margin-top: 0.25rem;
+            color: #3e3a33;
+            font-size: 0.9rem;
+        }
+        hr {
+            margin: 1.8rem 0 1rem;
+            border: none;
+            border-top: 1px solid #e2d9ce;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.7rem;
+            color: #938c7d;
+            margin-top: 1.5rem;
+        }
+        .small-note {
+            font-size: 0.76rem;
+            color: #7b6e5c;
+            margin-top: 0.4rem;
+        }
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .nav-bar.top { margin-bottom: 1.6rem; }
+        .nav-bar.bottom { margin-top: 1.8rem; }
+        .nav-link {
+            text-decoration: none;
+            color: #8b3c2c;
+            background: #f0ece0;
+            padding: 0.4rem 1.05rem;
+            border-radius: 22px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            white-space: nowrap;
+            transition: background 0.2s;
+        }
+        .nav-link:hover { background: #e3dccb; }
+        .nav-link.home { background: #8b3c2c; color: #fdfaf2; }
+        .nav-link.home:hover { background: #76301f; }
+        .nav-link.disabled {
+            color: #bcb3a1;
+            background: #f5f2ea;
+            pointer-events: none;
+        }
+        .content-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.8rem 1.6rem;
+            align-items: flex-start;
+            margin-bottom: 2.8rem;
+        }
+        .content-grid > .section { flex: 1 1 100%; order: 3; margin-bottom: 0; }
+        .content-grid > .section.text-col { flex: 1 1 58%; order: 1; min-width: 0; }
+        .content-grid > .section.vocab-col { flex: 0 0 36%; order: 2; min-width: 0; }
+        .content-grid .word-table { font-size: 0.82rem; }
+        .content-grid .word-table th,
+        .content-grid .word-table td { padding: 8px 10px; }
+        @media (max-width: 900px) {
+            .content-grid { display: block; }
+            .content-grid > .section { margin-bottom: 2.8rem; }
+        }
+        @media (max-width: 680px) {
+            .container { padding: 1.2rem; }
+            .japanese-text { padding: 1rem; font-size: 0.92rem; }
+            .section-title { font-size: 1.2rem; }
+        }
+        /* --- 你的难词 (personalized hard-word slot atop ③) + 单词练习 (MC self-test) --- */
+        .user-hard {
+            background: #fbeee6;
+            border: 1px solid #e6c9b8;
+            border-radius: 16px;
+            padding: 0.7rem 0.95rem;
+            margin-bottom: 0.95rem;
+        }
+        .user-hard .uh-title { font-weight: 700; color: #8b3c2c; font-size: 0.82rem; margin-bottom: 0.45rem; }
+        .user-hard .uh-list { list-style: none; display: flex; flex-direction: column; gap: 0.3rem; }
+        .user-hard .uh-list li { font-size: 0.82rem; color: #3e3a33; }
+        .user-hard .uh-r { color: #b45f2a; font-size: 0.76rem; margin: 0 0.3rem; }
+        .user-hard .uh-miss { color: #9b6a57; font-size: 0.72rem; }
+        .vp-intro { font-size: 0.85rem; color: #5c5343; margin-bottom: 1rem; }
+        .vp-intro b { color: #8b3c2c; }
+        .vp-controls { display: flex; align-items: center; gap: 1.3rem; margin-top: 1rem; flex-wrap: wrap; }
+        .vp-btn {
+            background: #8b3c2c; color: #fdfaf2; border: none; cursor: pointer;
+            padding: 0.5rem 1.5rem; border-radius: 22px; font-size: 0.9rem; font-weight: 600;
+            font-family: inherit; transition: background 0.2s;
+        }
+        .vp-btn:hover { background: #76301f; }
+        .vp-reset { font-size: 0.78rem; color: #9a8f7d; text-decoration: none; cursor: pointer; }
+        .vp-reset:hover { text-decoration: underline; }
+        .quiz-card {
+            background: #fffef9; border: 1px solid #e1d8cc; border-radius: 20px;
+            padding: 1.3rem 1.5rem; max-width: 560px;
+        }
+        .quiz-progress { font-size: 0.76rem; color: #7b6e5c; margin-bottom: 0.6rem; }
+        .quiz-q { font-size: 1.7rem; font-weight: 600; color: #2d2a23; line-height: 1.3; }
+        .quiz-q .qhint { font-size: 0.95rem; color: #b45f2a; font-weight: normal; margin-left: 0.55rem; }
+        .quiz-ask { font-size: 0.8rem; color: #6e6558; margin: 0.25rem 0 0.95rem; }
+        .quiz-opts { display: flex; flex-direction: column; gap: 0.55rem; }
+        .quiz-opt {
+            text-align: left; background: #f6f3ea; border: 1px solid #e1d8cc; border-radius: 14px;
+            padding: 0.6rem 1rem; font-size: 0.95rem; font-family: inherit; color: #2b2a26;
+            cursor: pointer; transition: background 0.15s, border-color 0.15s;
+        }
+        .quiz-opt:hover:not(:disabled) { background: #efeadd; }
+        .quiz-opt:disabled { cursor: default; }
+        .quiz-opt.correct { background: #e3f0e2; border-color: #8fbf8a; color: #1f5d2a; }
+        .quiz-opt.wrong { background: #f7e0db; border-color: #d99b8c; color: #8b3c2c; }
+        .quiz-reveal { font-size: 0.82rem; color: #5c5343; margin-top: 0.8rem; min-height: 1.1rem; }
+        .quiz-reveal .qr-r { color: #b45f2a; margin: 0 0.3rem; }
+        .quiz-next { margin-top: 0.95rem; }
+        .quiz-summary { font-size: 0.98rem; color: #2d2a23; }
+        .quiz-summary b { color: #8b3c2c; }
+        .quiz-reveal .qr-err { color: #b0461f; }
+        .user-hard .uh-acc { color: #7b6e5c; font-size: 0.72rem; }
+        /* --- auth bar (Supabase email/password login) + practice gate --- */
+        .auth-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.45rem; justify-content: flex-end; margin-bottom: 1.2rem; font-size: 0.82rem; }
+        .auth-bar input { font-family: inherit; font-size: 0.82rem; padding: 0.35rem 0.6rem; border: 1px solid #d8cdbb; border-radius: 12px; background: #fff; color: #2b2a26; }
+        .auth-bar .ab-user { color: #5c5343; margin-right: 0.3rem; }
+        .auth-bar .ab-msg { color: #b0461f; font-size: 0.76rem; flex-basis: 100%; text-align: right; }
+        .auth-btn { background: #8b3c2c; color: #fdfaf2; border: none; cursor: pointer; padding: 0.35rem 0.95rem; border-radius: 14px; font-size: 0.8rem; font-weight: 600; font-family: inherit; }
+        .auth-btn:hover { background: #76301f; }
+        .auth-btn.ghost { background: #efeadd; color: #6e5a3f; }
+        .auth-btn.ghost:hover { background: #e4dcc9; }
+        .vp-gate { font-size: 0.84rem; color: #9a6a30; background: #fbf3e3; border: 1px solid #ecd9b8; border-radius: 12px; padding: 0.5rem 0.85rem; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>📖 鲁迅与《龙图公案》· 孙楷第书目</h1>
+    <div class="sub">日语原文（総ルビ付き）· 汉语翻译 · 单词注释 · 语法分析</div>
+
+    <div class="auth-bar" id="auth-bar"></div>
+
+    <div class="nav-bar top">
+        <a class="nav-link" href="ch01-1-teigi-rojin.html">← 上一篇</a>
+        <a class="nav-link home" href="index.html">📖 目录</a>
+        <a class="nav-link" href="ch01-3-kachi-gogen.html">下一篇 →</a>
+    </div>
+
+    <div class="content-grid">
+    <div class="section text-col">
+        <div class="section-title">📜 日语原文（振り仮名付き）</div>
+        <div class="japanese-text">
+            <ruby>魯迅<rt>ろじん</rt></ruby>が<ruby>寓目<rt>ぐうもく</rt></ruby>した「<ruby>龍図公案<rt>りゅうとこうあん</rt></ruby>」は<ruby>六十三則<rt>ろくじゅうさんそく</rt></ruby>をおさめる、<ruby>文意<rt>ぶんい</rt></ruby>のはなはだ<ruby>拙<rt>つたな</rt></ruby>いもので、わずかに<ruby>文字<rt>もじ</rt></ruby>を<ruby>識<rt>し</rt></ruby>る<ruby>者<rt>もの</rt></ruby>が<ruby>書<rt>か</rt></ruby>き<ruby>記<rt>しる</rt></ruby>したにすぎぬものであるから、<ruby>小説<rt>しょうせつ</rt></ruby>と<ruby>呼<rt>よ</rt></ruby>ぶことを<ruby>躊躇<rt>ちゅうちょ</rt></ruby>したこともうなずける。<br><br>
+            <ruby>魯迅<rt>ろじん</rt></ruby>が「<ruby>中国小説史略<rt>ちゅうごくしょうせつしりゃく</rt></ruby>」を<ruby>書<rt>か</rt></ruby>いたのは<ruby>一九二〇年<rt>せんきゅうひゃくにじゅうねん</rt></ruby>のことで、<ruby>以来<rt>いらい</rt></ruby>、<ruby>小説<rt>しょうせつ</rt></ruby>の<ruby>研究<rt>けんきゅう</rt></ruby>はたしかに<ruby>目<rt>め</rt></ruby>ざましいものがある。しかし、<ruby>今<rt>いま</rt></ruby>なお<ruby>文学史<rt>ぶんがくし</rt></ruby>においてはもとより、<ruby>小説史<rt>しょうせつし</rt></ruby>と<ruby>名<rt>な</rt></ruby>づける<ruby>概説書<rt>がいせつしょ</rt></ruby>においても、<ruby>公案小説<rt>こうあんしょうせつ</rt></ruby>の<ruby>一項<rt>いっこう</rt></ruby>を<ruby>立<rt>た</rt></ruby>てないのもまま<ruby>見<rt>み</rt></ruby>られる。<ruby>孫楷第<rt>そんかいだい</rt></ruby>は「<ruby>中国通俗小説書目<rt>ちゅうごくつうぞくしょうせつしょもく</rt></ruby>」「<ruby>日本東京所見中国小説書目<rt>にほんとうきょうしょけんちゅうごくしょうせつしょもく</rt></ruby>」においても<ruby>公案小説<rt>こうあんしょうせつ</rt></ruby>とはよばず、たとえば、「<ruby>海剛峯先生居官公案伝<rt>かいこうほうせんせいきょかんこうあんでん</rt></ruby>」、「<ruby>包孝粛公百家公案演義<rt>ほうこうしゅくこうひゃっかこうあんえんぎ</rt></ruby>」、「<ruby>龍図公案<rt>りゅうとこうあん</rt></ruby>」については、
+            <div class="chinese-quote">
+                右三書説公案以海公包公為主、然毎篇皆独立不相連属、雑記事端、強属之海公包公、実亦短篇総集耳。
+            </div>
+            と<ruby>述<rt>の</rt></ruby>べ、「<ruby>皇明諸司公案伝<rt>こうみんしょしこうあんでん</rt></ruby>」、「<ruby>皇明諸司廉明奇判公案伝<rt>こうみんしょしれんめいきはんこうあんでん</rt></ruby>」、「<ruby>明鏡公案<rt>めいきょうこうあん</rt></ruby>」、「<ruby>詳情公案<rt>しょうじょうこうあん</rt></ruby>」、「<ruby>詳刑公案<rt>しょうけいこうあん</rt></ruby>」については、
+            <div class="chinese-quote">
+                右五書皆分類編次、取材亦大同小異、文字半文半自、与海公案、龍図公案諸書相傍佛、其体裁在通俗小説与雑書之間。
+            </div>
+            と<ruby>記<rt>しる</rt></ruby>している。「<ruby>日本東京所見中国小説書目<rt>にほんとうきょうしょけんちゅうごくしょうせつしょもく</rt></ruby>」においては、<ruby>公案類<rt>こうあんるい</rt></ruby>には「<ruby>水滸伝<rt>すいこでん</rt></ruby>」を<ruby>入<rt>い</rt></ruby>れ、<ruby>公案小説<rt>こうあんしょうせつ</rt></ruby>は<ruby>子部小説<rt>しぶしょうせつ</rt></ruby>におさめる。<ruby>孫楷第<rt>そんかいだい</rt></ruby>のこの<ruby>二書<rt>にしょ</rt></ruby>は<ruby>一九二〇年代<rt>せんきゅうひゃくにじゅうねんだい</rt></ruby>に、「<ruby>中国小説史略<rt>ちゅうごくしょうせつしりゃく</rt></ruby>」より<ruby>後<rt>のち</rt></ruby>に<ruby>書<rt>か</rt></ruby>かれたものであるが、<ruby>当時<rt>とうじ</rt></ruby>、<ruby>通俗小説<rt>つうぞくしょうせつ</rt></ruby>としては<ruby>取<rt>と</rt></ruby>り<ruby>上<rt>あ</rt></ruby>げられながらも、なお<ruby>小説<rt>しょうせつ</rt></ruby>としての<ruby>価値<rt>かち</rt></ruby>を<ruby>認<rt>みと</rt></ruby>められなかったことが<ruby>知<rt>し</rt></ruby>られよう。
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">🌐 汉语翻译</div>
+        <div class="translation-block">
+            <div class="translation-text">
+                鲁迅所寓目的《龙图公案》，收录六十三则故事，文意十分拙劣，不过是一个仅识文字的人所写，因此他犹豫不将其称为“小说”，也是可以理解的。<br><br>
+                鲁迅撰写《中国小说史略》是在1920年，自那以来，小说研究确实取得了显著进展。然而，即使在今天，不仅是在文学史中，就连那些名为“小说史”的概论书中，也常常不为公案小说设立专门的项目。孙楷第在《中国通俗小说书目》和《日本东京所见中国小说书目》中，也未将其称为“公案小说”。例如，关于《海刚峯先生居官公案传》、《包孝肃公百家公案演义》、《龙图公案》，他写道：
+                <div class="chinese-quote" style="margin: 0.6rem 0; background: #f3efe2;">
+                    右三书说公案，以海公、包公为主，然每篇皆独立不相连属，杂记事端，强属之海公、包公，实亦短篇总集耳。
+                </div>
+                关于《皇明诸司公案传》、《皇明诸司廉明奇判公案传》、《明镜公案》、《详情公案》、《详刑公案》，他写道：
+                <div class="chinese-quote" style="margin: 0.6rem 0; background: #f3efe2;">
+                    右五书皆分类编次，取材亦大同小异，文字半文半白，与《海公案》、《龙图公案》诸书相仿佛。其体裁在通俗小说与杂书之间。
+                </div>
+                在《日本东京所见中国小说书目》中，他将《水浒传》归入“公案类”，而将公案小说归入“子部小说”。孙楷第的这两部书撰写于1920年代（晚于《中国小说史略》），由此可知，当时公案小说虽然被作为通俗小说加以收录，但仍未被承认具有“小说”的价值。
+            </div>
+        </div>
+        <div class="small-note">※ 上引孙楷第原文（汉文部分）已在“日语原文”栏中以引文形式直接呈现，此处不再重复翻译。</div>
+    </div>
+
+    <div class="section vocab-col">
+        <div class="section-title">📖 語彙注釈（单词注释）</div>
+        <div class="user-hard" id="user-hard" hidden></div>
+        <div class="word-table-wrapper">
+            <table class="word-table">
+                <thead>
+                    <tr><th>日语词汇</th><th>读音</th><th>中文释义</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>寓目</td><td>ぐうもく</td><td>过目、阅览</td></tr>
+                    <tr><td>おさめる</td><td>おさめる</td><td>收录、收载</td></tr>
+                    <tr><td>はなはだ</td><td>はなはだ</td><td>甚、非常</td></tr>
+                    <tr><td>わずかに</td><td>わずかに</td><td>仅仅、勉强</td></tr>
+                    <tr><td>〜にすぎぬ</td><td>〜にすぎぬ</td><td>只不过是……（书面语）</td></tr>
+                    <tr><td>うなずける</td><td>うなずける</td><td>可以理解、难怪</td></tr>
+                    <tr><td>目ざましい</td><td>めざましい</td><td>显著的、惊人的</td></tr>
+                    <tr><td>もとより</td><td>もとより</td><td>当然、不用说</td></tr>
+                    <tr><td>まま見られる</td><td>ままみられる</td><td>常常能够看到</td></tr>
+                    <tr><td>体裁</td><td>たいさい</td><td>体裁、样式（日语「体裁」≈外观／格式，与汉语「体裁」义略异）</td></tr>
+                    <tr><td>取上げる</td><td>とりあげる</td><td>采纳、收录、提及</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="small-note">※ 本表仅收录中文读者较难推断的词汇（和语词、文语/语法形式、同形异义词等）；其义可由汉字直接推知的同形词已省略，读音见原文振假名。</div>
+    </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">✍️ 文法分析（句子语法简析）</div>
+        <div class="grammar-list">
+            <div class="grammar-card">
+                <div class="grammar-title">① ～をおさめる</div>
+                <div class="grammar-desc">「六十三則をおさめる」——收录、收载。表示书籍或文献中包含多少内容。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">② ～にすぎぬ（～にすぎない）</div>
+                <div class="grammar-desc">「わずかに文字を識る者が書き記したにすぎぬ」——只不过是……。书面语「ぬ」相当于「ない」，表示程度低微。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">③ ～もうなずける</div>
+                <div class="grammar-desc">「躊躇したこともうなずける」——能够理解，难怪。表示对某种态度或行为的理解与共情。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">④ ～はもとより</div>
+                <div class="grammar-desc">「文学史においてはもとより」——当然、不用说。表示前项理所当然，后项更进一步。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">⑤ まま見られる</div>
+                <div class="grammar-desc">「立てないのもまま見られる」——“まま”常表示状态，“～もまま見られる”表示“常常能看到……的情况”，略带书面性。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">⑥ ～とはよばず</div>
+                <div class="grammar-desc">「公案小説とはよばず」——不称之为……。与「～とはいわず」同义，表达命名或归类上的回避。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">⑦ 右三書・右五書</div>
+                <div class="grammar-desc">文言性的指示词，“上述三部书/五部书”。孙楷第原文中保持汉文训读风格，中文翻译部分直接保留汉文原文。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">⑧ ～ながらも</div>
+                <div class="grammar-desc">「取上げられながらも」——虽然……但是。表示转折，承认前项事实但后项是否定或保留。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">⑨ 知られよう</div>
+                <div class="grammar-desc">「知られよう」——「知られる」的推量形（文语・书面），“想必能够知道”“由此可见”。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">⑩ 漢文訓読調の引用構造</div>
+                <div class="grammar-desc">「～については、…と述べる」「…と記している」——日语学术文中引用汉文原文时，保留汉文原貌，用「と」标记引用内容，属于间接引用＋列举的表达方式。</div>
+            </div>
+        </div>
+        <div class="small-note">※ 语法分析以现代日语+文语残留为对象，汉文训读体保持原貌。</div>
+    </div>
+
+    <hr>
+    <div style="background-color: #faf6ed; border-radius: 20px; padding: 1rem 1.5rem;">
+        <p style="font-size: 0.83rem; color:#5c5343;">📌 <strong>资料补注</strong>：<br>
+        • 本段日文为学术史评述，延续了鲁迅《中国小说史略》对公案小说的低评价脉络，并引入孙楷第的书目学观点，指出20世纪初期公案小说虽被作为“通俗小说”著录，却仍未被视作具备文学价值的“小说”。<br>
+        • 「案贖」中的「贖」通「牘」（文书），属历史用字。孙楷第原文中「半文半自」实为「半文半白」（文言白话夹杂）。<br>
+        • 孙楷第《日本东京所见中国小说书目》将《水浒传》归入“公案类”，而将一般公案小说归入“子部小说”，体现了当时对公案小说文学价值的犹疑态度。</p>
+    </div>
+
+    <div class="section vocab-practice">
+        <div class="section-title">🎴 单词练习（多选自测）</div>
+        <div class="vp-intro">从本节 <b id="vp-count">0</b> 个词中随机抽取，选出正确的读音或释义；答错的词会记入上方「📌 你的难词」，并按正确率在数据库中追踪。</div>
+        <div id="vp-stage"></div>
+        <div class="vp-controls">
+            <span class="vp-gate" id="vp-gate">登录后即可练习（在页面顶部注册 / 登录）。</span>
+            <button class="vp-btn" id="vp-start" type="button">开始练习</button>
+            <button class="auth-btn ghost" id="vp-import" type="button" style="display:none">导入本机旧记录</button>
+            <a class="vp-reset" id="vp-reset">重置本节记录</a>
+        </div>
+    </div>
+
+    <div class="nav-bar bottom">
+        <a class="nav-link" href="ch01-1-teigi-rojin.html">← 上一篇：公案小説の定義と魯迅の評価</a>
+        <a class="nav-link home" href="index.html">📖 目录</a>
+        <a class="nav-link" href="ch01-3-kachi-gogen.html">下一篇：公案小説の価値と「公案」の語源 →</a>
+    </div>
+
+    <footer>
+        第一章 公案小説 · 第2節／全5節 ｜ 日语原文（振假名）· 汉语翻译 · 单词注释 · 语法分析<br>
+        鲁迅《中国小说史略》· 孙楷第书目专题 ｜ 出典：荘司格一『中国の公案小説』（研文出版, 1988）
+    </footer>
+</div>
+<script src="supabase-config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const VOCAB_BANK = [{"w": "魯迅", "r": "ろじん", "t": "reading"}, {"w": "寓目", "r": "ぐうもく", "t": "meaning", "m": "过目、阅览"}, {"w": "龍図公案", "r": "りゅうとこうあん", "t": "reading"}, {"w": "六十三則", "r": "ろくじゅうさんそく", "t": "reading"}, {"w": "文意", "r": "ぶんい", "t": "reading"}, {"w": "拙", "r": "つたな", "t": "reading"}, {"w": "文字", "r": "もじ", "t": "reading"}, {"w": "識", "r": "し", "t": "reading"}, {"w": "者", "r": "もの", "t": "reading"}, {"w": "書", "r": "か", "t": "reading"}, {"w": "記", "r": "しる", "t": "reading"}, {"w": "小説", "r": "しょうせつ", "t": "reading"}, {"w": "呼", "r": "よ", "t": "reading"}, {"w": "躊躇", "r": "ちゅうちょ", "t": "reading"}, {"w": "中国小説史略", "r": "ちゅうごくしょうせつしりゃく", "t": "reading"}, {"w": "一九二〇年", "r": "せんきゅうひゃくにじゅうねん", "t": "reading"}, {"w": "以来", "r": "いらい", "t": "reading"}, {"w": "研究", "r": "けんきゅう", "t": "reading"}, {"w": "目", "r": "め", "t": "reading"}, {"w": "今", "r": "いま", "t": "reading"}, {"w": "文学史", "r": "ぶんがくし", "t": "reading"}, {"w": "小説史", "r": "しょうせつし", "t": "reading"}, {"w": "名", "r": "な", "t": "reading"}, {"w": "概説書", "r": "がいせつしょ", "t": "reading"}, {"w": "公案小説", "r": "こうあんしょうせつ", "t": "reading"}, {"w": "一項", "r": "いっこう", "t": "reading"}, {"w": "立", "r": "た", "t": "reading"}, {"w": "見", "r": "み", "t": "reading"}, {"w": "孫楷第", "r": "そんかいだい", "t": "reading"}, {"w": "中国通俗小説書目", "r": "ちゅうごくつうぞくしょうせつしょもく", "t": "reading"}, {"w": "日本東京所見中国小説書目", "r": "にほんとうきょうしょけんちゅうごくしょうせつしょもく", "t": "reading"}, {"w": "海剛峯先生居官公案伝", "r": "かいこうほうせんせいきょかんこうあんでん", "t": "reading"}, {"w": "包孝粛公百家公案演義", "r": "ほうこうしゅくこうひゃっかこうあんえんぎ", "t": "reading"}, {"w": "述", "r": "の", "t": "reading"}, {"w": "皇明諸司公案伝", "r": "こうみんしょしこうあんでん", "t": "reading"}, {"w": "皇明諸司廉明奇判公案伝", "r": "こうみんしょしれんめいきはんこうあんでん", "t": "reading"}, {"w": "明鏡公案", "r": "めいきょうこうあん", "t": "reading"}, {"w": "詳情公案", "r": "しょうじょうこうあん", "t": "reading"}, {"w": "詳刑公案", "r": "しょうけいこうあん", "t": "reading"}, {"w": "公案類", "r": "こうあんるい", "t": "reading"}, {"w": "水滸伝", "r": "すいこでん", "t": "reading"}, {"w": "入", "r": "い", "t": "reading"}, {"w": "子部小説", "r": "しぶしょうせつ", "t": "reading"}, {"w": "二書", "r": "にしょ", "t": "reading"}, {"w": "一九二〇年代", "r": "せんきゅうひゃくにじゅうねんだい", "t": "reading"}, {"w": "後", "r": "のち", "t": "reading"}, {"w": "当時", "r": "とうじ", "t": "reading"}, {"w": "通俗小説", "r": "つうぞくしょうせつ", "t": "reading"}, {"w": "取", "r": "と", "t": "reading"}, {"w": "上", "r": "あ", "t": "reading"}, {"w": "価値", "r": "かち", "t": "reading"}, {"w": "認", "r": "みと", "t": "reading"}, {"w": "知", "r": "し", "t": "reading"}, {"w": "おさめる", "r": "おさめる", "m": "收录、收载", "t": "meaning"}, {"w": "はなはだ", "r": "はなはだ", "m": "甚、非常", "t": "meaning"}, {"w": "わずかに", "r": "わずかに", "m": "仅仅、勉强", "t": "meaning"}, {"w": "〜にすぎぬ", "r": "〜にすぎぬ", "m": "只不过是……（书面语）", "t": "meaning"}, {"w": "うなずける", "r": "うなずける", "m": "可以理解、难怪", "t": "meaning"}, {"w": "目ざましい", "r": "めざましい", "m": "显著的、惊人的", "t": "meaning"}, {"w": "もとより", "r": "もとより", "m": "当然、不用说", "t": "meaning"}, {"w": "まま見られる", "r": "ままみられる", "m": "常常能够看到", "t": "meaning"}, {"w": "体裁", "r": "たいさい", "m": "体裁、样式（日语「体裁」≈外观／格式，与汉语「体裁」义略异）", "t": "meaning"}, {"w": "取上げる", "r": "とりあげる", "m": "采纳、收录、提及", "t": "meaning"}];
+const PAGE_SLUG = "ch01-2-rojin-sonkaidai";
+(function () {
+  "use strict";
+  // ---------- shared MC quiz core (distractors from the embedded bank) ----------
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
+  function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+  const ansField = c => (c.t === 'meaning' ? 'm' : 'r');
+  function buildRound(deck, statsOf, size) {
+    return deck.map(c => {
+      const st = statsOf(c); const score = st ? st.score : 0, seen = st ? st.seen : 0;
+      return { c, w: score * 2 + (seen === 0 ? 3 : 0) + Math.random() * 2 };
+    }).sort((a, b) => b.w - a.w).slice(0, Math.min(size, deck.length)).map(x => x.c);
+  }
+  function buildOptions(card, pool) {
+    const field = ansField(card), correct = card[field], seen = new Set([correct]), out = [];
+    for (const c of shuffle(pool.filter(c => c[field] && c[field] !== correct))) {
+      if (seen.has(c[field])) continue;
+      seen.add(c[field]); out.push(c[field]);
+      if (out.length >= 3) break;
+    }
+    return shuffle([correct].concat(out));
+  }
+  // cfg: { deck, pool, statsOf, size, record(card,ok)->Promise, onAnswer, showSrc }
+  function makeQuiz(stage, cfg) {
+    let round = [], idx = 0, correctN = 0;
+    function start() {
+      round = buildRound(cfg.deck, cfg.statsOf, cfg.size || 12); idx = 0; correctN = 0;
+      if (!round.length) { stage.innerHTML = '<div class="quiz-summary">暂无可练习的词。</div>'; return; }
+      question();
+    }
+    function question() {
+      const card = round[idx], field = ansField(card), correct = card[field];
+      const options = buildOptions(card, cfg.pool);
+      const ask = field === 'm' ? '选择正确的中文释义' : '选择正确的读音（假名）';
+      const hint = (field === 'm' && card.r && card.r !== card.w) ? '<span class="qhint">' + esc(card.r) + '</span>' : '';
+      stage.innerHTML =
+        '<div class="quiz-card">'
+        + '<div class="quiz-progress">第 ' + (idx + 1) + ' / ' + round.length + ' 题 · 正确 ' + correctN + '</div>'
+        + '<div class="quiz-q">' + esc(card.w) + hint + '</div>'
+        + '<div class="quiz-ask">' + ask + '</div>'
+        + '<div class="quiz-opts">'
+        + options.map(o => '<button class="quiz-opt" type="button">' + esc(o) + '</button>').join('')
+        + '</div>'
+        + '<div class="quiz-reveal"></div>'
+        + '<div class="quiz-next"></div>'
+        + '</div>';
+      stage.querySelectorAll('.quiz-opt').forEach(btn => btn.addEventListener('click', async () => {
+        const ok = btn.textContent === correct;
+        stage.querySelectorAll('.quiz-opt').forEach(b => {
+          b.disabled = true;
+          if (b.textContent === correct) b.classList.add('correct');
+          else if (b === btn) b.classList.add('wrong');
+        });
+        if (ok) correctN++;
+        const reveal = stage.querySelector('.quiz-reveal');
+        reveal.innerHTML =
+          (ok ? '✅ 正确　' : '❌ 正确答案如上　')
+          + '<b>' + esc(card.w) + '</b><span class="qr-r">' + esc(card.r) + '</span>'
+          + (card.m ? '— ' + esc(card.m) : '')
+          + (cfg.showSrc && card.slug ? '<span class="qr-src">· ' + esc(card.slug) + '</span>' : '');
+        try { await cfg.record(card, ok); } catch (e) { reveal.innerHTML += '<span class="qr-err"> · 保存失败</span>'; }
+        if (cfg.onAnswer) cfg.onAnswer();
+        const next = stage.querySelector('.quiz-next'), last = idx + 1 >= round.length;
+        next.innerHTML = '<button class="vp-btn" type="button">' + (last ? '查看结果' : '下一题') + '</button>';
+        next.querySelector('button').addEventListener('click', () => { if (last) summary(); else { idx++; question(); } });
+      }));
+    }
+    function summary() {
+      stage.innerHTML = '<div class="quiz-summary">本组完成：正确 <b>' + correctN + '</b> / ' + round.length
+        + '　<button class="vp-btn" type="button" style="margin-left:0.6rem">再来一组</button></div>';
+      stage.querySelector('button').addEventListener('click', start);
+      if (cfg.onAnswer) cfg.onAnswer();
+    }
+    return { start };
+  }
+
+  // ---------- Supabase client + auth ----------
+  const cfgOK = !!(window.SUPA_URL && window.SUPA_ANON_KEY && window.supabase);
+  const sb = cfgOK ? window.supabase.createClient(window.SUPA_URL, window.SUPA_ANON_KEY) : null;
+  let user = null;
+  const $ = id => document.getElementById(id);
+  const bank = (VOCAB_BANK || []).map(c => ({ w: c.w, r: c.r, m: c.m || null, t: c.t, slug: PAGE_SLUG }));
+  if ($('vp-count')) $('vp-count').textContent = bank.length;
+  const stageEl = $('vp-stage');
+
+  function renderAuth() {
+    const bar = $('auth-bar'); if (!bar) return;
+    if (!cfgOK) { bar.innerHTML = '<span class="ab-msg">未配置数据库：把 supabase-config.example.js 复制为 supabase-config.js 并填入项目信息</span>'; return; }
+    if (user) {
+      bar.innerHTML = '<span class="ab-user">👤 ' + esc(user.email) + '</span><button class="auth-btn ghost" id="ab-logout" type="button">退出</button>';
+      $('ab-logout').addEventListener('click', () => sb.auth.signOut());
+    } else {
+      bar.innerHTML =
+        '<input id="ab-email" type="email" placeholder="邮箱" autocomplete="username">'
+        + '<input id="ab-pass" type="password" placeholder="密码" autocomplete="current-password">'
+        + '<button class="auth-btn" id="ab-login" type="button">登录</button>'
+        + '<button class="auth-btn ghost" id="ab-signup" type="button">注册</button>'
+        + '<span class="ab-msg" id="ab-msg"></span>';
+      const email = () => $('ab-email').value.trim(), pass = () => $('ab-pass').value, msg = t => { $('ab-msg').textContent = t || ''; };
+      $('ab-login').addEventListener('click', async () => {
+        msg('登录中…'); const { error } = await sb.auth.signInWithPassword({ email: email(), password: pass() });
+        if (error) msg('登录失败：' + error.message);
+      });
+      $('ab-signup').addEventListener('click', async () => {
+        msg('注册中…'); const { error } = await sb.auth.signUp({ email: email(), password: pass() });
+        msg(error ? ('注册失败：' + error.message) : '注册成功；若开启了邮箱验证，请查收邮件后再登录。');
+      });
+    }
+  }
+  function applyGate() {
+    const on = !!user;
+    if ($('vp-gate')) $('vp-gate').style.display = on ? 'none' : 'inline-block';
+    if ($('vp-start')) $('vp-start').style.display = on ? 'inline-block' : 'none';
+    if ($('vp-reset')) $('vp-reset').style.display = on ? 'inline' : 'none';
+    if (!on && stageEl) stageEl.innerHTML = '';
+    updateImport();
+  }
+
+  // ---------- DB-backed stats ----------
+  async function recordAnswer(card, ok) {
+    if (!sb || !user) throw new Error('not signed in');
+    const { error } = await sb.rpc('record_attempt', { p_slug: card.slug, p_word: card.w, p_reading: card.r || '', p_meaning: card.m, p_type: card.t, p_correct: ok });
+    if (error) throw error;
+  }
+  async function fetchSlugStats() {
+    if (!sb || !user) return {};
+    const { data, error } = await sb.from('user_word_stats').select('word,score,seen,correct').eq('slug', PAGE_SLUG);
+    if (error) return {};
+    const m = {}; (data || []).forEach(r => m[r.word] = r); return m;
+  }
+  async function refreshHard() {
+    const slot = $('user-hard'); if (!slot) return;
+    if (!sb || !user) { slot.hidden = true; slot.innerHTML = ''; return; }
+    const { data, error } = await sb.from('user_word_stats')
+      .select('word,reading,meaning,type,seen,correct,score').eq('slug', PAGE_SLUG).gt('score', 0)
+      .order('score', { ascending: false }).limit(5);
+    if (error || !data || !data.length) { slot.hidden = true; slot.innerHTML = ''; return; }
+    slot.hidden = false;
+    slot.innerHTML = '<div class="uh-title">📌 你的难词（练习易错）</div><ul class="uh-list">'
+      + data.map(x => {
+        const acc = x.seen ? Math.round(100 * x.correct / x.seen) : 0;
+        return '<li><b>' + esc(x.word) + '</b><span class="uh-r">' + esc(x.reading || '') + '</span>'
+          + (x.meaning ? '— ' + esc(x.meaning) : '<span class="uh-miss">（读音）</span>')
+          + ' <span class="uh-acc">正确率 ' + acc + '%</span></li>';
+      }).join('')
+      + '</ul>';
+  }
+  async function startPractice() {
+    if (!sb || !user) return;
+    stageEl.innerHTML = '<div class="quiz-summary">加载中…</div>';
+    const statsMap = await fetchSlugStats();
+    makeQuiz(stageEl, { deck: bank, pool: bank, statsOf: c => statsMap[c.w], size: 12, record: recordAnswer, onAnswer: refreshHard }).start();
+  }
+
+  // ---------- one-time legacy localStorage import ----------
+  function legacy() { try { return JSON.parse(localStorage.getItem('koan-vocab-v1')) || null; } catch (e) { return null; } }
+  function updateImport() { const b = $('vp-import'); if (b) b.style.display = (user && legacy()) ? 'inline' : 'none'; }
+  async function doImport() {
+    if (!sb || !user) return; const all = legacy(); if (!all) return;
+    const b = $('vp-import'); b.disabled = true; b.textContent = '导入中…';
+    const payload = [];
+    for (const slug of Object.keys(all)) for (const w of Object.keys(all[slug])) {
+      const s = all[slug][w];
+      payload.push({ slug, word: w, reading: s.r || '', meaning: s.m || null, type: s.t || 'reading', seen: s.seen || 0, correct: s.correct || 0, wrong: s.wrong || 0, score: s.score || 0 });
+    }
+    const { error } = await sb.rpc('import_stats', { p: payload });
+    if (error) { b.textContent = '导入失败'; b.disabled = false; return; }
+    try { localStorage.removeItem('koan-vocab-v1'); } catch (e) {}
+    b.textContent = '已导入 ' + payload.length + ' 词'; refreshHard();
+  }
+
+  // ---------- wire up ----------
+  if ($('vp-start')) $('vp-start').addEventListener('click', startPractice);
+  if ($('vp-import')) $('vp-import').addEventListener('click', doImport);
+  if ($('vp-reset')) $('vp-reset').addEventListener('click', async () => {
+    if (!sb || !user) return; if (!confirm('清除本节的练习记录（仅你自己）？')) return;
+    await sb.from('user_word_stats').delete().eq('slug', PAGE_SLUG).eq('user_id', user.id);
+    if (stageEl) stageEl.innerHTML = ''; refreshHard();
+  });
+
+  async function syncAuth(session) { user = session ? session.user : null; renderAuth(); applyGate(); await refreshHard(); }
+  renderAuth(); applyGate();
+  if (sb) {
+    sb.auth.getSession().then(({ data }) => syncAuth(data.session));
+    sb.auth.onAuthStateChange((_e, session) => syncAuth(session));
+  }
+})();
+</script>
+</body>
+</html>

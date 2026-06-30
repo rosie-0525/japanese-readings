@@ -1,0 +1,228 @@
+{
+  "book": {
+    "title": "中国の公案小説",
+    "author": "荘司格一",
+    "publisher": "研文出版",
+    "year": 1988,
+    "page_title": "『中国の公案小説』日语精读 · 目录 · 学术日语解析",
+    "h1": "📚 『中国の公案小説』日语精读",
+    "sub": "荘司格一 著（研文出版, 1988）｜ 日语原文（総ルビ）· 汉语翻译 · 单词注释 · 语法分析",
+    "intro": "本站以荘司格一《中国の公案小説》为底本，将书中段落整理为「日语原文（带振假名）＋汉语翻译＋词汇注释＋语法分析」的对照精读页面，供学术日语阅读练习之用。各页所引汉文（白文）保持原貌，OCR 讹字已据通行本订正并于「资料补注」说明。目前已完成 <strong>第一章 公案小説</strong>（全 5 节）与 <strong>第二章 公案小説の系譜</strong>（全 15 节），其余各章陆续补充。",
+    "footer": [
+      "底本：荘司格一『中国の公案小説』（研文出版, 1988）· 全451頁スキャン＋OCR",
+      "日语精读专题 · 日语原文（振假名）· 汉语翻译 · 单词注释 · 语法分析"
+    ]
+  },
+  "chapters": [
+    {
+      "number": 1,
+      "number_kanji": "一",
+      "title_ja": "公案小説",
+      "head": "第一章 公案小説",
+      "note": "全 5 节 · 已完成 ✅",
+      "status": "done",
+      "sections": [
+        {
+          "num": 1,
+          "href": "ch01-1-teigi-rojin.html",
+          "title_ja": "「公案小説」とは何か · 魯迅の評価",
+          "summary_zh": "何谓“公案小说”；“公案”与禅家公案之别；鲁迅对《龙图公案》的评价（附《中国小说史略》引文）"
+        },
+        {
+          "num": 2,
+          "href": "ch01-2-rojin-sonkaidai.html",
+          "title_ja": "魯迅と孫楷第の書目",
+          "summary_zh": "鲁迅《中国小说史略》与孙楷第书目对公案小说的著录与犹疑态度"
+        },
+        {
+          "num": 3,
+          "href": "ch01-3-kachi-gogen.html",
+          "title_ja": "公案小説の資料価値と「公案」の語源",
+          "summary_zh": "为公案小说翻案：其史料价值；“公案”一词溯源至宋代（《醉翁谈录》八类）"
+        },
+        {
+          "num": 4,
+          "href": "ch01-4-shijo-kahan.html",
+          "title_ja": "「酔翁談録」の私情公案・花判公案",
+          "summary_zh": "私情公案《张氏夜奔吕星可》与花判公案；判词与“花判”之体"
+        },
+        {
+          "num": 5,
+          "href": "ch01-5-kantei-ketsugo.html",
+          "title_ja": "「簡帖和尚」の公案伝奇と第一章の結語",
+          "summary_zh": "《清平山堂话本·简帖和尚》的“公案传奇”；结论——“公案”入小说始于宋代"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "number_kanji": "二",
+      "title_ja": "公案小説の系譜",
+      "head": "第二章 公案小説の系譜",
+      "note": "全 15 节 · 已完成 ✅",
+      "status": "done",
+      "sections": [
+        {
+          "num": 1,
+          "href": "ch02-1-koan-zentei-keiho.html",
+          "title_ja": "公案小説の前提と刑罰の起源",
+          "summary_zh": "公案小说以犯罪、摘发、裁判为主题，追溯中国成文法与五刑（墨劓宫刖杀）的起源，引《容斋随笔》《左传》《汉书》刑法志。"
+        },
+        {
+          "num": 2,
+          "href": "ch02-2-shikyo-saiban.html",
+          "title_ja": "『詩経』にうたわれる裁判",
+          "summary_zh": "《诗经》甘棠、行露、小宛诸篇所见的听讼、牢狱，及《尚书·舜典》「象以典刑」的古代刑罚。"
+        },
+        {
+          "num": 3,
+          "href": "ch02-3-kandai-saiban.html",
+          "title_ja": "漢代小説の裁判説話",
+          "summary_zh": "汉代《汉武故事》防年继母案与《折狱龟鉴》王尊治不孝子等裁判故事。"
+        },
+        {
+          "num": 4,
+          "href": "ch02-4-rikucho-soshinki.html",
+          "title_ja": "六朝『捜神記』の冤死譚",
+          "summary_zh": "六朝《搜神记》卷七淳于伯等冤死、涉罪故事群与天人感应。"
+        },
+        {
+          "num": 5,
+          "href": "ch02-5-todai-shashoga.html",
+          "title_ja": "唐代の名裁判と謝小娥伝",
+          "summary_zh": "唐代《棠阴比事》诸名判、李公佐传奇《谢小娥传》及《太平广记》「精察」颜真卿条。"
+        },
+        {
+          "num": 6,
+          "href": "ch02-6-sodai-suiou-danroku.html",
+          "title_ja": "宋代『酔翁談録』の公案十六題（一〜九）",
+          "summary_zh": "宋代《醉翁谈录》著录公案十六外题，引胡士莹解说（一）至（九）。"
+        },
+        {
+          "num": 7,
+          "href": "ch02-7-koan-gedai-seimeishu.html",
+          "title_ja": "公案十六題（十〜十六）と清明集",
+          "summary_zh": "公案外题（十）至（十六）解说，旁及其他话本与《名公书判清明集》。"
+        },
+        {
+          "num": 8,
+          "href": "ch02-8-gendai-koan-geki.html",
+          "title_ja": "元代の公案劇と包公の理想化",
+          "summary_zh": "元杂剧公案剧之盛行，郑振铎论其社会背景及包公被理想化为正义裁判官。"
+        },
+        {
+          "num": 9,
+          "href": "ch02-9-mindai-sangen-nihaku.html",
+          "title_ja": "明代・三言二拍の公案小説",
+          "summary_zh": "明代三言二拍中六十余篇公案题材小说篇目，及其中包公登场的三篇。"
+        },
+        {
+          "num": 10,
+          "href": "ch02-10-godo-monji-ki.html",
+          "title_ja": "話本『合同文字記』",
+          "summary_zh": "《清平山堂话本·合同文字记》的入话六言诗与争产认亲故事梗概。"
+        },
+        {
+          "num": 11,
+          "href": "ch02-11-godo-hakuan-kyoki.html",
+          "title_ja": "『拍案驚奇』の合同文と擬話本化",
+          "summary_zh": "《初刻拍案惊奇》卷三十三改写本的契约全文与说书套语，见话本向拟话本的发展。"
+        },
+        {
+          "num": 12,
+          "href": "ch02-12-godo-gen-zatsugeki.html",
+          "title_ja": "元雑劇『合同文字』と三本の比較",
+          "summary_zh": "元杂剧《包待制智赚合同文字》梗概，及话本、杂剧、拟话本三者之比较。"
+        },
+        {
+          "num": 13,
+          "href": "ch02-13-jugokan-zengyo.html",
+          "title_ja": "『十五貫戯言成巧禍』前半",
+          "summary_zh": "《醒世恒言》《十五贯戏言成巧祸》（《错斩崔宁》）入话及前半冤案与说书人评语。"
+        },
+        {
+          "num": 14,
+          "href": "ch02-14-jugokan-setsusho-shiwa.html",
+          "title_ja": "十五貫の後半と説唱詞話・張文貴伝",
+          "summary_zh": "十五贯后半昭雪冤情，及明成化说唱词话与《张文贵传》等包公八篇。"
+        },
+        {
+          "num": 15,
+          "href": "ch02-15-tankou-koan-kyushu.html",
+          "title_ja": "明代単行の公案小説九種と註",
+          "summary_zh": "明代单行刊行的九种公案小说书目（含别题）及本章注释。"
+        }
+      ]
+    }
+  ],
+  "future_chapters": [
+    {
+      "number_kanji": "三",
+      "title_ja": "龍図公案"
+    },
+    {
+      "number_kanji": "四",
+      "title_ja": "「龍図公案」百則"
+    },
+    {
+      "number_kanji": "五",
+      "title_ja": "「龍図公案」の研究"
+    },
+    {
+      "number_kanji": "六",
+      "title_ja": "百家公案"
+    },
+    {
+      "number_kanji": "七",
+      "title_ja": "律条公案"
+    },
+    {
+      "number_kanji": "八",
+      "title_ja": "「律条公案」四十二則"
+    },
+    {
+      "number_kanji": "九",
+      "title_ja": "皇明諸司廉明奇判公案伝"
+    },
+    {
+      "number_kanji": "十",
+      "title_ja": "皇明諸司公案"
+    },
+    {
+      "number_kanji": "十一",
+      "title_ja": "明鏡公案"
+    },
+    {
+      "number_kanji": "十二",
+      "title_ja": "詳情公案"
+    },
+    {
+      "number_kanji": "十三",
+      "title_ja": "詳刑公案"
+    },
+    {
+      "number_kanji": "十四",
+      "title_ja": "海剛峯先生居官公案伝"
+    },
+    {
+      "number_kanji": "十五",
+      "title_ja": "明代公案小説の内容と成立"
+    },
+    {
+      "number_kanji": "十六",
+      "title_ja": "明代公案小説における僧尼説話"
+    },
+    {
+      "number_kanji": "十七",
+      "title_ja": "「本朝桜陰比事」と中国の公案小説"
+    },
+    {
+      "number_kanji": "十八",
+      "title_ja": "清代の公案小説"
+    },
+    {
+      "number_kanji": "附",
+      "title_ja": "類似説話一覧 · 関連篇目 · あとがき · 索引"
+    }
+  ]
+}

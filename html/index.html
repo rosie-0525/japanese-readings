@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>『中国の公案小説』日语精读 · 目录 · 学术日语解析</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #f1efe7;
+            font-family: system-ui, -apple-system, 'Segoe UI', 'Noto Sans CJK JP', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Microsoft YaHei', sans-serif;
+            line-height: 1.65;
+            padding: 2rem 1rem;
+            color: #2b2a26;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fffef9;
+            border-radius: 32px;
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            padding: 2.2rem 2rem 2.4rem;
+        }
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            border-left: 6px solid #8b3c2c;
+            padding-left: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #2d2a23;
+        }
+        .sub {
+            color: #6e6558;
+            margin-bottom: 1.4rem;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #e2dbcf;
+            padding-bottom: 0.9rem;
+        }
+        .intro {
+            background: #faf6ed;
+            border-radius: 20px;
+            padding: 1rem 1.4rem;
+            font-size: 0.85rem;
+            color: #5c5343;
+            margin-bottom: 2rem;
+        }
+        .chapter-block { margin-bottom: 2.2rem; }
+        .chapter-head {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #4b3f2f;
+            background: #f0ece0;
+            display: inline-block;
+            padding: 0.2rem 1.2rem;
+            border-radius: 40px;
+            margin-bottom: 1rem;
+        }
+        .chapter-note { font-size: 0.8rem; color: #7b6e5c; margin: -0.4rem 0 1rem 0.3rem; }
+        .toc-list { display: flex; flex-direction: column; gap: 0.7rem; }
+        a.toc-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.95rem;
+            text-decoration: none;
+            background: #ffffff;
+            border: 1px solid #e1d8cc;
+            border-radius: 18px;
+            padding: 0.9rem 1.15rem;
+            transition: background 0.15s, border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+        }
+        a.toc-card:hover {
+            background: #fefaf0;
+            border-color: #d8c8a8;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+        }
+        .toc-num {
+            flex: none;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            background: #8b3c2c;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.88rem;
+        }
+        .toc-body { flex: 1; }
+        .toc-ja { font-weight: 600; color: #2d2a23; font-size: 1.02rem; }
+        .toc-zh { font-size: 0.82rem; color: #6e6558; margin-top: 0.15rem; }
+        .future-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.55rem;
+        }
+        .future-chip {
+            background: #f3efe6;
+            border: 1px dashed #d6cdbb;
+            border-radius: 14px;
+            padding: 0.5rem 0.85rem;
+            font-size: 0.82rem;
+            color: #8a7f6c;
+        }
+        .future-chip .num { font-weight: 700; color: #a8957a; margin-right: 0.35rem; }
+        .badge {
+            display: inline-block;
+            font-size: 0.68rem;
+            background: #e7e0d2;
+            color: #6e6558;
+            border-radius: 10px;
+            padding: 0.05rem 0.5rem;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.72rem;
+            color: #938c7d;
+            margin-top: 2rem;
+            border-top: 1px solid #e2d9ce;
+            padding-top: 1rem;
+        }
+        @media (max-width: 680px) {
+            .container { padding: 1.3rem; }
+            h1 { font-size: 1.55rem; }
+        }
+        /* --- 错题复习 · 难词练习 (cross-lesson MC review, localStorage-driven) --- */
+        .review-block {
+            background: #faf6ed;
+            border: 1px solid #ece1cc;
+            border-radius: 20px;
+            padding: 1.2rem 1.5rem;
+            margin-bottom: 2.2rem;
+        }
+        .review-head {
+            font-size: 1.2rem; font-weight: 700; color: #4b3f2f;
+            background: #f0ece0; display: inline-block;
+            padding: 0.2rem 1.1rem; border-radius: 40px; margin-bottom: 0.7rem;
+        }
+        .review-note { font-size: 0.82rem; color: #7b6e5c; margin-bottom: 1rem; }
+        .review-controls { display: flex; align-items: center; gap: 1.1rem; margin-top: 1rem; flex-wrap: wrap; }
+        .rv-count { font-size: 0.8rem; color: #6e6558; }
+        .vp-btn {
+            background: #8b3c2c; color: #fdfaf2; border: none; cursor: pointer;
+            padding: 0.5rem 1.5rem; border-radius: 22px; font-size: 0.9rem; font-weight: 600;
+            font-family: inherit; transition: background 0.2s;
+        }
+        .vp-btn:hover { background: #76301f; }
+        .vp-reset { font-size: 0.78rem; color: #9a8f7d; text-decoration: none; cursor: pointer; }
+        .vp-reset:hover { text-decoration: underline; }
+        .quiz-card {
+            background: #fffef9; border: 1px solid #e1d8cc; border-radius: 20px;
+            padding: 1.3rem 1.5rem; max-width: 560px; margin-top: 0.6rem;
+        }
+        .quiz-progress { font-size: 0.76rem; color: #7b6e5c; margin-bottom: 0.6rem; }
+        .quiz-q { font-size: 1.7rem; font-weight: 600; color: #2d2a23; line-height: 1.3; }
+        .quiz-q .qhint { font-size: 0.95rem; color: #b45f2a; font-weight: normal; margin-left: 0.55rem; }
+        .quiz-ask { font-size: 0.8rem; color: #6e6558; margin: 0.25rem 0 0.95rem; }
+        .quiz-opts { display: flex; flex-direction: column; gap: 0.55rem; }
+        .quiz-opt {
+            text-align: left; background: #f6f3ea; border: 1px solid #e1d8cc; border-radius: 14px;
+            padding: 0.6rem 1rem; font-size: 0.95rem; font-family: inherit; color: #2b2a26;
+            cursor: pointer; transition: background 0.15s, border-color 0.15s;
+        }
+        .quiz-opt:hover:not(:disabled) { background: #efeadd; }
+        .quiz-opt:disabled { cursor: default; }
+        .quiz-opt.correct { background: #e3f0e2; border-color: #8fbf8a; color: #1f5d2a; }
+        .quiz-opt.wrong { background: #f7e0db; border-color: #d99b8c; color: #8b3c2c; }
+        .quiz-reveal { font-size: 0.82rem; color: #5c5343; margin-top: 0.8rem; min-height: 1.1rem; }
+        .quiz-reveal .qr-r { color: #b45f2a; margin: 0 0.3rem; }
+        .quiz-reveal .qr-src { color: #9a8f7d; margin-left: 0.4rem; }
+        .quiz-next { margin-top: 0.95rem; }
+        .quiz-summary { font-size: 0.98rem; color: #2d2a23; }
+        .quiz-summary b { color: #8b3c2c; }
+        .quiz-reveal .qr-err { color: #b0461f; }
+        /* --- auth bar (Supabase email/password login) + review gate --- */
+        .auth-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.45rem; justify-content: flex-end; margin-bottom: 1.4rem; font-size: 0.82rem; }
+        .auth-bar input { font-family: inherit; font-size: 0.82rem; padding: 0.35rem 0.6rem; border: 1px solid #d8cdbb; border-radius: 12px; background: #fff; color: #2b2a26; }
+        .auth-bar .ab-user { color: #5c5343; margin-right: 0.3rem; }
+        .auth-bar .ab-msg { color: #b0461f; font-size: 0.76rem; flex-basis: 100%; text-align: right; }
+        .auth-btn { background: #8b3c2c; color: #fdfaf2; border: none; cursor: pointer; padding: 0.35rem 0.95rem; border-radius: 14px; font-size: 0.8rem; font-weight: 600; font-family: inherit; }
+        .auth-btn:hover { background: #76301f; }
+        .auth-btn.ghost { background: #efeadd; color: #6e5a3f; }
+        .auth-btn.ghost:hover { background: #e4dcc9; }
+        .vp-gate { font-size: 0.84rem; color: #9a6a30; background: #fbf3e3; border: 1px solid #ecd9b8; border-radius: 12px; padding: 0.5rem 0.85rem; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>📚 『中国の公案小説』日语精读</h1>
+    <div class="sub">荘司格一 著（研文出版, 1988）｜ 日语原文（総ルビ）· 汉语翻译 · 单词注释 · 语法分析</div>
+
+    <div class="auth-bar" id="auth-bar"></div>
+
+    <div class="intro">
+        本站以荘司格一《中国の公案小説》为底本，将书中段落整理为「日语原文（带振假名）＋汉语翻译＋词汇注释＋语法分析」的对照精读页面，供学术日语阅读练习之用。各页所引汉文（白文）保持原貌，OCR 讹字已据通行本订正并于「资料补注」说明。目前已完成 <strong>第一章 公案小説</strong>（全 5 节）与 <strong>第二章 公案小説の系譜</strong>（全 15 节），其余各章陆续补充。
+    </div>
+
+    <div class="chapter-block">
+        <div class="chapter-head">第一章 公案小説</div>
+        <div class="chapter-note">全 5 节 · 已完成 ✅</div>
+        <div class="toc-list">
+            <a class="toc-card" href="ch01-1-teigi-rojin.html">
+                <div class="toc-num">1</div>
+                <div class="toc-body">
+                    <div class="toc-ja">「公案小説」とは何か · 魯迅の評価</div>
+                    <div class="toc-zh">何谓“公案小说”；“公案”与禅家公案之别；鲁迅对《龙图公案》的评价（附《中国小说史略》引文）</div>
+                </div>
+            </a>
+            <a class="toc-card" href="ch01-2-rojin-sonkaidai.html">
+                <div class="toc-num">2</div>
+                <div class="toc-body">
+                    <div class="toc-ja">魯迅と孫楷第の書目</div>
+                    <div class="toc-zh">鲁迅《中国小说史略》与孙楷第书目对公案小说的著录与犹疑态度</div>
+                </div>
+            </a>
+            <a class="toc-card" href="ch01-3-kachi-gogen.html">
+                <div class="toc-num">3</div>
+                <div class="toc-body">
+                    <div class="toc-ja">公案小説の資料価値と「公案」の語源</div>
+                    <div class="toc-zh">为公案小说翻案：其史料价值；“公案”一词溯源至宋代（《醉翁谈录》八类）</div>
+                </div>
+            </a>
+            <a class="toc-card" href="ch01-4-shijo-kahan.html">
+                <div class="toc-num">4</div>
+                <div class="toc-body">
+                    <div class="toc-ja">「酔翁談録」の私情公案・花判公案</div>
+                    <div class="toc-zh">私情公案《张氏夜奔吕星可》与花判公案；判词与“花判”之体</div>
+                </div>
+            </a>
+            <a class="toc-card" href="ch01-5-kantei-ketsugo.html">
+                <div class="toc-num">5</div>
+                <div class="toc-body">
+                    <div class="toc-ja">「簡帖和尚」の公案伝奇と第一章の結語</div>
+                    <div class="toc-zh">《清平山堂话本·简帖和尚》的“公案传奇”；结论——“公案”入小说始于宋代</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="chapter-block">
+        <div class="chapter-head">第二章 公案小説の系譜</div>
+        <div class="chapter-note">全 15 节 · 已完成 ✅</div>
+        <div class="toc-list">
+            <a class="toc-card" href="ch02-1-koan-zentei-keiho.html">
+                <div class="toc-num">1</div>
+                <div class="toc-body">
+                    <div class="toc-ja">公案小説の前提と刑罰の起源</div>
+                    <div class="toc-zh">公案小说以犯罪、摘发、裁判为主题，追溯中国成文法与五刑（墨劓宫刖杀）的起源，引《容斋随笔》《左传》《汉书》刑法志。</div>
+                </div>
+            </a>
+            <a class="toc-card" href="ch02-2-shikyo-saiban.html">
+                <div class="toc-num">2</div>
+                <div class="toc-body">
+                    <div class="toc-ja">『詩経』にうたわれる裁判</div>
+                    <div class="toc-zh">《诗经》甘棠、行露、小宛诸篇所见的听讼、牢狱，及《尚书·舜典》「象以典刑」的古代刑罚。</div>
+                </div>
+            </a>
+            <a class="toc-card" href="ch02-3-kandai-saiban.html">
+                <div class="toc-num">3</div>
+                <div class="toc-body">
+                    <div class="toc-ja">漢代小説の裁判説話</div>
+                    <div class="toc-zh">汉代《汉武故事》防年继母案与《折狱龟鉴》王尊治不孝子等裁判故事。</div>
+                </div>
+            </a>
+            <a class="toc-card" href="ch02-4-rikucho-soshinki.html">
+                <div class="toc-num">4</div>
+                <div class="toc-body">
+                    <div class="toc-ja">六朝『捜神記』の冤死譚</div>
+                    <div class="toc-zh">六朝《搜神记》卷七淳于伯等冤死、涉罪故事群与天人感应。</div>
+                </div>
+            </a>
+            <a class="toc-card" href="ch02-5-todai-shashoga.html">
+                <div class="toc-num">5</div>
+                <div class="toc-body">
+                    <div class="toc-ja">唐代の名裁判と謝小娥伝</div>
+                    <div class="toc-zh">唐代《棠阴比事》诸名判、李公佐传奇《谢小娥传》及《太平广记》「精察」颜真卿条。</div>
+                </div>
+            </a>
+            <a class="toc-card" href="ch02-6-sodai-suiou-danroku.html">
+                <div class="toc-num">6</div>
+                <div class="toc-body">
+                    <div class="toc-ja">宋代『酔翁談録』の公案十六題（一〜九）</div>
+                    <div class="toc-zh">宋代《醉翁谈录》著录公案十六外题，引胡士莹解说（一）至（九）。</div>
+                </div>
+            </a>
+            <a class="toc-card" href="ch02-7-koan-gedai-seimeishu.html">
+                <div class="toc-num">7</div>
+                <div class="toc-body">
+                    <div class="toc-ja">公案十六題（十〜十六）と清明集</div>
+                    <div class="toc-zh">公案外题（十）至（十六）解说，旁及其他话本与《名公书判清明集》。</div>
+                </div>
+            </a>
+            <a class="toc-card" href="ch02-8-gendai-koan-geki.html">
+                <div class="toc-num">8</div>
+                <div class="toc-body">
+                    <div class="toc-ja">元代の公案劇と包公の理想化</div>
+                    <div class="toc-zh">元杂剧公案剧之盛行，郑振铎论其社会背景及包公被理想化为正义裁判官。</div>
+                </div>
+            </a>
+            <a class="toc-card" href="ch02-9-mindai-sangen-nihaku.html">
+                <div class="toc-num">9</div>
+                <div class="toc-body">
+                    <div class="toc-ja">明代・三言二拍の公案小説</div>
+                    <div class="toc-zh">明代三言二拍中六十余篇公案题材小说篇目，及其中包公登场的三篇。</div>
+                </div>
+            </a>
+            <a class="toc-card" href="ch02-10-godo-monji-ki.html">
+                <div class="toc-num">10</div>
+                <div class="toc-body">
+                    <div class="toc-ja">話本『合同文字記』</div>
+                    <div class="toc-zh">《清平山堂话本·合同文字记》的入话六言诗与争产认亲故事梗概。</div>
+                </div>
+            </a>
+            <a class="toc-card" href="ch02-11-godo-hakuan-kyoki.html">
+                <div class="toc-num">11</div>
+                <div class="toc-body">
+                    <div class="toc-ja">『拍案驚奇』の合同文と擬話本化</div>
+                    <div class="toc-zh">《初刻拍案惊奇》卷三十三改写本的契约全文与说书套语，见话本向拟话本的发展。</div>
+                </div>
+            </a>
+            <a class="toc-card" href="ch02-12-godo-gen-zatsugeki.html">
+                <div class="toc-num">12</div>
+                <div class="toc-body">
+                    <div class="toc-ja">元雑劇『合同文字』と三本の比較</div>
+                    <div class="toc-zh">元杂剧《包待制智赚合同文字》梗概，及话本、杂剧、拟话本三者之比较。</div>
+                </div>
+            </a>
+            <a class="toc-card" href="ch02-13-jugokan-zengyo.html">
+                <div class="toc-num">13</div>
+                <div class="toc-body">
+                    <div class="toc-ja">『十五貫戯言成巧禍』前半</div>
+                    <div class="toc-zh">《醒世恒言》《十五贯戏言成巧祸》（《错斩崔宁》）入话及前半冤案与说书人评语。</div>
+                </div>
+            </a>
+            <a class="toc-card" href="ch02-14-jugokan-setsusho-shiwa.html">
+                <div class="toc-num">14</div>
+                <div class="toc-body">
+                    <div class="toc-ja">十五貫の後半と説唱詞話・張文貴伝</div>
+                    <div class="toc-zh">十五贯后半昭雪冤情，及明成化说唱词话与《张文贵传》等包公八篇。</div>
+                </div>
+            </a>
+            <a class="toc-card" href="ch02-15-tankou-koan-kyushu.html">
+                <div class="toc-num">15</div>
+                <div class="toc-body">
+                    <div class="toc-ja">明代単行の公案小説九種と註</div>
+                    <div class="toc-zh">明代单行刊行的九种公案小说书目（含别题）及本章注释。</div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="review-block">
+        <div class="review-head">🎴 错题复习 · 难词练习</div>
+        <div class="review-note">汇集你在各课「单词练习」中最易出错的词，跨课集中复习。答对会降低难度，逐步从难词中移除。</div>
+        <div id="rv-stage"></div>
+        <div class="review-controls">
+            <span class="vp-gate" id="rv-gate">登录后查看你的跨课难词复习（在页面顶部注册 / 登录）。</span>
+            <button class="vp-btn" id="rv-start" type="button">开始复习</button>
+            <span class="rv-count" id="rv-count"></span>
+            <a class="vp-reset" id="rv-reset">清除全部练习记录</a>
+        </div>
+    </div>
+
+    <div class="chapter-block">
+        <div class="chapter-head">後続章節 <span class="badge">待补充</span></div>
+        <div class="chapter-note">以下各章已备好原文文本，尚未制作精读页面。</div>
+        <div class="future-list">
+            <span class="future-chip"><span class="num">三</span>龍図公案</span>
+            <span class="future-chip"><span class="num">四</span>「龍図公案」百則</span>
+            <span class="future-chip"><span class="num">五</span>「龍図公案」の研究</span>
+            <span class="future-chip"><span class="num">六</span>百家公案</span>
+            <span class="future-chip"><span class="num">七</span>律条公案</span>
+            <span class="future-chip"><span class="num">八</span>「律条公案」四十二則</span>
+            <span class="future-chip"><span class="num">九</span>皇明諸司廉明奇判公案伝</span>
+            <span class="future-chip"><span class="num">十</span>皇明諸司公案</span>
+            <span class="future-chip"><span class="num">十一</span>明鏡公案</span>
+            <span class="future-chip"><span class="num">十二</span>詳情公案</span>
+            <span class="future-chip"><span class="num">十三</span>詳刑公案</span>
+            <span class="future-chip"><span class="num">十四</span>海剛峯先生居官公案伝</span>
+            <span class="future-chip"><span class="num">十五</span>明代公案小説の内容と成立</span>
+            <span class="future-chip"><span class="num">十六</span>明代公案小説における僧尼説話</span>
+            <span class="future-chip"><span class="num">十七</span>「本朝桜陰比事」と中国の公案小説</span>
+            <span class="future-chip"><span class="num">十八</span>清代の公案小説</span>
+            <span class="future-chip"><span class="num">附</span>類似説話一覧 · 関連篇目 · あとがき · 索引</span>
+        </div>
+    </div>
+
+    <footer>
+        底本：荘司格一『中国の公案小説』（研文出版, 1988）· 全451頁スキャン＋OCR<br>
+        日语精读专题 · 日语原文（振假名）· 汉语翻译 · 单词注释 · 语法分析
+    </footer>
+</div>
+<script src="supabase-config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+(function () {
+  "use strict";
+  // ---------- shared MC quiz core (identical to the page engine) ----------
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
+  function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+  const ansField = c => (c.t === 'meaning' ? 'm' : 'r');
+  function buildRound(deck, statsOf, size) {
+    return deck.map(c => {
+      const st = statsOf(c); const score = st ? st.score : 0, seen = st ? st.seen : 0;
+      return { c, w: score * 2 + (seen === 0 ? 3 : 0) + Math.random() * 2 };
+    }).sort((a, b) => b.w - a.w).slice(0, Math.min(size, deck.length)).map(x => x.c);
+  }
+  function buildOptions(card, pool) {
+    const field = ansField(card), correct = card[field], seen = new Set([correct]), out = [];
+    for (const c of shuffle(pool.filter(c => c[field] && c[field] !== correct))) {
+      if (seen.has(c[field])) continue;
+      seen.add(c[field]); out.push(c[field]);
+      if (out.length >= 3) break;
+    }
+    return shuffle([correct].concat(out));
+  }
+  function makeQuiz(stage, cfg) {
+    let round = [], idx = 0, correctN = 0;
+    function start() {
+      round = buildRound(cfg.deck, cfg.statsOf, cfg.size || 12); idx = 0; correctN = 0;
+      if (!round.length) { stage.innerHTML = '<div class="quiz-summary">暂无可练习的词。</div>'; return; }
+      question();
+    }
+    function question() {
+      const card = round[idx], field = ansField(card), correct = card[field];
+      const options = buildOptions(card, cfg.pool);
+      const ask = field === 'm' ? '选择正确的中文释义' : '选择正确的读音（假名）';
+      const hint = (field === 'm' && card.r && card.r !== card.w) ? '<span class="qhint">' + esc(card.r) + '</span>' : '';
+      stage.innerHTML =
+        '<div class="quiz-card">'
+        + '<div class="quiz-progress">第 ' + (idx + 1) + ' / ' + round.length + ' 题 · 正确 ' + correctN + '</div>'
+        + '<div class="quiz-q">' + esc(card.w) + hint + '</div>'
+        + '<div class="quiz-ask">' + ask + '</div>'
+        + '<div class="quiz-opts">'
+        + options.map(o => '<button class="quiz-opt" type="button">' + esc(o) + '</button>').join('')
+        + '</div>'
+        + '<div class="quiz-reveal"></div>'
+        + '<div class="quiz-next"></div>'
+        + '</div>';
+      stage.querySelectorAll('.quiz-opt').forEach(btn => btn.addEventListener('click', async () => {
+        const ok = btn.textContent === correct;
+        stage.querySelectorAll('.quiz-opt').forEach(b => {
+          b.disabled = true;
+          if (b.textContent === correct) b.classList.add('correct');
+          else if (b === btn) b.classList.add('wrong');
+        });
+        if (ok) correctN++;
+        const reveal = stage.querySelector('.quiz-reveal');
+        reveal.innerHTML =
+          (ok ? '✅ 正确　' : '❌ 正确答案如上　')
+          + '<b>' + esc(card.w) + '</b><span class="qr-r">' + esc(card.r) + '</span>'
+          + (card.m ? '— ' + esc(card.m) : '')
+          + (cfg.showSrc && card.slug ? '<span class="qr-src">· ' + esc(card.slug) + '</span>' : '');
+        try { await cfg.record(card, ok); } catch (e) { reveal.innerHTML += '<span class="qr-err"> · 保存失败</span>'; }
+        if (cfg.onAnswer) cfg.onAnswer();
+        const next = stage.querySelector('.quiz-next'), last = idx + 1 >= round.length;
+        next.innerHTML = '<button class="vp-btn" type="button">' + (last ? '查看结果' : '下一题') + '</button>';
+        next.querySelector('button').addEventListener('click', () => { if (last) summary(); else { idx++; question(); } });
+      }));
+    }
+    function summary() {
+      stage.innerHTML = '<div class="quiz-summary">本组完成：正确 <b>' + correctN + '</b> / ' + round.length
+        + '　<button class="vp-btn" type="button" style="margin-left:0.6rem">再来一组</button></div>';
+      stage.querySelector('button').addEventListener('click', start);
+      if (cfg.onAnswer) cfg.onAnswer();
+    }
+    return { start };
+  }
+
+  // ---------- Supabase client + auth ----------
+  const cfgOK = !!(window.SUPA_URL && window.SUPA_ANON_KEY && window.supabase);
+  const sb = cfgOK ? window.supabase.createClient(window.SUPA_URL, window.SUPA_ANON_KEY) : null;
+  let user = null;
+  const $ = id => document.getElementById(id);
+  const stageEl = $('rv-stage');
+
+  function renderAuth() {
+    const bar = $('auth-bar'); if (!bar) return;
+    if (!cfgOK) { bar.innerHTML = '<span class="ab-msg">未配置数据库：把 supabase-config.example.js 复制为 supabase-config.js 并填入项目信息</span>'; return; }
+    if (user) {
+      bar.innerHTML = '<span class="ab-user">👤 ' + esc((user.email || '').replace(/@example\.com$/, '')) + '</span><button class="auth-btn ghost" id="ab-logout" type="button">退出</button>';
+      $('ab-logout').addEventListener('click', () => sb.auth.signOut());
+    } else {
+      bar.innerHTML =
+        '<input id="ab-user" type="text" placeholder="用户名" autocomplete="username" autocapitalize="none" spellcheck="false">'
+        + '<input id="ab-pass" type="password" placeholder="密码" autocomplete="current-password">'
+        + '<button class="auth-btn" id="ab-login" type="button">登录</button>'
+        + '<button class="auth-btn ghost" id="ab-signup" type="button">注册</button>'
+        + '<span class="ab-msg" id="ab-msg"></span>';
+      const uname = () => $('ab-user').value.trim().toLowerCase(), pass = () => $('ab-pass').value, msg = t => { $('ab-msg').textContent = t || ''; };
+      // Supabase auth is email-based; we synthesize an email from the username.
+      const emailOf = u => u + '@example.com';
+      const badName = u => !/^[a-z0-9._-]+$/.test(u);
+      $('ab-login').addEventListener('click', async () => {
+        const u = uname(); if (badName(u)) { msg('用户名只能用字母、数字、. _ -'); return; }
+        msg('登录中…'); const { error } = await sb.auth.signInWithPassword({ email: emailOf(u), password: pass() });
+        if (error) msg('登录失败：' + error.message);
+      });
+      $('ab-signup').addEventListener('click', async () => {
+        const u = uname(); if (badName(u)) { msg('用户名只能用字母、数字、. _ -'); return; }
+        msg('注册中…'); const { error } = await sb.auth.signUp({ email: emailOf(u), password: pass() });
+        msg(error ? ('注册失败：' + error.message) : '注册成功，请直接登录。');
+      });
+    }
+  }
+  function applyGate() {
+    const on = !!user;
+    if ($('rv-gate')) $('rv-gate').style.display = on ? 'none' : 'inline-block';
+    if ($('rv-start')) $('rv-start').style.display = on ? 'inline-block' : 'none';
+    if ($('rv-reset')) $('rv-reset').style.display = on ? 'inline' : 'none';
+    if (!on && stageEl) stageEl.innerHTML = '';
+  }
+
+  // ---------- DB-backed review ----------
+  async function recordAnswer(card, ok) {
+    if (!sb || !user) throw new Error('not signed in');
+    const { error } = await sb.rpc('record_attempt', { p_slug: card.slug, p_word: card.w, p_reading: card.r || '', p_meaning: card.m, p_type: card.t, p_correct: ok });
+    if (error) throw error;
+  }
+  async function fetchHardDeck() {
+    if (!sb || !user) return [];
+    const { data, error } = await sb.from('user_word_stats')
+      .select('slug,word,reading,meaning,type,seen,correct,score').gt('score', 0)
+      .order('score', { ascending: false }).limit(80);
+    if (error || !data) return [];
+    return data.map(r => ({ w: r.word, r: r.reading, m: r.meaning, t: r.type, slug: r.slug, score: r.score, seen: r.seen }));
+  }
+  async function fetchPool() {
+    if (!sb) return [];
+    const { data, error } = await sb.from('words').select('word,reading,meaning,type').limit(800);
+    if (error || !data) return [];
+    return data.map(r => ({ w: r.word, r: r.reading, m: r.meaning, t: r.type }));
+  }
+  async function updateCount() {
+    const el = $('rv-count'); if (!el) return;
+    if (!sb || !user) { el.textContent = ''; return; }
+    const { count } = await sb.from('user_word_stats').select('*', { count: 'exact', head: true }).gt('score', 0);
+    el.textContent = count ? ('当前难词 ' + count + ' 个') : '还没有错题记录——先到课文页练习。';
+  }
+
+  if ($('rv-start')) $('rv-start').addEventListener('click', async () => {
+    if (!sb || !user) return;
+    stageEl.innerHTML = '<div class="quiz-summary">加载中…</div>';
+    const deck = await fetchHardDeck();
+    if (!deck.length) {
+      stageEl.innerHTML = '<div class="quiz-summary">还没有错题记录。到任意课文页做「🎴 单词练习」后，这里会汇集你的难词。</div>';
+      return;
+    }
+    let pool = await fetchPool(); if (!pool.length) pool = deck;
+    const statsMap = {}; deck.forEach(c => statsMap[c.w] = { score: c.score, seen: c.seen });
+    makeQuiz(stageEl, { deck, pool, statsOf: c => statsMap[c.w], size: 15, record: recordAnswer, onAnswer: updateCount, showSrc: true }).start();
+  });
+  if ($('rv-reset')) $('rv-reset').addEventListener('click', async () => {
+    if (!sb || !user) return; if (!confirm('清除你的全部练习记录？')) return;
+    await sb.from('user_word_stats').delete().eq('user_id', user.id);
+    if (stageEl) stageEl.innerHTML = ''; updateCount();
+  });
+
+  async function syncAuth(session) { user = session ? session.user : null; renderAuth(); applyGate(); await updateCount(); }
+  renderAuth(); applyGate();
+  if (sb) {
+    sb.auth.getSession().then(({ data }) => syncAuth(data.session));
+    sb.auth.onAuthStateChange((_e, session) => syncAuth(session));
+  }
+})();
+</script>
+</body>
+</html>

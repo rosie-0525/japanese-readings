@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>日语学习：『拍案驚奇』の合同文と擬話本化 ·『中国の公案小説』第二章⑪ · 学术日语解析</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #f1efe7;
+            font-family: system-ui, -apple-system, 'Segoe UI', 'Noto Sans CJK JP', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Microsoft YaHei', sans-serif;
+            line-height: 1.65;
+            padding: 2rem 1rem;
+            color: #2b2a26;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            background: #fffef9;
+            border-radius: 32px;
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            padding: 2rem 2rem 2.2rem;
+        }
+        h1 {
+            font-size: 1.9rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            border-left: 6px solid #8b3c2c;
+            padding-left: 1.2rem;
+            margin-bottom: 0.4rem;
+            color: #2d2a23;
+        }
+        .sub {
+            color: #6e6558;
+            margin-bottom: 2rem;
+            font-size: 0.85rem;
+            border-bottom: 1px solid #e2dbcf;
+            padding-bottom: 0.75rem;
+        }
+        .section {
+            margin-bottom: 2.8rem;
+        }
+        .section-title {
+            font-size: 1.35rem;
+            font-weight: 600;
+            background: #f0ece0;
+            display: inline-block;
+            padding: 0.2rem 1.3rem;
+            border-radius: 40px;
+            margin-bottom: 1.2rem;
+            color: #4b3f2f;
+        }
+        .japanese-text {
+            background: #fefaf0;
+            padding: 1.5rem 1.8rem;
+            border-radius: 26px;
+            border: 1px solid #e5ddce;
+            font-size: 1.02rem;
+            line-height: 2.1;
+            font-family: 'Noto Sans CJK JP', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+            margin-bottom: 1rem;
+        }
+        ruby rt {
+            font-size: 0.68rem;
+            color: #b45f2a;
+            font-weight: normal;
+            letter-spacing: 0.02em;
+        }
+        .translation-block {
+            background: #f6f8fc;
+            padding: 1.2rem 1.8rem;
+            border-radius: 22px;
+            border-left: 5px solid #2c6e6b;
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .translation-text {
+            font-size: 1rem;
+            color: #1e3e3c;
+        }
+        .chinese-quote {
+            background: #fef5e6;
+            padding: 1rem 1.6rem;
+            margin: 0.8rem 0;
+            border-left: 4px solid #b47c48;
+            border-radius: 18px;
+            font-size: 0.96rem;
+            color: #2b4b3a;
+            font-family: 'Noto Serif SC', 'STSong', 'SimSun', serif;
+            line-height: 1.75;
+        }
+        .word-table-wrapper {
+            overflow-x: auto;
+            margin: 1.2rem 0 1rem;
+            border-radius: 20px;
+            border: 1px solid #ddd6ca;
+        }
+        .word-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+            background: white;
+        }
+        .word-table th {
+            background: #e7e0d2;
+            padding: 10px 12px;
+            text-align: left;
+            font-weight: 600;
+            color: #2e2b25;
+            border-bottom: 1px solid #cfc6b6;
+        }
+        .word-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #ece3d8;
+            vertical-align: top;
+        }
+        .grammar-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+        }
+        .grammar-card {
+            background: #ffffff;
+            border-radius: 20px;
+            border: 1px solid #e1d8cc;
+            padding: 0.9rem 1.3rem;
+        }
+        .grammar-title {
+            font-weight: 700;
+            font-size: 0.92rem;
+            color: #9b542e;
+            font-family: monospace;
+            background: #faf3e8;
+            display: inline-block;
+            padding: 0.2rem 0.8rem;
+            border-radius: 24px;
+            margin-bottom: 0.5rem;
+        }
+        .grammar-desc {
+            margin-top: 0.25rem;
+            color: #3e3a33;
+            font-size: 0.9rem;
+        }
+        hr {
+            margin: 1.8rem 0 1rem;
+            border: none;
+            border-top: 1px solid #e2d9ce;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.7rem;
+            color: #938c7d;
+            margin-top: 1.5rem;
+        }
+        .small-note {
+            font-size: 0.76rem;
+            color: #7b6e5c;
+            margin-top: 0.4rem;
+        }
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .nav-bar.top { margin-bottom: 1.6rem; }
+        .nav-bar.bottom { margin-top: 1.8rem; }
+        .nav-link {
+            text-decoration: none;
+            color: #8b3c2c;
+            background: #f0ece0;
+            padding: 0.4rem 1.05rem;
+            border-radius: 22px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            white-space: nowrap;
+            transition: background 0.2s;
+        }
+        .nav-link:hover { background: #e3dccb; }
+        .nav-link.home { background: #8b3c2c; color: #fdfaf2; }
+        .nav-link.home:hover { background: #76301f; }
+        .nav-link.disabled {
+            color: #bcb3a1;
+            background: #f5f2ea;
+            pointer-events: none;
+        }
+        .content-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.8rem 1.6rem;
+            align-items: flex-start;
+            margin-bottom: 2.8rem;
+        }
+        .content-grid > .section { flex: 1 1 100%; order: 3; margin-bottom: 0; }
+        .content-grid > .section.text-col { flex: 1 1 58%; order: 1; min-width: 0; }
+        .content-grid > .section.vocab-col { flex: 0 0 36%; order: 2; min-width: 0; }
+        .content-grid .word-table { font-size: 0.82rem; }
+        .content-grid .word-table th,
+        .content-grid .word-table td { padding: 8px 10px; }
+        @media (max-width: 900px) {
+            .content-grid { display: block; }
+            .content-grid > .section { margin-bottom: 2.8rem; }
+        }
+        @media (max-width: 680px) {
+            .container { padding: 1.2rem; }
+            .japanese-text { padding: 1rem; font-size: 0.92rem; }
+            .section-title { font-size: 1.2rem; }
+        }
+        /* --- 你的难词 (personalized hard-word slot atop ③) + 单词练习 (MC self-test) --- */
+        .user-hard {
+            background: #fbeee6;
+            border: 1px solid #e6c9b8;
+            border-radius: 16px;
+            padding: 0.7rem 0.95rem;
+            margin-bottom: 0.95rem;
+        }
+        .user-hard .uh-title { font-weight: 700; color: #8b3c2c; font-size: 0.82rem; margin-bottom: 0.45rem; }
+        .user-hard .uh-list { list-style: none; display: flex; flex-direction: column; gap: 0.3rem; }
+        .user-hard .uh-list li { font-size: 0.82rem; color: #3e3a33; }
+        .user-hard .uh-r { color: #b45f2a; font-size: 0.76rem; margin: 0 0.3rem; }
+        .user-hard .uh-miss { color: #9b6a57; font-size: 0.72rem; }
+        .vp-intro { font-size: 0.85rem; color: #5c5343; margin-bottom: 1rem; }
+        .vp-intro b { color: #8b3c2c; }
+        .vp-controls { display: flex; align-items: center; gap: 1.3rem; margin-top: 1rem; flex-wrap: wrap; }
+        .vp-btn {
+            background: #8b3c2c; color: #fdfaf2; border: none; cursor: pointer;
+            padding: 0.5rem 1.5rem; border-radius: 22px; font-size: 0.9rem; font-weight: 600;
+            font-family: inherit; transition: background 0.2s;
+        }
+        .vp-btn:hover { background: #76301f; }
+        .vp-reset { font-size: 0.78rem; color: #9a8f7d; text-decoration: none; cursor: pointer; }
+        .vp-reset:hover { text-decoration: underline; }
+        .quiz-card {
+            background: #fffef9; border: 1px solid #e1d8cc; border-radius: 20px;
+            padding: 1.3rem 1.5rem; max-width: 560px;
+        }
+        .quiz-progress { font-size: 0.76rem; color: #7b6e5c; margin-bottom: 0.6rem; }
+        .quiz-q { font-size: 1.7rem; font-weight: 600; color: #2d2a23; line-height: 1.3; }
+        .quiz-q .qhint { font-size: 0.95rem; color: #b45f2a; font-weight: normal; margin-left: 0.55rem; }
+        .quiz-ask { font-size: 0.8rem; color: #6e6558; margin: 0.25rem 0 0.95rem; }
+        .quiz-opts { display: flex; flex-direction: column; gap: 0.55rem; }
+        .quiz-opt {
+            text-align: left; background: #f6f3ea; border: 1px solid #e1d8cc; border-radius: 14px;
+            padding: 0.6rem 1rem; font-size: 0.95rem; font-family: inherit; color: #2b2a26;
+            cursor: pointer; transition: background 0.15s, border-color 0.15s;
+        }
+        .quiz-opt:hover:not(:disabled) { background: #efeadd; }
+        .quiz-opt:disabled { cursor: default; }
+        .quiz-opt.correct { background: #e3f0e2; border-color: #8fbf8a; color: #1f5d2a; }
+        .quiz-opt.wrong { background: #f7e0db; border-color: #d99b8c; color: #8b3c2c; }
+        .quiz-reveal { font-size: 0.82rem; color: #5c5343; margin-top: 0.8rem; min-height: 1.1rem; }
+        .quiz-reveal .qr-r { color: #b45f2a; margin: 0 0.3rem; }
+        .quiz-next { margin-top: 0.95rem; }
+        .quiz-summary { font-size: 0.98rem; color: #2d2a23; }
+        .quiz-summary b { color: #8b3c2c; }
+        .quiz-reveal .qr-err { color: #b0461f; }
+        .user-hard .uh-acc { color: #7b6e5c; font-size: 0.72rem; }
+        /* --- auth bar (Supabase email/password login) + practice gate --- */
+        .auth-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.45rem; justify-content: flex-end; margin-bottom: 1.2rem; font-size: 0.82rem; }
+        .auth-bar input { font-family: inherit; font-size: 0.82rem; padding: 0.35rem 0.6rem; border: 1px solid #d8cdbb; border-radius: 12px; background: #fff; color: #2b2a26; }
+        .auth-bar .ab-user { color: #5c5343; margin-right: 0.3rem; }
+        .auth-bar .ab-msg { color: #b0461f; font-size: 0.76rem; flex-basis: 100%; text-align: right; }
+        .auth-btn { background: #8b3c2c; color: #fdfaf2; border: none; cursor: pointer; padding: 0.35rem 0.95rem; border-radius: 14px; font-size: 0.8rem; font-weight: 600; font-family: inherit; }
+        .auth-btn:hover { background: #76301f; }
+        .auth-btn.ghost { background: #efeadd; color: #6e5a3f; }
+        .auth-btn.ghost:hover { background: #e4dcc9; }
+        .vp-gate { font-size: 0.84rem; color: #9a6a30; background: #fbf3e3; border: 1px solid #ecd9b8; border-radius: 12px; padding: 0.5rem 0.85rem; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>📖 『拍案驚奇』の合同文と擬話本化</h1>
+    <div class="sub">第二章 公案小説の系譜 · 第11節／全15節 ｜ 日语原文（総ルビ付き）· 汉语翻译 · 单词注释 · 语法分析</div>
+
+    <div class="auth-bar" id="auth-bar"></div>
+
+    <div class="nav-bar top">
+        <a class="nav-link" href="ch02-10-godo-monji-ki.html">← 上一篇</a>
+        <a class="nav-link home" href="index.html">📖 目录</a>
+        <a class="nav-link" href="ch02-12-godo-gen-zatsugeki.html">下一篇 →</a>
+    </div>
+
+    <div class="content-grid">
+    <div class="section text-col">
+        <div class="section-title">📜 日语原文（振り仮名付き）</div>
+        <div class="japanese-text">
+            「<ruby>拍案驚奇<rt>はくあんきょうき</rt></ruby>」では、まず<ruby>七律<rt>しちりつ</rt></ruby>がおかれ、<ruby>話説<rt>わせつ</rt></ruby>にはじまる<ruby>入話<rt>にゅうわ</rt></ruby>がくる。<ruby>財産<rt>ざいさん</rt></ruby>をめぐる<ruby>遺言書<rt>ゆいごんしょ</rt></ruby>の<ruby>読<rt>よ</rt></ruby>み<ruby>方<rt>かた</rt></ruby>にかかわる<ruby>話<rt>はなし</rt></ruby>で、<ruby>女婿<rt>じょせい</rt></ruby>と<ruby>継室<rt>けいしつ</rt></ruby>の<ruby>子<rt>こ</rt></ruby>との<ruby>争<rt>あらそ</rt></ruby>いになる。<ruby>遺言<rt>ゆいごん</rt></ruby>は、張一非我子也家財尽与我壻外人不得争倍、というもので、<ruby>女壻<rt>じょせい</rt></ruby>はこれを、張一非我子也、家財尽与我壻、外人不得争倍、と<ruby>読<rt>よ</rt></ruby>み、<ruby>財産<rt>ざいさん</rt></ruby>はわがもの、といいはる。<ruby>新任<rt>しんにん</rt></ruby>の<ruby>知県<rt>ちけん</rt></ruby>はそう<ruby>読<rt>よ</rt></ruby>むのではない。と、張一非、我子也、家財尽与、我壻外人、不得争佑、と<ruby>句読<rt>くとう</rt></ruby>を<ruby>改<rt>あらた</rt></ruby>めてきって<ruby>読<rt>よ</rt></ruby>みきかせる。<ruby>一種<rt>いっしゅ</rt></ruby>の<ruby>文字遊戯<rt>もじゆうぎ</rt></ruby>である。これは「<ruby>龍図公案<rt>りゅうずこうあん</rt></ruby>」の「<ruby>味遺嘱<rt>みいしょく</rt></ruby>」（<ruby>巻四<rt>かんし</rt></ruby>７８）とプロットが<ruby>同<rt>おな</rt></ruby>じい。<br><br>
+            このあと<ruby>正文<rt>せいぶん</rt></ruby>にはいるが、あらすじはほとんど「<ruby>合同文字記<rt>ごうどうもんじき</rt></ruby>」を<ruby>襲<rt>おそ</rt></ruby>うけれども、<ruby>後半部分<rt>こうはんぶぶん</rt></ruby>は<ruby>書<rt>か</rt></ruby>き<ruby>改<rt>あらた</rt></ruby>められる。<ruby>劉天祥<rt>りゅうてんしょう</rt></ruby>の<ruby>妻<rt>つま</rt></ruby><ruby>楊氏<rt>ようし</rt></ruby>は<ruby>女<rt>むすめ</rt></ruby>を<ruby>連<rt>つ</rt></ruby>れ<ruby>子<rt>こ</rt></ruby>にして<ruby>再婚<rt>さいこん</rt></ruby>することになり、<ruby>財産<rt>ざいさん</rt></ruby>をひとりじめしようと、<ruby>訪<rt>たず</rt></ruby>ねきた<ruby>安住<rt>あんじゅう</rt></ruby>から<ruby>契約書<rt>けいやくしょ</rt></ruby>をとりあげて<ruby>返<rt>かえ</rt></ruby>そうとしない。<ruby>安住<rt>あんじゅう</rt></ruby>が<ruby>困<rt>こま</rt></ruby>りはてているところに<ruby>天祥<rt>てんしょう</rt></ruby>がもどってき、<ruby>甥<rt>おい</rt></ruby>であると<ruby>認<rt>みと</rt></ruby>めて<ruby>家<rt>いえ</rt></ruby>にいれようとするが、<ruby>楊氏<rt>ようし</rt></ruby>は<ruby>却<rt>かえ</rt></ruby>って<ruby>棒<rt>ぼう</rt></ruby>でなぐりつけ<ruby>傷<rt>きず</rt></ruby>をおわす。<ruby>李社長<rt>りしゃちょう</rt></ruby>がきてわけをきき、まちがいなく<ruby>甥<rt>おい</rt></ruby>の<ruby>安住<rt>あんじゅう</rt></ruby>だというが<ruby>二人<rt>ふたり</rt></ruby>はとりあわない。<ruby>家<rt>いえ</rt></ruby>につれて<ruby>帰<rt>かえ</rt></ruby>り<ruby>翌日<rt>よくじつ</rt></ruby>、<ruby>包公<rt>ほうこう</rt></ruby>に<ruby>訴<rt>うった</rt></ruby>えでる。<ruby>結着<rt>けっちゃく</rt></ruby>がつかず、<ruby>包公<rt>ほうこう</rt></ruby>は<ruby>一計<rt>いっけい</rt></ruby>を<ruby>案<rt>あん</rt></ruby>じ、<ruby>安住<rt>あんじゅう</rt></ruby>を<ruby>牢<rt>ろう</rt></ruby>につなぎ、<ruby>満州<rt>まんしゅう</rt></ruby>の<ruby>張乗率<rt>ちょうじょうりつ</rt></ruby>をよび、<ruby>詳<rt>くわ</rt></ruby>しい<ruby>事情<rt>じじょう</rt></ruby>をきき、<ruby>再<rt>ふたた</rt></ruby>び<ruby>一同<rt>いちどう</rt></ruby>をよび<ruby>自洲<rt>じしゅう</rt></ruby>をひらき、<ruby>安住<rt>あんじゅう</rt></ruby>が<ruby>牢<rt>ろう</rt></ruby>で<ruby>死<rt>し</rt></ruby>んだが、<ruby>検屍<rt>けんし</rt></ruby>したところ<ruby>打<rt>う</rt></ruby>たれ<ruby>傷<rt>きず</rt></ruby>がもとである。もし<ruby>親類<rt>しんるい</rt></ruby>なら<ruby>死刑<rt>しけい</rt></ruby>にはならぬが、<ruby>他人<rt>たにん</rt></ruby>なら<ruby>命<rt>いのち</rt></ruby>を<ruby>償<rt>つぐな</rt></ruby>わねばならぬ、というと<ruby>楊氏<rt>ようし</rt></ruby>ははじめて<ruby>甥<rt>おい</rt></ruby>である、といい、<ruby>契約書<rt>けいやくしょ</rt></ruby>も<ruby>差<rt>さ</rt></ruby>し<ruby>出<rt>だ</rt></ruby>した。のち<ruby>安住<rt>あんじゅう</rt></ruby>は<ruby>出仕<rt>しゅっし</rt></ruby>し<ruby>貴顕<rt>きけん</rt></ruby>となった。<ruby>天祥<rt>てんしょう</rt></ruby>、<ruby>張員外<rt>ちょういんがい</rt></ruby>はともにあとつぎがなく、<ruby>両家<rt>りょうけ</rt></ruby>の<ruby>財産<rt>ざいさん</rt></ruby>はすべて<ruby>安住<rt>あんじゅう</rt></ruby>のものとなった。<br><br>
+            という。<ruby>叙述<rt>じょじゅつ</rt></ruby>は<ruby>話本<rt>わほん</rt></ruby>よりずっと<ruby>詳細<rt>しょうさい</rt></ruby>になり、たとえば<ruby>契約書<rt>けいやくしょ</rt></ruby>も、その<ruby>全文<rt>ぜんぶん</rt></ruby>を<ruby>記<rt>しる</rt></ruby>す。
+            <div class="chinese-quote">
+                東京西関義定坊住人劉天祥、弟劉天瑞、幼侄安住、只為六料不収、奉上司文書分房減口、各処趁熟、弟天瑞挈妻帯子、他郷趁熟、一応家私房産、不曽分另、今立合同文書二紙、各収一紙為照、年月日、立文書人劉天祥、親弟劉天瑞、見人李社長、当下各人画個花押、兄弟二人、毎人収了一紙、管待了李社長自別去了。
+            </div>
+            と<ruby>述<rt>の</rt></ruby>べる。つづいて、<ruby>天瑞<rt>てんずい</rt></ruby>は<ruby>吉日<rt>きちじつ</rt></ruby>を<ruby>択<rt>えら</rt></ruby>んで<ruby>荷物<rt>にもつ</rt></ruby>をまとめ<ruby>兄<rt>あに</rt></ruby>、<ruby>捜<rt>そう</rt></ruby>に<ruby>別<rt>わか</rt></ruby>れて<ruby>旅<rt>たび</rt></ruby>だちました。<ruby>兄弟<rt>きょうだい</rt></ruby><ruby>二人<rt>ふたり</rt></ruby>、<ruby>涙<rt>なみだ</rt></ruby>をながしましたが、<ruby>楊氏<rt>ようし</rt></ruby>だけは、<ruby>二人<rt>ふたり</rt></ruby>が<ruby>出<rt>で</rt></ruby>ていけばいいなとずっと<ruby>願<rt>ねが</rt></ruby>っていたものですから、わが<ruby>意<rt>い</rt></ruby>を<ruby>得<rt>え</rt></ruby>たりです。<ruby>仙呂賞花時<rt>せんりょしょうかじ</rt></ruby><ruby>一首<rt>いっしゅ</rt></ruby>がこのことをうたっております。<br><br>
+            とのべて、
+            <div class="chinese-quote">
+                両紙合同各自収、一日分離無限憂、辞故里、往他州、只為這黄苗不収、可死的心、去意難留。
+            </div>
+            と<ruby>歌詞<rt>かし</rt></ruby>をおく。この<ruby>歌詞<rt>かし</rt></ruby>には<ruby>槻字<rt>しんじ</rt></ruby>がニカ<ruby>所<rt>しょ</rt></ruby>におかれることに<ruby>注目<rt>ちゅうもく</rt></ruby>しておきたい。（ン」のン」とについてはのちにふれる。）これと<ruby>同様<rt>どうよう</rt></ruby>、<ruby>語<rt>かた</rt></ruby>り<ruby>回<rt>かい</rt></ruby>の<ruby>工夫<rt>くふう</rt></ruby>がなされる。たとえば、<ruby>入話<rt>にゅうわ</rt></ruby>のしめくくりと<ruby>正文<rt>せいぶん</rt></ruby>の<ruby>書<rt>か</rt></ruby>き<ruby>出<rt>だ</rt></ruby>しの<ruby>部分<rt>ぶぶん</rt></ruby>は、
+            <div class="chinese-quote">
+                才暁得張老命名之時、就有心機了、正是、異姓如何擁厚資、応帰親子不須疑、書中啞謎誰能識、大尹神明果足奇、只這個故事、可見親疎分定、縦然一時朦朧、久後自有廉明官府剖断出来、用不着体的瞞心昧己、如今待小子再宣一段話本、叫做「包龍図智賺合同文」、你道這話本出在那裏。
+            </div>
+            などは、あきらかに<ruby>話本<rt>わほん</rt></ruby>の<ruby>体裁<rt>たいさい</rt></ruby>をおそうものである。<br><br>
+            また、<ruby>最後<rt>さいご</rt></ruby>のしめくくりにも、
+            <div class="chinese-quote">
+                可見栄枯分定、不可強求、況且骨肉之間、如此昧己瞞心、最傷元気、所以宣這個話本、奉戒世人、切不可為着区区財産、傷了天性之恩、有詩為証、螟蛉義父猶施徳、骨肉天親反弄奸、日後方知前数定、何如休要用機関。
+            </div>
+            とのべるのも〝<ruby>語<rt>かた</rt></ruby>りもの〟の<ruby>意識<rt>いしき</rt></ruby>に<ruby>支<rt>ささ</rt></ruby>えられている<ruby>叙述<rt>じょじゅつ</rt></ruby>といえよう。
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">🌐 汉语翻译</div>
+        <div class="translation-block">
+            <div class="translation-text">
+                在《拍案惊奇》中，开篇先列一首七律，随后是以“话说”起首的入话。这是一个围绕财产、关乎遗嘱读法的故事，由女婿与继室之子之间的争产构成。遗嘱原文为“张一非我子也家财尽与我壻外人不得争倍”，女婿将其断读为“张一非我子也，家财尽与我壻，外人不得争倍”，坚称财产尽归己有。新任知县却不这样断读，他把句读改为“张一非，我子也，家财尽与，我壻外人，不得争佑”，重新断句念给众人听——这是一种文字游戏。此节与《龙图公案》的《味遗嘱》（卷四，78）情节相同。<br><br>
+                此后进入正文。情节大体沿袭《合同文字记》，但后半部分作了改写：刘天祥之妻杨氏带着女儿改嫁，意图独吞财产，便从前来投靠的安住手中夺走契约书，拒不归还。安住走投无路之际，天祥归来，认下他是侄儿、欲领其进门，杨氏却反用棍棒将他打伤。李社长前来问明缘由，确认此人正是侄儿安住，但杨氏母子二人却不予理会。（李社长）领安住回家，次日上告包公。案情一时难决，包公心生一计：先将安住收监，唤来满州的张乗率细问详情，再次召集众人开堂审理，（诈称）安住已死于狱中，验尸发现死于棒伤——若是亲属则不至处死，若是外人便须偿命。杨氏这才承认（安住）是侄儿，并交出契约书。后来安住出仕，成为显贵；天祥与张员外都无后嗣，两家财产尽归安住所有。<br><br>
+                如此叙述。其叙述较之话本远为详尽，例如连契约书也照录全文：
+                <div class="chinese-quote" style="margin: 0.6rem 0; background: #f3efe2;">
+                    東京西関義定坊住人劉天祥、弟劉天瑞、幼侄安住、只為六料不収、奉上司文書分房減口、各処趁熟、弟天瑞挈妻帯子、他郷趁熟、一応家私房産、不曽分另、今立合同文書二紙、各収一紙為照、年月日、立文書人劉天祥、親弟劉天瑞、見人李社長、当下各人画個花押、兄弟二人、毎人収了一紙、管待了李社長自別去了。
+                </div>
+                如此记述。接着写道：天瑞择吉日整理行装，辞别兄长（与嫂嫂），踏上旅途。兄弟二人皆落泪，唯独杨氏因一直巴望二人离去，正中下怀。有《仙吕·赏花时》一首咏其事。<br><br>
+                如此叙说，并系以一首歌词：
+                <div class="chinese-quote" style="margin: 0.6rem 0; background: #f3efe2;">
+                    両紙合同各自収、一日分離無限憂、辞故里、往他州、只為這黄苗不収、可死的心、去意難留。
+                </div>
+                如此安置了一首歌词。值得注意的是，这首歌词中有两处用了衬字。（关于“ン”与“ン”二字，后文再论。）与此相同，文中还在叙述上作了种种讲求“说话”技巧的安排。例如，入话的收束与正文的起首部分写道：
+                <div class="chinese-quote" style="margin: 0.6rem 0; background: #f3efe2;">
+                    才暁得張老命名之時、就有心機了、正是、異姓如何擁厚資、応帰親子不須疑、書中啞謎誰能識、大尹神明果足奇、只這個故事、可見親疎分定、縦然一時朦朧、久後自有廉明官府剖断出来、用不着体的瞞心昧己、如今待小子再宣一段話本、叫做「包龍図智賺合同文」、你道這話本出在那裏。
+                </div>
+                诸如此类，显然都是在仿效话本的体裁。<br><br>
+                此外，在末尾的收束处也写道：
+                <div class="chinese-quote" style="margin: 0.6rem 0; background: #f3efe2;">
+                    可見栄枯分定、不可強求、況且骨肉之間、如此昧己瞞心、最傷元気、所以宣這個話本、奉戒世人、切不可為着区区財産、傷了天性之恩、有詩為証、螟蛉義父猶施徳、骨肉天親反弄奸、日後方知前数定、何如休要用機関。
+                </div>
+                如此叙说——这样的叙述，也可以说是受“说话”（说书）意识支撑的叙述。
+            </div>
+        </div>
+        <div class="small-note">※ 上引《初刻拍案惊奇》卷三十三（《张员外义抚螟蛉子，包龙图智赚合同文》）的合同文书、说书人入话七言诗、散场诗及一支曲词，已据通行本校正 OCR 讹字并施句读，照录原文不另译（详见下「资料补注」OCR 订正条）。</div>
+    </div>
+
+    <div class="section vocab-col">
+        <div class="section-title">📖 語彙注釈（单词注释）</div>
+        <div class="user-hard" id="user-hard" hidden></div>
+        <div class="word-table-wrapper">
+            <table class="word-table">
+                <thead>
+                    <tr><th>日语词汇</th><th>读音</th><th>中文释义</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>めぐる</td><td>めぐる</td><td>围绕……、就……（而生的争端）（「～をめぐる」）</td></tr>
+                    <tr><td>いいはる</td><td>いいはる</td><td>一口咬定、坚称、硬说（言い張る）</td></tr>
+                    <tr><td>あらすじ</td><td>あらすじ</td><td>梗概、剧情大意</td></tr>
+                    <tr><td>襲う</td><td>おそう</td><td>沿袭、承袭（此处非汉语“袭击”，而是“因袭、踵继”）</td></tr>
+                    <tr><td>ひとりじめ</td><td>ひとりじめ</td><td>独占、独吞（独り占め）</td></tr>
+                    <tr><td>困りはてる</td><td>こまりはてる</td><td>一筹莫展、走投无路（困り果てる）</td></tr>
+                    <tr><td>却って</td><td>かえって</td><td>反而、反倒</td></tr>
+                    <tr><td>わが意を得たり</td><td>わがいをえたり</td><td>正中下怀、称心如意（如愿以偿之意）</td></tr>
+                    <tr><td>工夫</td><td>くふう</td><td>巧思、（费心）讲求与安排（≠汉语“工夫＝时间/本领”）</td></tr>
+                    <tr><td>体裁</td><td>たいさい</td><td>外观、样式、格局（≈话本的体式；日语“体裁”偏指外在形式）</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="small-note">※ 本表仅收录中文读者较难推断的词汇（和语词、文语/语法形式、同形异义词等）；其义可由汉字直接推知的同形词已省略，读音见原文振假名。</div>
+    </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">✍️ 文法分析（句子语法简析）</div>
+        <div class="grammar-list">
+            <div class="grammar-card">
+                <div class="grammar-title">① 引用「…と＋述べる／のべる／おく／いう」（漢文訓読調の引用）</div>
+                <div class="grammar-desc">「…と述べる」「…とのべて」「…と歌詞をおく」「…という」——引用助词「と」承接前文所引的白文／歌词，再接「述べる・のべる・おく・いう」等动词，是汉文训读体征引典籍的固定句法。本页多处白文引文皆以此法导入。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">② ～というもの（で）</div>
+                <div class="grammar-desc">「『張一非我子也…』というもので」——「～というもの」把所引内容名词化，意为“是……这样一份（东西）”，此处指那份遗嘱的文句。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">③ ～のではない（否定判断）</div>
+                <div class="grammar-desc">「新任の知県はそう読むのではない」——「～のではない」表否定性判断，“（知县）并不那样断读”，转出下文重新断句之事。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">④ ～と同じい（文语形容词残留）</div>
+                <div class="grammar-desc">「プロットが同じい」——「同じい」是形容词「同じ」的文语形（连体／终止），意为“相同”；现代日语多作「同じだ／同じ」。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">⑤ ～（よ）うとする／～（よ）うとしない（意志・企図）</div>
+                <div class="grammar-desc">「ひとりじめしようと」「家にいれようとするが」「返そうとしない」——「～（よ）うとする」表意图、企图，否定形「～（よ）うとしない」表“不肯、不愿”。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">⑥ 文语否定 ～ず／～ぬ／～ねばならぬ</div>
+                <div class="grammar-desc">「結着がつかず」「死刑にはならぬが」「命を償わねばならぬ」——中止形「～ず」（不……而）、连体／终止「～ぬ」（＝ない）、「～ねばならぬ」（非……不可），皆为汉文训读调的文语残留。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">⑦ 受身 ～られる／なされる</div>
+                <div class="grammar-desc">「後半部分は書き改められる」「語り回の工夫がなされる」「〝語りもの〟の意識に支えられている」——被动「～られる」及「なす」的被动「なされる」，表“被改写／被（作者）安排／受……支撑”。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">⑧ ～したところ（…してみると）</div>
+                <div class="grammar-desc">「検屍したところ打たれ傷がもとである」——「～したところ」表“一……（便发现）、（结果）……”，引出动作之后的结果或发现。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">⑨ ～ものですから（原因・理由）</div>
+                <div class="grammar-desc">「二人が出ていけばいいなとずっと願っていたものですから」——「～ものですから」表原因、理由，“正因为（一直巴望）……（所以）”，语气带解释、辩白意味。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">⑩ 推量 ～（よ）う／～といえよう</div>
+                <div class="grammar-desc">「叙述といえよう」——「～といえよう」＝「～といえるだろう」，文语推量「よう」表婉转判断“可以说是……吧”，学术行文常用以缓和断定。</div>
+            </div>
+        </div>
+        <div class="small-note">※ 语法分析以现代日语为主，兼及汉文训读调与文语残留。</div>
+    </div>
+
+    <hr>
+    <div style="background-color: #faf6ed; border-radius: 20px; padding: 1rem 1.5rem;">
+        <p style="font-size: 0.83rem; color:#5c5343;">📌 <strong>资料补注</strong>：<br>
+        • <strong>本节定位</strong>：本节承上节对话本《合同文字记》的考察，转入凌濛初《拍案惊奇》中同题故事的分析：通过对照其入话、正文以及所录合同文书、歌词与开场收场的套语，呈现由话本向白话短篇小说——即“拟话本”——演进（拟话本化）的面貌。<br>
+        • <strong>《拍案惊奇》与本篇</strong>：「拍案惊奇」是明末凌濛初（1580–1644）编撰的拟话本小说集（《初刻拍案惊奇》初刻于1628年，与《二刻拍案惊奇》合称“二拍”）。本节所析“合同文字”故事，即《初刻拍案惊奇》卷三十三《张员外义抚螟蛉子，包龙图智赚合同文》。其体例摹拟宋元话本：卷首先列一首七律作“篇首诗”，继以“话说”领起的“入话”（引子），再转入“正文”——正是由口传话本演为案头白话短篇（即“拟话本”）的典型形态。<br>
+        • <strong>《龙图公案》味遗嘱 · 话本《合同文字记》</strong>：「龙图公案」（又称《包公案》）为明代公案小说集，托名包拯（曾任龙图阁直学士，故称“包龙图”）断狱；其卷四“味遗嘱”一篇，与本篇开头“遗嘱断句”的情节（正文所引“张一非我子也……”的两种断读）相同。「合同文字记」则是更早的宋元话本（收于《清平山堂话本》），《拍案惊奇》此篇大体沿袭其情节，仅将后半改写。<br>
+        • <strong>衬字与《仙吕·赏花时》</strong>：文中所引歌词系北曲曲牌“仙吕宫·赏花时”。作者特别指出其中有两处用了「衬字」（原文作“槻字”，当即“襯字／衬字”）：衬字指元曲（南北曲）于固定曲牌格律之外增添的字，不计入正格，多为口语虚字，用以补足语气、便于演唱。歌词中杂用衬字，正是《拍案惊奇》摹拟“说话／演唱”体的痕迹之一。<br>
+        • <strong>OCR订正</strong>：白文据通行本（《初刻拍案惊奇》卷三十三）校正：合同文书底本「幼優安住」→「幼侄安住」、「六科不収」→「六料不収」、「各処越熟／他郷診熟」→「趁熟」、「自懸摯妻」→「挈妻」、「不曽分房」→「不曽分另」、「年月日一二文書人」→「年月日、立文書人」、「菫個花押」→「画個花押」；入话诗底本「唖謎」→「啞謎」、「大ヂ神明」→「大尹神明」、「智廉合同文」→「智賺合同文」、「叫倣」→「叫做」、「祢道」→「你道」、「購心昧己」→「瞞心昧己」；散场诗底本「煩蛉義父」→「螟蛉義父」、「弄機関」→「用機関」、「昧己購心」→「昧己瞞心」。（按：仙吕·赏花时一支曲词底本讹脱较甚，今仅施句读，文字未敢臆改，存疑待校。）</p>
+    </div>
+
+    <div class="section vocab-practice">
+        <div class="section-title">🎴 单词练习（多选自测）</div>
+        <div class="vp-intro">从本节 <b id="vp-count">0</b> 个词中随机抽取，选出正确的读音或释义；答错的词会记入上方「📌 你的难词」，并按正确率在数据库中追踪。</div>
+        <div id="vp-stage"></div>
+        <div class="vp-controls">
+            <span class="vp-gate" id="vp-gate">登录后即可练习（在页面顶部注册 / 登录）。</span>
+            <button class="vp-btn" id="vp-start" type="button">开始练习</button>
+            <button class="auth-btn ghost" id="vp-import" type="button" style="display:none">导入本机旧记录</button>
+            <a class="vp-reset" id="vp-reset">重置本节记录</a>
+        </div>
+    </div>
+
+    <div class="nav-bar bottom">
+        <a class="nav-link" href="ch02-10-godo-monji-ki.html">← 上一篇：話本『合同文字記』</a>
+        <a class="nav-link home" href="index.html">📖 目录</a>
+        <a class="nav-link" href="ch02-12-godo-gen-zatsugeki.html">下一篇：元雑劇『合同文字』と三本の比較 →</a>
+    </div>
+
+    <footer>
+        第二章 公案小説の系譜 · 第11節／全15節 ｜ 日语原文（振假名）· 汉语翻译 · 单词注释 · 语法分析<br>
+        出典：荘司格一『中国の公案小説』（研文出版, 1988）· 第二章
+    </footer>
+</div>
+<script src="supabase-config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const VOCAB_BANK = [{"w": "拍案驚奇", "r": "はくあんきょうき", "t": "reading"}, {"w": "七律", "r": "しちりつ", "t": "reading"}, {"w": "話説", "r": "わせつ", "t": "reading"}, {"w": "入話", "r": "にゅうわ", "t": "reading"}, {"w": "財産", "r": "ざいさん", "t": "reading"}, {"w": "遺言書", "r": "ゆいごんしょ", "t": "reading"}, {"w": "読", "r": "よ", "t": "reading"}, {"w": "方", "r": "かた", "t": "reading"}, {"w": "話", "r": "はなし", "t": "reading"}, {"w": "女婿", "r": "じょせい", "t": "reading"}, {"w": "継室", "r": "けいしつ", "t": "reading"}, {"w": "子", "r": "こ", "t": "reading"}, {"w": "争", "r": "あらそ", "t": "reading"}, {"w": "遺言", "r": "ゆいごん", "t": "reading"}, {"w": "女壻", "r": "じょせい", "t": "reading"}, {"w": "新任", "r": "しんにん", "t": "reading"}, {"w": "知県", "r": "ちけん", "t": "reading"}, {"w": "句読", "r": "くとう", "t": "reading"}, {"w": "改", "r": "あらた", "t": "reading"}, {"w": "一種", "r": "いっしゅ", "t": "reading"}, {"w": "文字遊戯", "r": "もじゆうぎ", "t": "reading"}, {"w": "龍図公案", "r": "りゅうずこうあん", "t": "reading"}, {"w": "味遺嘱", "r": "みいしょく", "t": "reading"}, {"w": "巻四", "r": "かんし", "t": "reading"}, {"w": "同", "r": "おな", "t": "reading"}, {"w": "正文", "r": "せいぶん", "t": "reading"}, {"w": "合同文字記", "r": "ごうどうもんじき", "t": "reading"}, {"w": "襲", "r": "おそ", "t": "reading"}, {"w": "後半部分", "r": "こうはんぶぶん", "t": "reading"}, {"w": "書", "r": "か", "t": "reading"}, {"w": "劉天祥", "r": "りゅうてんしょう", "t": "reading"}, {"w": "妻", "r": "つま", "t": "reading"}, {"w": "楊氏", "r": "ようし", "t": "reading"}, {"w": "女", "r": "むすめ", "t": "reading"}, {"w": "連", "r": "つ", "t": "reading"}, {"w": "再婚", "r": "さいこん", "t": "reading"}, {"w": "訪", "r": "たず", "t": "reading"}, {"w": "安住", "r": "あんじゅう", "t": "reading"}, {"w": "契約書", "r": "けいやくしょ", "t": "reading"}, {"w": "返", "r": "かえ", "t": "reading"}, {"w": "困", "r": "こま", "t": "reading"}, {"w": "天祥", "r": "てんしょう", "t": "reading"}, {"w": "甥", "r": "おい", "t": "reading"}, {"w": "認", "r": "みと", "t": "reading"}, {"w": "家", "r": "いえ", "t": "reading"}, {"w": "却", "r": "かえ", "t": "reading"}, {"w": "棒", "r": "ぼう", "t": "reading"}, {"w": "傷", "r": "きず", "t": "reading"}, {"w": "李社長", "r": "りしゃちょう", "t": "reading"}, {"w": "二人", "r": "ふたり", "t": "reading"}, {"w": "帰", "r": "かえ", "t": "reading"}, {"w": "翌日", "r": "よくじつ", "t": "reading"}, {"w": "包公", "r": "ほうこう", "t": "reading"}, {"w": "訴", "r": "うった", "t": "reading"}, {"w": "結着", "r": "けっちゃく", "t": "reading"}, {"w": "一計", "r": "いっけい", "t": "reading"}, {"w": "案", "r": "あん", "t": "reading"}, {"w": "牢", "r": "ろう", "t": "reading"}, {"w": "満州", "r": "まんしゅう", "t": "reading"}, {"w": "張乗率", "r": "ちょうじょうりつ", "t": "reading"}, {"w": "詳", "r": "くわ", "t": "reading"}, {"w": "事情", "r": "じじょう", "t": "reading"}, {"w": "再", "r": "ふたた", "t": "reading"}, {"w": "一同", "r": "いちどう", "t": "reading"}, {"w": "自洲", "r": "じしゅう", "t": "reading"}, {"w": "死", "r": "し", "t": "reading"}, {"w": "検屍", "r": "けんし", "t": "reading"}, {"w": "打", "r": "う", "t": "reading"}, {"w": "親類", "r": "しんるい", "t": "reading"}, {"w": "死刑", "r": "しけい", "t": "reading"}, {"w": "他人", "r": "たにん", "t": "reading"}, {"w": "命", "r": "いのち", "t": "reading"}, {"w": "償", "r": "つぐな", "t": "reading"}, {"w": "差", "r": "さ", "t": "reading"}, {"w": "出", "r": "だ", "t": "reading"}, {"w": "出仕", "r": "しゅっし", "t": "reading"}, {"w": "貴顕", "r": "きけん", "t": "reading"}, {"w": "張員外", "r": "ちょういんがい", "t": "reading"}, {"w": "両家", "r": "りょうけ", "t": "reading"}, {"w": "叙述", "r": "じょじゅつ", "t": "reading"}, {"w": "話本", "r": "わほん", "t": "reading"}, {"w": "詳細", "r": "しょうさい", "t": "reading"}, {"w": "全文", "r": "ぜんぶん", "t": "reading"}, {"w": "記", "r": "しる", "t": "reading"}, {"w": "述", "r": "の", "t": "reading"}, {"w": "天瑞", "r": "てんずい", "t": "reading"}, {"w": "吉日", "r": "きちじつ", "t": "reading"}, {"w": "択", "r": "えら", "t": "reading"}, {"w": "荷物", "r": "にもつ", "t": "reading"}, {"w": "兄", "r": "あに", "t": "reading"}, {"w": "捜", "r": "そう", "t": "reading"}, {"w": "別", "r": "わか", "t": "reading"}, {"w": "旅", "r": "たび", "t": "reading"}, {"w": "兄弟", "r": "きょうだい", "t": "reading"}, {"w": "涙", "r": "なみだ", "t": "reading"}, {"w": "願", "r": "ねが", "t": "reading"}, {"w": "意", "r": "い", "t": "reading"}, {"w": "得", "r": "え", "t": "reading"}, {"w": "仙呂賞花時", "r": "せんりょしょうかじ", "t": "reading"}, {"w": "一首", "r": "いっしゅ", "t": "reading"}, {"w": "歌詞", "r": "かし", "t": "reading"}, {"w": "槻字", "r": "しんじ", "t": "reading"}, {"w": "所", "r": "しょ", "t": "reading"}, {"w": "注目", "r": "ちゅうもく", "t": "reading"}, {"w": "同様", "r": "どうよう", "t": "reading"}, {"w": "語", "r": "かた", "t": "reading"}, {"w": "回", "r": "かい", "t": "reading"}, {"w": "工夫", "r": "くふう", "t": "meaning", "m": "巧思、（费心）讲求与安排（≠汉语“工夫＝时间/本领”）"}, {"w": "部分", "r": "ぶぶん", "t": "reading"}, {"w": "体裁", "r": "たいさい", "t": "meaning", "m": "外观、样式、格局（≈话本的体式；日语“体裁”偏指外在形式）"}, {"w": "最後", "r": "さいご", "t": "reading"}, {"w": "意識", "r": "いしき", "t": "reading"}, {"w": "支", "r": "ささ", "t": "reading"}, {"w": "めぐる", "r": "めぐる", "m": "围绕……、就……（而生的争端）（「～をめぐる」）", "t": "meaning"}, {"w": "いいはる", "r": "いいはる", "m": "一口咬定、坚称、硬说（言い張る）", "t": "meaning"}, {"w": "あらすじ", "r": "あらすじ", "m": "梗概、剧情大意", "t": "meaning"}, {"w": "襲う", "r": "おそう", "m": "沿袭、承袭（此处非汉语“袭击”，而是“因袭、踵继”）", "t": "meaning"}, {"w": "ひとりじめ", "r": "ひとりじめ", "m": "独占、独吞（独り占め）", "t": "meaning"}, {"w": "困りはてる", "r": "こまりはてる", "m": "一筹莫展、走投无路（困り果てる）", "t": "meaning"}, {"w": "却って", "r": "かえって", "m": "反而、反倒", "t": "meaning"}, {"w": "わが意を得たり", "r": "わがいをえたり", "m": "正中下怀、称心如意（如愿以偿之意）", "t": "meaning"}];
+const PAGE_SLUG = "ch02-11-godo-hakuan-kyoki";
+(function () {
+  "use strict";
+  // ---------- shared MC quiz core (distractors from the embedded bank) ----------
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
+  function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+  const ansField = c => (c.t === 'meaning' ? 'm' : 'r');
+  function buildRound(deck, statsOf, size) {
+    return deck.map(c => {
+      const st = statsOf(c); const score = st ? st.score : 0, seen = st ? st.seen : 0;
+      return { c, w: score * 2 + (seen === 0 ? 3 : 0) + Math.random() * 2 };
+    }).sort((a, b) => b.w - a.w).slice(0, Math.min(size, deck.length)).map(x => x.c);
+  }
+  function buildOptions(card, pool) {
+    const field = ansField(card), correct = card[field], seen = new Set([correct]), out = [];
+    for (const c of shuffle(pool.filter(c => c[field] && c[field] !== correct))) {
+      if (seen.has(c[field])) continue;
+      seen.add(c[field]); out.push(c[field]);
+      if (out.length >= 3) break;
+    }
+    return shuffle([correct].concat(out));
+  }
+  // cfg: { deck, pool, statsOf, size, record(card,ok)->Promise, onAnswer, showSrc }
+  function makeQuiz(stage, cfg) {
+    let round = [], idx = 0, correctN = 0;
+    function start() {
+      round = buildRound(cfg.deck, cfg.statsOf, cfg.size || 12); idx = 0; correctN = 0;
+      if (!round.length) { stage.innerHTML = '<div class="quiz-summary">暂无可练习的词。</div>'; return; }
+      question();
+    }
+    function question() {
+      const card = round[idx], field = ansField(card), correct = card[field];
+      const options = buildOptions(card, cfg.pool);
+      const ask = field === 'm' ? '选择正确的中文释义' : '选择正确的读音（假名）';
+      const hint = (field === 'm' && card.r && card.r !== card.w) ? '<span class="qhint">' + esc(card.r) + '</span>' : '';
+      stage.innerHTML =
+        '<div class="quiz-card">'
+        + '<div class="quiz-progress">第 ' + (idx + 1) + ' / ' + round.length + ' 题 · 正确 ' + correctN + '</div>'
+        + '<div class="quiz-q">' + esc(card.w) + hint + '</div>'
+        + '<div class="quiz-ask">' + ask + '</div>'
+        + '<div class="quiz-opts">'
+        + options.map(o => '<button class="quiz-opt" type="button">' + esc(o) + '</button>').join('')
+        + '</div>'
+        + '<div class="quiz-reveal"></div>'
+        + '<div class="quiz-next"></div>'
+        + '</div>';
+      stage.querySelectorAll('.quiz-opt').forEach(btn => btn.addEventListener('click', async () => {
+        const ok = btn.textContent === correct;
+        stage.querySelectorAll('.quiz-opt').forEach(b => {
+          b.disabled = true;
+          if (b.textContent === correct) b.classList.add('correct');
+          else if (b === btn) b.classList.add('wrong');
+        });
+        if (ok) correctN++;
+        const reveal = stage.querySelector('.quiz-reveal');
+        reveal.innerHTML =
+          (ok ? '✅ 正确　' : '❌ 正确答案如上　')
+          + '<b>' + esc(card.w) + '</b><span class="qr-r">' + esc(card.r) + '</span>'
+          + (card.m ? '— ' + esc(card.m) : '')
+          + (cfg.showSrc && card.slug ? '<span class="qr-src">· ' + esc(card.slug) + '</span>' : '');
+        try { await cfg.record(card, ok); } catch (e) { reveal.innerHTML += '<span class="qr-err"> · 保存失败</span>'; }
+        if (cfg.onAnswer) cfg.onAnswer();
+        const next = stage.querySelector('.quiz-next'), last = idx + 1 >= round.length;
+        next.innerHTML = '<button class="vp-btn" type="button">' + (last ? '查看结果' : '下一题') + '</button>';
+        next.querySelector('button').addEventListener('click', () => { if (last) summary(); else { idx++; question(); } });
+      }));
+    }
+    function summary() {
+      stage.innerHTML = '<div class="quiz-summary">本组完成：正确 <b>' + correctN + '</b> / ' + round.length
+        + '　<button class="vp-btn" type="button" style="margin-left:0.6rem">再来一组</button></div>';
+      stage.querySelector('button').addEventListener('click', start);
+      if (cfg.onAnswer) cfg.onAnswer();
+    }
+    return { start };
+  }
+
+  // ---------- Supabase client + auth ----------
+  const cfgOK = !!(window.SUPA_URL && window.SUPA_ANON_KEY && window.supabase);
+  const sb = cfgOK ? window.supabase.createClient(window.SUPA_URL, window.SUPA_ANON_KEY) : null;
+  let user = null;
+  const $ = id => document.getElementById(id);
+  const bank = (VOCAB_BANK || []).map(c => ({ w: c.w, r: c.r, m: c.m || null, t: c.t, slug: PAGE_SLUG }));
+  if ($('vp-count')) $('vp-count').textContent = bank.length;
+  const stageEl = $('vp-stage');
+
+  function renderAuth() {
+    const bar = $('auth-bar'); if (!bar) return;
+    if (!cfgOK) { bar.innerHTML = '<span class="ab-msg">未配置数据库：把 supabase-config.example.js 复制为 supabase-config.js 并填入项目信息</span>'; return; }
+    if (user) {
+      bar.innerHTML = '<span class="ab-user">👤 ' + esc(user.email) + '</span><button class="auth-btn ghost" id="ab-logout" type="button">退出</button>';
+      $('ab-logout').addEventListener('click', () => sb.auth.signOut());
+    } else {
+      bar.innerHTML =
+        '<input id="ab-email" type="email" placeholder="邮箱" autocomplete="username">'
+        + '<input id="ab-pass" type="password" placeholder="密码" autocomplete="current-password">'
+        + '<button class="auth-btn" id="ab-login" type="button">登录</button>'
+        + '<button class="auth-btn ghost" id="ab-signup" type="button">注册</button>'
+        + '<span class="ab-msg" id="ab-msg"></span>';
+      const email = () => $('ab-email').value.trim(), pass = () => $('ab-pass').value, msg = t => { $('ab-msg').textContent = t || ''; };
+      $('ab-login').addEventListener('click', async () => {
+        msg('登录中…'); const { error } = await sb.auth.signInWithPassword({ email: email(), password: pass() });
+        if (error) msg('登录失败：' + error.message);
+      });
+      $('ab-signup').addEventListener('click', async () => {
+        msg('注册中…'); const { error } = await sb.auth.signUp({ email: email(), password: pass() });
+        msg(error ? ('注册失败：' + error.message) : '注册成功；若开启了邮箱验证，请查收邮件后再登录。');
+      });
+    }
+  }
+  function applyGate() {
+    const on = !!user;
+    if ($('vp-gate')) $('vp-gate').style.display = on ? 'none' : 'inline-block';
+    if ($('vp-start')) $('vp-start').style.display = on ? 'inline-block' : 'none';
+    if ($('vp-reset')) $('vp-reset').style.display = on ? 'inline' : 'none';
+    if (!on && stageEl) stageEl.innerHTML = '';
+    updateImport();
+  }
+
+  // ---------- DB-backed stats ----------
+  async function recordAnswer(card, ok) {
+    if (!sb || !user) throw new Error('not signed in');
+    const { error } = await sb.rpc('record_attempt', { p_slug: card.slug, p_word: card.w, p_reading: card.r || '', p_meaning: card.m, p_type: card.t, p_correct: ok });
+    if (error) throw error;
+  }
+  async function fetchSlugStats() {
+    if (!sb || !user) return {};
+    const { data, error } = await sb.from('user_word_stats').select('word,score,seen,correct').eq('slug', PAGE_SLUG);
+    if (error) return {};
+    const m = {}; (data || []).forEach(r => m[r.word] = r); return m;
+  }
+  async function refreshHard() {
+    const slot = $('user-hard'); if (!slot) return;
+    if (!sb || !user) { slot.hidden = true; slot.innerHTML = ''; return; }
+    const { data, error } = await sb.from('user_word_stats')
+      .select('word,reading,meaning,type,seen,correct,score').eq('slug', PAGE_SLUG).gt('score', 0)
+      .order('score', { ascending: false }).limit(5);
+    if (error || !data || !data.length) { slot.hidden = true; slot.innerHTML = ''; return; }
+    slot.hidden = false;
+    slot.innerHTML = '<div class="uh-title">📌 你的难词（练习易错）</div><ul class="uh-list">'
+      + data.map(x => {
+        const acc = x.seen ? Math.round(100 * x.correct / x.seen) : 0;
+        return '<li><b>' + esc(x.word) + '</b><span class="uh-r">' + esc(x.reading || '') + '</span>'
+          + (x.meaning ? '— ' + esc(x.meaning) : '<span class="uh-miss">（读音）</span>')
+          + ' <span class="uh-acc">正确率 ' + acc + '%</span></li>';
+      }).join('')
+      + '</ul>';
+  }
+  async function startPractice() {
+    if (!sb || !user) return;
+    stageEl.innerHTML = '<div class="quiz-summary">加载中…</div>';
+    const statsMap = await fetchSlugStats();
+    makeQuiz(stageEl, { deck: bank, pool: bank, statsOf: c => statsMap[c.w], size: 12, record: recordAnswer, onAnswer: refreshHard }).start();
+  }
+
+  // ---------- one-time legacy localStorage import ----------
+  function legacy() { try { return JSON.parse(localStorage.getItem('koan-vocab-v1')) || null; } catch (e) { return null; } }
+  function updateImport() { const b = $('vp-import'); if (b) b.style.display = (user && legacy()) ? 'inline' : 'none'; }
+  async function doImport() {
+    if (!sb || !user) return; const all = legacy(); if (!all) return;
+    const b = $('vp-import'); b.disabled = true; b.textContent = '导入中…';
+    const payload = [];
+    for (const slug of Object.keys(all)) for (const w of Object.keys(all[slug])) {
+      const s = all[slug][w];
+      payload.push({ slug, word: w, reading: s.r || '', meaning: s.m || null, type: s.t || 'reading', seen: s.seen || 0, correct: s.correct || 0, wrong: s.wrong || 0, score: s.score || 0 });
+    }
+    const { error } = await sb.rpc('import_stats', { p: payload });
+    if (error) { b.textContent = '导入失败'; b.disabled = false; return; }
+    try { localStorage.removeItem('koan-vocab-v1'); } catch (e) {}
+    b.textContent = '已导入 ' + payload.length + ' 词'; refreshHard();
+  }
+
+  // ---------- wire up ----------
+  if ($('vp-start')) $('vp-start').addEventListener('click', startPractice);
+  if ($('vp-import')) $('vp-import').addEventListener('click', doImport);
+  if ($('vp-reset')) $('vp-reset').addEventListener('click', async () => {
+    if (!sb || !user) return; if (!confirm('清除本节的练习记录（仅你自己）？')) return;
+    await sb.from('user_word_stats').delete().eq('slug', PAGE_SLUG).eq('user_id', user.id);
+    if (stageEl) stageEl.innerHTML = ''; refreshHard();
+  });
+
+  async function syncAuth(session) { user = session ? session.user : null; renderAuth(); applyGate(); await refreshHard(); }
+  renderAuth(); applyGate();
+  if (sb) {
+    sb.auth.getSession().then(({ data }) => syncAuth(data.session));
+    sb.auth.onAuthStateChange((_e, session) => syncAuth(session));
+  }
+})();
+</script>
+</body>
+</html>

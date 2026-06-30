@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>日语学习：漢代小説の裁判説話 ·『中国の公案小説』第二章③ · 学术日语解析</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #f1efe7;
+            font-family: system-ui, -apple-system, 'Segoe UI', 'Noto Sans CJK JP', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Microsoft YaHei', sans-serif;
+            line-height: 1.65;
+            padding: 2rem 1rem;
+            color: #2b2a26;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            background: #fffef9;
+            border-radius: 32px;
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            padding: 2rem 2rem 2.2rem;
+        }
+        h1 {
+            font-size: 1.9rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            border-left: 6px solid #8b3c2c;
+            padding-left: 1.2rem;
+            margin-bottom: 0.4rem;
+            color: #2d2a23;
+        }
+        .sub {
+            color: #6e6558;
+            margin-bottom: 2rem;
+            font-size: 0.85rem;
+            border-bottom: 1px solid #e2dbcf;
+            padding-bottom: 0.75rem;
+        }
+        .section {
+            margin-bottom: 2.8rem;
+        }
+        .section-title {
+            font-size: 1.35rem;
+            font-weight: 600;
+            background: #f0ece0;
+            display: inline-block;
+            padding: 0.2rem 1.3rem;
+            border-radius: 40px;
+            margin-bottom: 1.2rem;
+            color: #4b3f2f;
+        }
+        .japanese-text {
+            background: #fefaf0;
+            padding: 1.5rem 1.8rem;
+            border-radius: 26px;
+            border: 1px solid #e5ddce;
+            font-size: 1.02rem;
+            line-height: 2.1;
+            font-family: 'Noto Sans CJK JP', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+            margin-bottom: 1rem;
+        }
+        ruby rt {
+            font-size: 0.68rem;
+            color: #b45f2a;
+            font-weight: normal;
+            letter-spacing: 0.02em;
+        }
+        .translation-block {
+            background: #f6f8fc;
+            padding: 1.2rem 1.8rem;
+            border-radius: 22px;
+            border-left: 5px solid #2c6e6b;
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .translation-text {
+            font-size: 1rem;
+            color: #1e3e3c;
+        }
+        .chinese-quote {
+            background: #fef5e6;
+            padding: 1rem 1.6rem;
+            margin: 0.8rem 0;
+            border-left: 4px solid #b47c48;
+            border-radius: 18px;
+            font-size: 0.96rem;
+            color: #2b4b3a;
+            font-family: 'Noto Serif SC', 'STSong', 'SimSun', serif;
+            line-height: 1.75;
+        }
+        .word-table-wrapper {
+            overflow-x: auto;
+            margin: 1.2rem 0 1rem;
+            border-radius: 20px;
+            border: 1px solid #ddd6ca;
+        }
+        .word-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+            background: white;
+        }
+        .word-table th {
+            background: #e7e0d2;
+            padding: 10px 12px;
+            text-align: left;
+            font-weight: 600;
+            color: #2e2b25;
+            border-bottom: 1px solid #cfc6b6;
+        }
+        .word-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #ece3d8;
+            vertical-align: top;
+        }
+        .grammar-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+        }
+        .grammar-card {
+            background: #ffffff;
+            border-radius: 20px;
+            border: 1px solid #e1d8cc;
+            padding: 0.9rem 1.3rem;
+        }
+        .grammar-title {
+            font-weight: 700;
+            font-size: 0.92rem;
+            color: #9b542e;
+            font-family: monospace;
+            background: #faf3e8;
+            display: inline-block;
+            padding: 0.2rem 0.8rem;
+            border-radius: 24px;
+            margin-bottom: 0.5rem;
+        }
+        .grammar-desc {
+            margin-top: 0.25rem;
+            color: #3e3a33;
+            font-size: 0.9rem;
+        }
+        hr {
+            margin: 1.8rem 0 1rem;
+            border: none;
+            border-top: 1px solid #e2d9ce;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.7rem;
+            color: #938c7d;
+            margin-top: 1.5rem;
+        }
+        .small-note {
+            font-size: 0.76rem;
+            color: #7b6e5c;
+            margin-top: 0.4rem;
+        }
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .nav-bar.top { margin-bottom: 1.6rem; }
+        .nav-bar.bottom { margin-top: 1.8rem; }
+        .nav-link {
+            text-decoration: none;
+            color: #8b3c2c;
+            background: #f0ece0;
+            padding: 0.4rem 1.05rem;
+            border-radius: 22px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            white-space: nowrap;
+            transition: background 0.2s;
+        }
+        .nav-link:hover { background: #e3dccb; }
+        .nav-link.home { background: #8b3c2c; color: #fdfaf2; }
+        .nav-link.home:hover { background: #76301f; }
+        .nav-link.disabled {
+            color: #bcb3a1;
+            background: #f5f2ea;
+            pointer-events: none;
+        }
+        .content-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.8rem 1.6rem;
+            align-items: flex-start;
+            margin-bottom: 2.8rem;
+        }
+        .content-grid > .section { flex: 1 1 100%; order: 3; margin-bottom: 0; }
+        .content-grid > .section.text-col { flex: 1 1 58%; order: 1; min-width: 0; }
+        .content-grid > .section.vocab-col { flex: 0 0 36%; order: 2; min-width: 0; }
+        .content-grid .word-table { font-size: 0.82rem; }
+        .content-grid .word-table th,
+        .content-grid .word-table td { padding: 8px 10px; }
+        @media (max-width: 900px) {
+            .content-grid { display: block; }
+            .content-grid > .section { margin-bottom: 2.8rem; }
+        }
+        @media (max-width: 680px) {
+            .container { padding: 1.2rem; }
+            .japanese-text { padding: 1rem; font-size: 0.92rem; }
+            .section-title { font-size: 1.2rem; }
+        }
+        /* --- 你的难词 (personalized hard-word slot atop ③) + 单词练习 (MC self-test) --- */
+        .user-hard {
+            background: #fbeee6;
+            border: 1px solid #e6c9b8;
+            border-radius: 16px;
+            padding: 0.7rem 0.95rem;
+            margin-bottom: 0.95rem;
+        }
+        .user-hard .uh-title { font-weight: 700; color: #8b3c2c; font-size: 0.82rem; margin-bottom: 0.45rem; }
+        .user-hard .uh-list { list-style: none; display: flex; flex-direction: column; gap: 0.3rem; }
+        .user-hard .uh-list li { font-size: 0.82rem; color: #3e3a33; }
+        .user-hard .uh-r { color: #b45f2a; font-size: 0.76rem; margin: 0 0.3rem; }
+        .user-hard .uh-miss { color: #9b6a57; font-size: 0.72rem; }
+        .vp-intro { font-size: 0.85rem; color: #5c5343; margin-bottom: 1rem; }
+        .vp-intro b { color: #8b3c2c; }
+        .vp-controls { display: flex; align-items: center; gap: 1.3rem; margin-top: 1rem; flex-wrap: wrap; }
+        .vp-btn {
+            background: #8b3c2c; color: #fdfaf2; border: none; cursor: pointer;
+            padding: 0.5rem 1.5rem; border-radius: 22px; font-size: 0.9rem; font-weight: 600;
+            font-family: inherit; transition: background 0.2s;
+        }
+        .vp-btn:hover { background: #76301f; }
+        .vp-reset { font-size: 0.78rem; color: #9a8f7d; text-decoration: none; cursor: pointer; }
+        .vp-reset:hover { text-decoration: underline; }
+        .quiz-card {
+            background: #fffef9; border: 1px solid #e1d8cc; border-radius: 20px;
+            padding: 1.3rem 1.5rem; max-width: 560px;
+        }
+        .quiz-progress { font-size: 0.76rem; color: #7b6e5c; margin-bottom: 0.6rem; }
+        .quiz-q { font-size: 1.7rem; font-weight: 600; color: #2d2a23; line-height: 1.3; }
+        .quiz-q .qhint { font-size: 0.95rem; color: #b45f2a; font-weight: normal; margin-left: 0.55rem; }
+        .quiz-ask { font-size: 0.8rem; color: #6e6558; margin: 0.25rem 0 0.95rem; }
+        .quiz-opts { display: flex; flex-direction: column; gap: 0.55rem; }
+        .quiz-opt {
+            text-align: left; background: #f6f3ea; border: 1px solid #e1d8cc; border-radius: 14px;
+            padding: 0.6rem 1rem; font-size: 0.95rem; font-family: inherit; color: #2b2a26;
+            cursor: pointer; transition: background 0.15s, border-color 0.15s;
+        }
+        .quiz-opt:hover:not(:disabled) { background: #efeadd; }
+        .quiz-opt:disabled { cursor: default; }
+        .quiz-opt.correct { background: #e3f0e2; border-color: #8fbf8a; color: #1f5d2a; }
+        .quiz-opt.wrong { background: #f7e0db; border-color: #d99b8c; color: #8b3c2c; }
+        .quiz-reveal { font-size: 0.82rem; color: #5c5343; margin-top: 0.8rem; min-height: 1.1rem; }
+        .quiz-reveal .qr-r { color: #b45f2a; margin: 0 0.3rem; }
+        .quiz-next { margin-top: 0.95rem; }
+        .quiz-summary { font-size: 0.98rem; color: #2d2a23; }
+        .quiz-summary b { color: #8b3c2c; }
+        .quiz-reveal .qr-err { color: #b0461f; }
+        .user-hard .uh-acc { color: #7b6e5c; font-size: 0.72rem; }
+        /* --- auth bar (Supabase email/password login) + practice gate --- */
+        .auth-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.45rem; justify-content: flex-end; margin-bottom: 1.2rem; font-size: 0.82rem; }
+        .auth-bar input { font-family: inherit; font-size: 0.82rem; padding: 0.35rem 0.6rem; border: 1px solid #d8cdbb; border-radius: 12px; background: #fff; color: #2b2a26; }
+        .auth-bar .ab-user { color: #5c5343; margin-right: 0.3rem; }
+        .auth-bar .ab-msg { color: #b0461f; font-size: 0.76rem; flex-basis: 100%; text-align: right; }
+        .auth-btn { background: #8b3c2c; color: #fdfaf2; border: none; cursor: pointer; padding: 0.35rem 0.95rem; border-radius: 14px; font-size: 0.8rem; font-weight: 600; font-family: inherit; }
+        .auth-btn:hover { background: #76301f; }
+        .auth-btn.ghost { background: #efeadd; color: #6e5a3f; }
+        .auth-btn.ghost:hover { background: #e4dcc9; }
+        .vp-gate { font-size: 0.84rem; color: #9a6a30; background: #fbf3e3; border: 1px solid #ecd9b8; border-radius: 12px; padding: 0.5rem 0.85rem; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>📖 漢代小説の裁判説話</h1>
+    <div class="sub">第二章 公案小説の系譜 · 第3節／全15節 ｜ 日语原文（総ルビ付き）· 汉语翻译 · 单词注释 · 语法分析</div>
+
+    <div class="auth-bar" id="auth-bar"></div>
+
+    <div class="nav-bar top">
+        <a class="nav-link" href="ch02-2-shikyo-saiban.html">← 上一篇</a>
+        <a class="nav-link home" href="index.html">📖 目录</a>
+        <a class="nav-link" href="ch02-4-rikucho-soshinki.html">下一篇 →</a>
+    </div>
+
+    <div class="content-grid">
+    <div class="section text-col">
+        <div class="section-title">📜 日语原文（振り仮名付き）</div>
+        <div class="japanese-text">
+            「<ruby>漢武故事<rt>かんぶこじ</rt></ruby>」にはつぎのような<ruby>判決<rt>はんけつ</rt></ruby>にまつわる<ruby>話<rt>はなし</rt></ruby>が<ruby>記<rt>しる</rt></ruby>される。
+            <div class="chinese-quote">
+                廷尉上囚、防年継母陳殺父、因殺陳、依律、年殺母、大逆論、帝疑之、詔問太子、太子対曰、夫継母如母、明其不及母也、故比之子母耳、今継母無状、手殺其父、則下手之日、母恩絶矣、宜与殺人者同、不宜大逆論、帝従之、年棄市、議者称善、太子年十四、帝益奇之。（御覧八十八）
+            </div>
+            <ruby>太子<rt>たいし</rt></ruby>とはのちの<ruby>漢武帝<rt>かんぶてい</rt></ruby>のことである。<ruby>継母<rt>けいぼ</rt></ruby>が<ruby>父<rt>ちち</rt></ruby>を<ruby>殺<rt>ころ</rt></ruby>す。<ruby>子<rt>こ</rt></ruby>がその<ruby>継母<rt>けいぼ</rt></ruby>を<ruby>殺<rt>ころ</rt></ruby>す。<ruby>子<rt>こ</rt></ruby>の<ruby>罪<rt>つみ</rt></ruby>は<ruby>大逆罪<rt>だいぎゃくざい</rt></ruby>にあたるか、<ruby>殺人罪<rt>さつじんざい</rt></ruby>となるか、という<ruby>論議<rt>ろんぎ</rt></ruby>である。<ruby>漢代<rt>かんだい</rt></ruby>の<ruby>裁判<rt>さいばん</rt></ruby>についてはこの<ruby>外<rt>ほか</rt></ruby>「<ruby>棠陰比事<rt>とういんひじ</rt></ruby>」や「<ruby>折獄亀鑑<rt>せつごくきかん</rt></ruby>」にいくつか<ruby>記<rt>しる</rt></ruby>されるが<ruby>一例<rt>いちれい</rt></ruby>だけあげる。
+            <div class="chinese-quote">
+                按元帝時、王尊守槐里令、兼行美陽令事、美陽女子告仮子不孝曰、児常以我為妻、詈笞我、尊聞之、遣吏収捕験問、辞服、尊曰、律無妻母之法、聖人所不忍書、此経所謂造獄者也、尊於是出坐廷上、取不孝子懸磔著樹、使騎吏五人張弓射殺之、是亦以禽獣処之也。（『折獄亀鑑』巻四）
+            </div>
+            なんともおぞましい<ruby>不孝者<rt>ふこうもの</rt></ruby>の<ruby>事件<rt>じけん</rt></ruby>であるが、これも<ruby>律<rt>りつ</rt></ruby>には<ruby>記<rt>しる</rt></ruby>されぬという。
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">🌐 汉语翻译</div>
+        <div class="translation-block">
+            <div class="translation-text">
+                《汉武故事》中记载着如下一则与判决有关的故事。
+                <div class="chinese-quote" style="margin: 0.6rem 0; background: #f3efe2;">
+                    廷尉上囚、防年継母陳殺父、因殺陳、依律、年殺母、大逆論、帝疑之、詔問太子、太子対曰、夫継母如母、明其不及母也、故比之子母耳、今継母無状、手殺其父、則下手之日、母恩絶矣、宜与殺人者同、不宜大逆論、帝従之、年棄市、議者称善、太子年十四、帝益奇之。（御覧八十八）
+                </div>
+                “太子”即后来的汉武帝。继母杀了（防年的）父亲，（防年）之子又杀了这位继母。其子之罪究竟应以大逆罪论处，还是构成杀人罪——这便是争论之所在。关于汉代的审判，除此之外《棠阴比事》《折狱龟鉴》中也有若干记载，这里仅举一例。
+                <div class="chinese-quote" style="margin: 0.6rem 0; background: #f3efe2;">
+                    按元帝時、王尊守槐里令、兼行美陽令事、美陽女子告仮子不孝曰、児常以我為妻、詈笞我、尊聞之、遣吏収捕験問、辞服、尊曰、律無妻母之法、聖人所不忍書、此経所謂造獄者也、尊於是出坐廷上、取不孝子懸磔著樹、使騎吏五人張弓射殺之、是亦以禽獣処之也。（『折獄亀鑑』巻四）
+                </div>
+                这是一桩令人不寒而栗的不孝者案件，但据说此事在律（法律条文）中同样未见记载。
+            </div>
+        </div>
+        <div class="small-note">※ 上引《汉武故事》（防年继母案，《太平御览》卷八十八）及《折狱龟鉴》卷四（王尊治美阳不孝子，本《汉书·王尊传》）二白文，已据通行本校正 OCR 讹字（详见下「资料补注」OCR 订正条），照录原文不另译。</div>
+    </div>
+
+    <div class="section vocab-col">
+        <div class="section-title">📖 語彙注釈（单词注释）</div>
+        <div class="user-hard" id="user-hard" hidden></div>
+        <div class="word-table-wrapper">
+            <table class="word-table">
+                <thead>
+                    <tr><th>日语词汇</th><th>读音</th><th>中文释义</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>まつわる</td><td>まつわる</td><td>缠绕、纠缠；与……相关联（「～にまつわる話」＝与……有关的故事）</td></tr>
+                    <tr><td>つぎのような</td><td>つぎのような</td><td>如下的、像下面这样的</td></tr>
+                    <tr><td>外</td><td>ほか</td><td>别的、此外（「この外」＝除此之外；训读「ほか」，非汉语“外面”）</td></tr>
+                    <tr><td>いくつか</td><td>いくつか</td><td>若干、几条、几处</td></tr>
+                    <tr><td>あげる</td><td>あげる</td><td>举出、列举（「挙げる」；「一例だけあげる」＝只举一例）</td></tr>
+                    <tr><td>あたる</td><td>あたる</td><td>相当于、属于、构成（「大逆罪にあたる」＝构成大逆罪）</td></tr>
+                    <tr><td>なんとも</td><td>なんとも</td><td>实在、何等（加强语气；「なんともおぞましい」＝实在令人发指）</td></tr>
+                    <tr><td>おぞましい</td><td>おぞましい</td><td>令人毛骨悚然的、可憎可厌的</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="small-note">※ 本表仅收录中文读者较难推断的词汇（和语词、文语/语法形式、同形异义词等）；其义可由汉字直接推知的同形词已省略，读音见原文振假名。</div>
+    </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">✍️ 文法分析（句子语法简析）</div>
+        <div class="grammar-list">
+            <div class="grammar-card">
+                <div class="grammar-title">① ～にまつわる</div>
+                <div class="grammar-desc">「判決にまつわる話」——“与判决相关的故事”。「～にまつわる」连体修饰，表示“围绕……、与……牵连相关的”。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">② 受身「記される」（漢文訓読調）</div>
+                <div class="grammar-desc">「話が記される」「いくつか記される」——“（某事）被记载”。「記す」的被动「記される」，学术与训读体常借被动作客观叙述，谓某事见于某书记载。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">③ ～とは…のことである</div>
+                <div class="grammar-desc">「太子とはのちの漢武帝のことである」——“所谓‘太子’即后来的汉武帝”。释义句式「ＡとはＢのことである」＝“所谓A就是B”。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">④ ～か、～か、という＋名词</div>
+                <div class="grammar-desc">「大逆罪にあたるか、殺人罪となるか、という論議」——“是构成大逆罪、还是构成杀人罪，这样一场争论”。并列疑问「～か、～か」由「という」承接、名词化后修饰「論議」。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">⑤ ～については</div>
+                <div class="grammar-desc">「漢代の裁判については」——“关于汉代的审判”。提示话题“就……而言、关于……”。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">⑥ この外…や…に（并列举例「や」）</div>
+                <div class="grammar-desc">「この外『棠陰比事』や『折獄亀鑑』に…記される」——“除此之外，《棠阴比事》《折狱龟鉴》中也（有记载）”。「この外」＝此外；「や」举例并列，含“等等”之意（非穷尽列举）。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">⑦ ～だけ</div>
+                <div class="grammar-desc">「一例だけあげる」——“只举一例”。「だけ」表限定“仅、只”。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">⑧ 文语否定「ぬ」（記されぬ）</div>
+                <div class="grammar-desc">「律には記されぬ」——“（此事）在律中并未记载”。文语否定助动词「ぬ」＝现代「ない」，「記されぬ」＝“未被记载”。</div>
+            </div>
+            <div class="grammar-card">
+                <div class="grammar-title">⑨ 伝聞「～という」</div>
+                <div class="grammar-desc">「記されぬという」——“据说（律中）并未记载”。句末「という」表传闻、转述“据说、说是”。</div>
+            </div>
+        </div>
+        <div class="small-note">※ 语法分析以现代日语为主，兼及汉文训读调与文语残留。</div>
+    </div>
+
+    <hr>
+    <div style="background-color: #faf6ed; border-radius: 20px; padding: 1rem 1.5rem;">
+        <p style="font-size: 0.83rem; color:#5c5343;">📌 <strong>资料补注</strong>：<br>
+        • <strong>本节定位</strong>：本节承上文对先秦典籍中刑罚与裁判记述的梳理，转入汉代小说，举《汉武故事》防年继母案与《折狱龟鉴》所引王尊断不孝子案两则白文，说明汉代小说中已出现以判决为题材的裁判说话，并点出此类奇案多为“律所不载”之事。<br>
+        • <strong>《汉武故事》·御览</strong>：《汉武故事》旧题东汉班固（一说南朝齐王俭）撰，实为后人托名的杂史小说，专记汉武帝刘彻生平轶事，多神怪夸饰之辞，原书已佚，今多赖《太平御览》等类书征引而存。白文末括注“御覧八十八”即《太平御览》卷八十八（皇王部·孝武皇帝）所引；文中“太子”指即位前的汉武帝。<br>
+        • <strong>防年继母案</strong>：案情：继母（陈氏）杀防年之父，防年遂手刃继母。依律，杀母当以“大逆”论；时为太子的武帝（年仅十四）力主“继母如母，本非生母，今其手杀生父，则母子之恩已绝”，故应以“杀人”而非“大逆”论处。帝从其议，防年弃市，论者称善——既正其杀人之罪，又免其大逆之名，成为汉代以经义折狱的著例。<br>
+        • <strong>《棠阴比事》·《折狱龟鉴》</strong>：二书皆宋代决狱（断案）故事汇编：《折狱龟鉴》郑克编、《棠阴比事》桂万荣编，辑录历代疑案与明断之例，为后世公案小说的重要取材渊薮。文中所引王尊案（汉元帝时王尊守槐里令、兼行美阳令事，以养子虐母不孝而射杀之、“以禽兽处之”）即出《折狱龟鉴》卷四。<br>
+        • <strong>OCR订正</strong>：白文据通行本校正：《汉武故事》底本「詔間太子」→「詔問太子」、「太子対日」→「太子対曰」、「母恩絶央」→「母恩絶矣」；《折狱龟鉴》（王尊案）底本「守椀里令」→「守槐里令」、「不孝日」→「不孝曰」、「為妻話笞我」→「為妻、詈笞我」、「収捕験間」→「収捕験問」、「尊日」→「尊曰」、「不忍書此経、所謂」→「不忍書、此経所謂」、「懸礫著樹」→「懸磔著樹」、句末脱字「名折獄亀鑑」→「（『折獄亀鑑』」。</p>
+    </div>
+
+    <div class="section vocab-practice">
+        <div class="section-title">🎴 单词练习（多选自测）</div>
+        <div class="vp-intro">从本节 <b id="vp-count">0</b> 个词中随机抽取，选出正确的读音或释义；答错的词会记入上方「📌 你的难词」，并按正确率在数据库中追踪。</div>
+        <div id="vp-stage"></div>
+        <div class="vp-controls">
+            <span class="vp-gate" id="vp-gate">登录后即可练习（在页面顶部注册 / 登录）。</span>
+            <button class="vp-btn" id="vp-start" type="button">开始练习</button>
+            <button class="auth-btn ghost" id="vp-import" type="button" style="display:none">导入本机旧记录</button>
+            <a class="vp-reset" id="vp-reset">重置本节记录</a>
+        </div>
+    </div>
+
+    <div class="nav-bar bottom">
+        <a class="nav-link" href="ch02-2-shikyo-saiban.html">← 上一篇：『詩経』にうたわれる裁判</a>
+        <a class="nav-link home" href="index.html">📖 目录</a>
+        <a class="nav-link" href="ch02-4-rikucho-soshinki.html">下一篇：六朝『捜神記』の冤死譚 →</a>
+    </div>
+
+    <footer>
+        第二章 公案小説の系譜 · 第3節／全15節 ｜ 日语原文（振假名）· 汉语翻译 · 单词注释 · 语法分析<br>
+        出典：荘司格一『中国の公案小説』（研文出版, 1988）· 第二章
+    </footer>
+</div>
+<script src="supabase-config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const VOCAB_BANK = [{"w": "漢武故事", "r": "かんぶこじ", "t": "reading"}, {"w": "判決", "r": "はんけつ", "t": "reading"}, {"w": "話", "r": "はなし", "t": "reading"}, {"w": "記", "r": "しる", "t": "reading"}, {"w": "太子", "r": "たいし", "t": "reading"}, {"w": "漢武帝", "r": "かんぶてい", "t": "reading"}, {"w": "継母", "r": "けいぼ", "t": "reading"}, {"w": "父", "r": "ちち", "t": "reading"}, {"w": "殺", "r": "ころ", "t": "reading"}, {"w": "子", "r": "こ", "t": "reading"}, {"w": "罪", "r": "つみ", "t": "reading"}, {"w": "大逆罪", "r": "だいぎゃくざい", "t": "reading"}, {"w": "殺人罪", "r": "さつじんざい", "t": "reading"}, {"w": "論議", "r": "ろんぎ", "t": "reading"}, {"w": "漢代", "r": "かんだい", "t": "reading"}, {"w": "裁判", "r": "さいばん", "t": "reading"}, {"w": "外", "r": "ほか", "t": "meaning", "m": "别的、此外（「この外」＝除此之外；训读「ほか」，非汉语“外面”）"}, {"w": "棠陰比事", "r": "とういんひじ", "t": "reading"}, {"w": "折獄亀鑑", "r": "せつごくきかん", "t": "reading"}, {"w": "一例", "r": "いちれい", "t": "reading"}, {"w": "不孝者", "r": "ふこうもの", "t": "reading"}, {"w": "事件", "r": "じけん", "t": "reading"}, {"w": "律", "r": "りつ", "t": "reading"}, {"w": "まつわる", "r": "まつわる", "m": "缠绕、纠缠；与……相关联（「～にまつわる話」＝与……有关的故事）", "t": "meaning"}, {"w": "つぎのような", "r": "つぎのような", "m": "如下的、像下面这样的", "t": "meaning"}, {"w": "いくつか", "r": "いくつか", "m": "若干、几条、几处", "t": "meaning"}, {"w": "あげる", "r": "あげる", "m": "举出、列举（「挙げる」；「一例だけあげる」＝只举一例）", "t": "meaning"}, {"w": "あたる", "r": "あたる", "m": "相当于、属于、构成（「大逆罪にあたる」＝构成大逆罪）", "t": "meaning"}, {"w": "なんとも", "r": "なんとも", "m": "实在、何等（加强语气；「なんともおぞましい」＝实在令人发指）", "t": "meaning"}, {"w": "おぞましい", "r": "おぞましい", "m": "令人毛骨悚然的、可憎可厌的", "t": "meaning"}];
+const PAGE_SLUG = "ch02-3-kandai-saiban";
+(function () {
+  "use strict";
+  // ---------- shared MC quiz core (distractors from the embedded bank) ----------
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
+  function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+  const ansField = c => (c.t === 'meaning' ? 'm' : 'r');
+  function buildRound(deck, statsOf, size) {
+    return deck.map(c => {
+      const st = statsOf(c); const score = st ? st.score : 0, seen = st ? st.seen : 0;
+      return { c, w: score * 2 + (seen === 0 ? 3 : 0) + Math.random() * 2 };
+    }).sort((a, b) => b.w - a.w).slice(0, Math.min(size, deck.length)).map(x => x.c);
+  }
+  function buildOptions(card, pool) {
+    const field = ansField(card), correct = card[field], seen = new Set([correct]), out = [];
+    for (const c of shuffle(pool.filter(c => c[field] && c[field] !== correct))) {
+      if (seen.has(c[field])) continue;
+      seen.add(c[field]); out.push(c[field]);
+      if (out.length >= 3) break;
+    }
+    return shuffle([correct].concat(out));
+  }
+  // cfg: { deck, pool, statsOf, size, record(card,ok)->Promise, onAnswer, showSrc }
+  function makeQuiz(stage, cfg) {
+    let round = [], idx = 0, correctN = 0;
+    function start() {
+      round = buildRound(cfg.deck, cfg.statsOf, cfg.size || 12); idx = 0; correctN = 0;
+      if (!round.length) { stage.innerHTML = '<div class="quiz-summary">暂无可练习的词。</div>'; return; }
+      question();
+    }
+    function question() {
+      const card = round[idx], field = ansField(card), correct = card[field];
+      const options = buildOptions(card, cfg.pool);
+      const ask = field === 'm' ? '选择正确的中文释义' : '选择正确的读音（假名）';
+      const hint = (field === 'm' && card.r && card.r !== card.w) ? '<span class="qhint">' + esc(card.r) + '</span>' : '';
+      stage.innerHTML =
+        '<div class="quiz-card">'
+        + '<div class="quiz-progress">第 ' + (idx + 1) + ' / ' + round.length + ' 题 · 正确 ' + correctN + '</div>'
+        + '<div class="quiz-q">' + esc(card.w) + hint + '</div>'
+        + '<div class="quiz-ask">' + ask + '</div>'
+        + '<div class="quiz-opts">'
+        + options.map(o => '<button class="quiz-opt" type="button">' + esc(o) + '</button>').join('')
+        + '</div>'
+        + '<div class="quiz-reveal"></div>'
+        + '<div class="quiz-next"></div>'
+        + '</div>';
+      stage.querySelectorAll('.quiz-opt').forEach(btn => btn.addEventListener('click', async () => {
+        const ok = btn.textContent === correct;
+        stage.querySelectorAll('.quiz-opt').forEach(b => {
+          b.disabled = true;
+          if (b.textContent === correct) b.classList.add('correct');
+          else if (b === btn) b.classList.add('wrong');
+        });
+        if (ok) correctN++;
+        const reveal = stage.querySelector('.quiz-reveal');
+        reveal.innerHTML =
+          (ok ? '✅ 正确　' : '❌ 正确答案如上　')
+          + '<b>' + esc(card.w) + '</b><span class="qr-r">' + esc(card.r) + '</span>'
+          + (card.m ? '— ' + esc(card.m) : '')
+          + (cfg.showSrc && card.slug ? '<span class="qr-src">· ' + esc(card.slug) + '</span>' : '');
+        try { await cfg.record(card, ok); } catch (e) { reveal.innerHTML += '<span class="qr-err"> · 保存失败</span>'; }
+        if (cfg.onAnswer) cfg.onAnswer();
+        const next = stage.querySelector('.quiz-next'), last = idx + 1 >= round.length;
+        next.innerHTML = '<button class="vp-btn" type="button">' + (last ? '查看结果' : '下一题') + '</button>';
+        next.querySelector('button').addEventListener('click', () => { if (last) summary(); else { idx++; question(); } });
+      }));
+    }
+    function summary() {
+      stage.innerHTML = '<div class="quiz-summary">本组完成：正确 <b>' + correctN + '</b> / ' + round.length
+        + '　<button class="vp-btn" type="button" style="margin-left:0.6rem">再来一组</button></div>';
+      stage.querySelector('button').addEventListener('click', start);
+      if (cfg.onAnswer) cfg.onAnswer();
+    }
+    return { start };
+  }
+
+  // ---------- Supabase client + auth ----------
+  const cfgOK = !!(window.SUPA_URL && window.SUPA_ANON_KEY && window.supabase);
+  const sb = cfgOK ? window.supabase.createClient(window.SUPA_URL, window.SUPA_ANON_KEY) : null;
+  let user = null;
+  const $ = id => document.getElementById(id);
+  const bank = (VOCAB_BANK || []).map(c => ({ w: c.w, r: c.r, m: c.m || null, t: c.t, slug: PAGE_SLUG }));
+  if ($('vp-count')) $('vp-count').textContent = bank.length;
+  const stageEl = $('vp-stage');
+
+  function renderAuth() {
+    const bar = $('auth-bar'); if (!bar) return;
+    if (!cfgOK) { bar.innerHTML = '<span class="ab-msg">未配置数据库：把 supabase-config.example.js 复制为 supabase-config.js 并填入项目信息</span>'; return; }
+    if (user) {
+      bar.innerHTML = '<span class="ab-user">👤 ' + esc(user.email) + '</span><button class="auth-btn ghost" id="ab-logout" type="button">退出</button>';
+      $('ab-logout').addEventListener('click', () => sb.auth.signOut());
+    } else {
+      bar.innerHTML =
+        '<input id="ab-email" type="email" placeholder="邮箱" autocomplete="username">'
+        + '<input id="ab-pass" type="password" placeholder="密码" autocomplete="current-password">'
+        + '<button class="auth-btn" id="ab-login" type="button">登录</button>'
+        + '<button class="auth-btn ghost" id="ab-signup" type="button">注册</button>'
+        + '<span class="ab-msg" id="ab-msg"></span>';
+      const email = () => $('ab-email').value.trim(), pass = () => $('ab-pass').value, msg = t => { $('ab-msg').textContent = t || ''; };
+      $('ab-login').addEventListener('click', async () => {
+        msg('登录中…'); const { error } = await sb.auth.signInWithPassword({ email: email(), password: pass() });
+        if (error) msg('登录失败：' + error.message);
+      });
+      $('ab-signup').addEventListener('click', async () => {
+        msg('注册中…'); const { error } = await sb.auth.signUp({ email: email(), password: pass() });
+        msg(error ? ('注册失败：' + error.message) : '注册成功；若开启了邮箱验证，请查收邮件后再登录。');
+      });
+    }
+  }
+  function applyGate() {
+    const on = !!user;
+    if ($('vp-gate')) $('vp-gate').style.display = on ? 'none' : 'inline-block';
+    if ($('vp-start')) $('vp-start').style.display = on ? 'inline-block' : 'none';
+    if ($('vp-reset')) $('vp-reset').style.display = on ? 'inline' : 'none';
+    if (!on && stageEl) stageEl.innerHTML = '';
+    updateImport();
+  }
+
+  // ---------- DB-backed stats ----------
+  async function recordAnswer(card, ok) {
+    if (!sb || !user) throw new Error('not signed in');
+    const { error } = await sb.rpc('record_attempt', { p_slug: card.slug, p_word: card.w, p_reading: card.r || '', p_meaning: card.m, p_type: card.t, p_correct: ok });
+    if (error) throw error;
+  }
+  async function fetchSlugStats() {
+    if (!sb || !user) return {};
+    const { data, error } = await sb.from('user_word_stats').select('word,score,seen,correct').eq('slug', PAGE_SLUG);
+    if (error) return {};
+    const m = {}; (data || []).forEach(r => m[r.word] = r); return m;
+  }
+  async function refreshHard() {
+    const slot = $('user-hard'); if (!slot) return;
+    if (!sb || !user) { slot.hidden = true; slot.innerHTML = ''; return; }
+    const { data, error } = await sb.from('user_word_stats')
+      .select('word,reading,meaning,type,seen,correct,score').eq('slug', PAGE_SLUG).gt('score', 0)
+      .order('score', { ascending: false }).limit(5);
+    if (error || !data || !data.length) { slot.hidden = true; slot.innerHTML = ''; return; }
+    slot.hidden = false;
+    slot.innerHTML = '<div class="uh-title">📌 你的难词（练习易错）</div><ul class="uh-list">'
+      + data.map(x => {
+        const acc = x.seen ? Math.round(100 * x.correct / x.seen) : 0;
+        return '<li><b>' + esc(x.word) + '</b><span class="uh-r">' + esc(x.reading || '') + '</span>'
+          + (x.meaning ? '— ' + esc(x.meaning) : '<span class="uh-miss">（读音）</span>')
+          + ' <span class="uh-acc">正确率 ' + acc + '%</span></li>';
+      }).join('')
+      + '</ul>';
+  }
+  async function startPractice() {
+    if (!sb || !user) return;
+    stageEl.innerHTML = '<div class="quiz-summary">加载中…</div>';
+    const statsMap = await fetchSlugStats();
+    makeQuiz(stageEl, { deck: bank, pool: bank, statsOf: c => statsMap[c.w], size: 12, record: recordAnswer, onAnswer: refreshHard }).start();
+  }
+
+  // ---------- one-time legacy localStorage import ----------
+  function legacy() { try { return JSON.parse(localStorage.getItem('koan-vocab-v1')) || null; } catch (e) { return null; } }
+  function updateImport() { const b = $('vp-import'); if (b) b.style.display = (user && legacy()) ? 'inline' : 'none'; }
+  async function doImport() {
+    if (!sb || !user) return; const all = legacy(); if (!all) return;
+    const b = $('vp-import'); b.disabled = true; b.textContent = '导入中…';
+    const payload = [];
+    for (const slug of Object.keys(all)) for (const w of Object.keys(all[slug])) {
+      const s = all[slug][w];
+      payload.push({ slug, word: w, reading: s.r || '', meaning: s.m || null, type: s.t || 'reading', seen: s.seen || 0, correct: s.correct || 0, wrong: s.wrong || 0, score: s.score || 0 });
+    }
+    const { error } = await sb.rpc('import_stats', { p: payload });
+    if (error) { b.textContent = '导入失败'; b.disabled = false; return; }
+    try { localStorage.removeItem('koan-vocab-v1'); } catch (e) {}
+    b.textContent = '已导入 ' + payload.length + ' 词'; refreshHard();
+  }
+
+  // ---------- wire up ----------
+  if ($('vp-start')) $('vp-start').addEventListener('click', startPractice);
+  if ($('vp-import')) $('vp-import').addEventListener('click', doImport);
+  if ($('vp-reset')) $('vp-reset').addEventListener('click', async () => {
+    if (!sb || !user) return; if (!confirm('清除本节的练习记录（仅你自己）？')) return;
+    await sb.from('user_word_stats').delete().eq('slug', PAGE_SLUG).eq('user_id', user.id);
+    if (stageEl) stageEl.innerHTML = ''; refreshHard();
+  });
+
+  async function syncAuth(session) { user = session ? session.user : null; renderAuth(); applyGate(); await refreshHard(); }
+  renderAuth(); applyGate();
+  if (sb) {
+    sb.auth.getSession().then(({ data }) => syncAuth(data.session));
+    sb.auth.onAuthStateChange((_e, session) => syncAuth(session));
+  }
+})();
+</script>
+</body>
+</html>
